@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bg-home scroll-smooth">
+
+    <!-- Navbar -->
+    <header class="shadow flex justify-between items-center sticky top-0 z-50 backdrop:blur-3xl bg-white/50 ">
+        <h1 class="font-bold text-xl p-4">ABID KHAN</h1>
+        <a href="assets/Abid_Khan_Resume.pdf" target="_blank"
+            class="cursor-pointer flex justify-between bg-black px-3 py-2 m-2 rounded-full text-white shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-28">
+            Resume
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5 animate-bounce">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"></path>
+            </svg>
+        </a>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex justify-center items-center" id="home">
+        <div class="w-full md:w-auto text-center">
+            <h1 class="text-3xl md:text-6xl font-bold mb-6 typewriter">
+                Frontend Developer
+            </h1>
+            <p class="text-l md:text-2xl animate-bounce ">
+                Clean code | creative design <br>
+                Turning ideas into smooth web apps
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="h-auto flex flex-col" id="projects">
+
+        <div class="self-center mb-20">
+            <h2 class="text-3xl md:text-4xl font-bold">
+                Projects
+            </h2>
+        </div>
+
+        <div class="grid w-[90%] md:grid-cols-3 gap-10 mx-auto">
+
+            <div data-aos="fade-up" class="max-w-sm rounded overflow-hidden shadow-lg h-90 bg-card">
+                <img class="w-full" src="assets/cry.png" alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Cryptocurrency Tracker</div>
+                    <p class="text-xs mb-1">
+                        ReactJS, TailwindCSS, Firebase, CoinGecko API
+                    </p>
+                    <p class="text-sm mb-1">
+                        Monitors live market prices for cryptocurrencies with portfolio access
+                    </p>
+                    <a href="https://crypto-trackerrr.vercel.app/" target="_blank"
+                        class="flex items-center bg-transparent border-none cursor-pointer group mt-4 md:mt-0">
+                        <span
+                            class="relative text-black text-sm  pr-4 pb-2 after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-black after:bottom-0 after:left-0 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
+                            Live Preview
+                        </span>
+                        <svg class="w-8 h-3 -translate-x-2 group-hover:translate-x-0 transition-transform duration-300"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 16">
+                            <path d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                transform="translate(30)"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" class="max-w-sm rounded overflow-hidden shadow-lg h-90 bg-card">
+                <img class="w-full" src="assets/ca.png" alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">CaloriCurve</div>
+                    <p class="text-xs mb-1">
+                        HTML, CSS, JS, Firebase
+                    </p>
+                    <p class=" text-sm mb-1">
+                        A nutrition tracking app with food logging, nutrients, and persistent progress
+                    </p>
+                    <a href="https://crypto-trackerrr.vercel.app/" target="_blank"
+                        class="flex items-center bg-transparent border-none cursor-pointer group mt-4 md:mt-0">
+                        <span
+                            class="relative text-black text-sm  pr-4 pb-2 after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-black after:bottom-0 after:left-0 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
+                            Live Preview
+                        </span>
+                        <svg class="w-8 h-3 -translate-x-2 group-hover:translate-x-0 transition-transform duration-300"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 16">
+                            <path d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                transform="translate(30)"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" class="max-w-sm rounded overflow-hidden shadow-lg h-90 bg-card">
+                <img class="w-full" src="assets/lb.png" alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Cosmetic Showcase Website</div>
+                    <p class="text-xs mb-1">HTML, CSS, JS</p>
+                    <p class="text-sm mb-1">
+                        A sleek beauty brand site with product displays and contact info
+                    </p>
+                    <a href="https://crypto-trackerrr.vercel.app/" target="_blank"
+                        class="flex items-center bg-transparent border-none cursor-pointer group mt-4 md:mt-0">
+                        <span
+                            class="relative text-black text-sm  pr-4 pb-2 after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-black after:bottom-0 after:left-0 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
+                            Live Preview
+                        </span>
+                        <svg class="w-8 h-3 -translate-x-2 group-hover:translate-x-0 transition-transform duration-300"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 16">
+                            <path d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                transform="translate(30)"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" class="max-w-sm rounded overflow-hidden shadow-lg h-90 bg-card">
+                <img class="w-full" src="assets/ae.png" alt="Sunset in the mountains">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Company Landing Page</div>
+                    <p class="text-xs mb-1">HTML, CSS, JS</p>
+                    <p class="text-sm mb-1">
+                        A clean business site for industrial services and inquiries
+                    </p>
+                    <a href="https://crypto-trackerrr.vercel.app/" target="_blank"
+                        class="flex items-center bg-transparent border-none cursor-pointer group mt-4 md:mt-0">
+                        <span
+                            class="relative text-black text-sm  pr-4 pb-2 after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-black after:bottom-0 after:left-0 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 group-hover:after:scale-x-100 group-hover:after:origin-bottom-left">
+                            Live Preview
+                        </span>
+                        <svg class="w-8 h-3 -translate-x-2 group-hover:translate-x-0 transition-transform duration-300"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 16">
+                            <path d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                transform="translate(30)"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="h-screen flex flex-col " id="skills">
+        <div class="self-center mb-20 mt-10">
+            <h2 class="text-3xl md:text-4xl font-bold">
+                Skills
+            </h2>
+        </div>
+
+        <div class="w-[95%] md:w-2/3 self-center">
+
+            <div class="flex items-center justify-between gap-4 ">
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    HTML
+                </h6>
+                <h6 class="">
+                    90%
+                </h6>
+            </div>
+            <div
+                class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-2 md:mb-4">
+                <div
+                    class="flex items-center justify-center w-[90%] h-full overflow-hidden text-white break-all bg-html rounded-full">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4">
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    CSS
+                </h6>
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    80%
+                </h6>
+            </div>
+            <div
+                class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-2 md:mb-4">
+                <div
+                    class="flex items-center justify-center w-[80%] h-full overflow-hidden text-white break-all bg-css rounded-full">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4">
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    JavaScript
+                </h6>
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    70%
+                </h6>
+            </div>
+            <div
+                class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-2 md:mb-4">
+                <div
+                    class="flex items-center justify-center w-[70%] h-full overflow-hidden text-white break-all bg-js rounded-full">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4">
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    React
+                </h6>
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    70%
+                </h6>
+            </div>
+            <div
+                class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-2 md:mb-4">
+                <div
+                    class="flex items-center justify-center w-[70%] h-full overflow-hidden text-white break-all bg-react rounded-full">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 mb-2">
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    Bootstrap
+                </h6>
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    80%
+                </h6>
+            </div>
+            <div
+                class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-2 md:mb-4">
+                <div
+                    class="flex items-center justify-center w-[80%] h-full overflow-hidden text-white break-all bg-bootstrap rounded-full">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 mb-2">
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    Tailwind CSS
+                </h6>
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    80%
+                </h6>
+            </div>
+            <div
+                class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-2 md:mb-4">
+                <div
+                    class="flex items-center justify-center w-[80%] h-full overflow-hidden text-white break-all bg-tailwind rounded-full">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 mb-2">
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    Python
+                </h6>
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    50%
+                </h6>
+            </div>
+            <div
+                class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-2 md:mb-4">
+                <div
+                    class="flex items-center justify-center w-[50%] h-full overflow-hidden text-white break-all bg-python rounded-full">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 mb-2">
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    C++
+                </h6>
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    50%
+                </h6>
+            </div>
+            <div
+                class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-2 md:mb-4">
+                <div
+                    class="flex items-center justify-center w-[50%] h-full overflow-hidden text-white break-all bg-cpp rounded-full">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 mb-2">
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    Git / Github
+                </h6>
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    90%
+                </h6>
+            </div>
+            <div
+                class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-2 md:mb-4">
+                <div
+                    class="flex items-center justify-center w-[90%] h-full overflow-hidden text-white break-all bg-github rounded-full">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 mb-2">
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    Vercel
+                </h6>
+                <h6
+                    class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
+                    90%
+                </h6>
+            </div>
+            <div
+                class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-2 md:mb-4">
+                <div
+                    class="flex items-center justify-center w-[90%] h-full overflow-hidden text-white break-all bg-vercel rounded-full">
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="h-auto flex flex-col justify-center items-center" id="contact">
+        <div class="self-center mb-10 mt-10">
+            <h2 class="text-3xl md:text-4xl font-bold">
+                Get in Touch
+            </h2>
+        </div>
+
+        <div class="card flex h-16 w-64 mb-4">
+            <a class="social-link1 group flex w-1/4 items-center justify-center rounded-full text-black transition-all hover:bg-email hover:animate-bounce"
+                href="mailto:kaabid1557@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" class="h-8 w-8 transition-all duration-300 group-hover:scale-125"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.75 5.25L3 5.25V5.25C3 4.83579 3.33579 4.5 3.75 4.5H20.25C20.6642 4.5 21 4.83579 21 5.25C21 5.66421 20.6642 6 20.25 6H3.75C3.33579 6 3 5.66421 3 5.25ZM3.75 8.25L3 8.25V8.25L3 8.25V18C3 18.4142 3.33579 18.75 3.75 18.75H20.25C20.6642 18.75 21 18.4142 21 18V8.25L12 14.25L3.75 8.25ZM12 12.75L3 7.5H21L12 12.75Z"
+                        fill="black" />
+                </svg>
+            </a>
+
+            <a class="social-link2 group flex w-1/4 items-center justify-center rounded-full text-black transition-all hover:bg-gray-700 hover:animate-bounce"
+                href="https://x.com/yourusername" target="_blank">
+                <svg viewBox="0 0 16 16"
+                    class="bi bi-x-twitter h-8 w-8 transition-all duration-300 group-hover:scale-125"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="black"
+                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                </svg>
+            </a>
+            <a class="social-link3 group flex w-1/4 items-center justify-center rounded-full text-black transition-all hover:bg-gray-600 hover:animate-bounce"
+                href="https://github.com/00Abid" target="_blank">
+                <svg viewBox="0 0 16 16" class="bi bi-github h-8 w-8 transition-all duration-300 group-hover:scale-125"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2.0-.21.15-.46.55-.38C13.71 14.53 16 11.53 16 8c0-4.42-3.8-8-8z"
+                        fill="black" />
+                </svg>
+            </a>
+
+            <a class="social-link4 group flex w-1/4 items-center justify-center rounded-full text-black transition-all hover:bg-linkedin hover:animate-bounce"
+                href="https://www.linkedin.com/in/abid-khan-coder/" target="_blank">
+                <svg viewBox="0 0 24 24" class="h-8 w-8 transition-all duration-300 group-hover:scale-125"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.761s.784-1.761 1.75-1.761 1.75.79 1.75 1.761-.784 1.761-1.75 1.761zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                        fill="black" />
+                </svg>
+            </a>
+        </div>
+
+    </section>
+
+    <footer class="flex justify-center items-center h-auto border-t">
+        <p class="text-sm p-4">
+            @ 2025 All right reserved @ ABID KHAN
+        </p>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(); 
+    </script>
+
+</body>
+
+</html>
