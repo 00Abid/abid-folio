@@ -103,7 +103,10 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="h-[80vh] flex justify-center items-center bg-home" id="home">
+    <section class="h-[80vh] flex justify-center items-center" id="home">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="jumbo absolute -inset-2.5 opacity-50"></div>
+        </div>
         <div data-aos="zoom-in-down" class="w-[100vw] md:w-auto text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-6 w-full">
                 Frontend Developer
@@ -116,7 +119,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="h-auto flex flex-col" id="projects">
+    <section class="h-auto flex flex-col bg-home">
 
         <div class="self-center mb-5 md:mb-20 mt-10">
             <h2 class="text-3xl md:text-4xl font-bold">
@@ -130,7 +133,7 @@
                 <img class="w-full" src="assets/cry.webp"
                     alt="Cryptocurrency Tracker project by Abid Khan - ReactJS, TailwindCSS, Firebase, CoinGecko API">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Cryptocurrency Tracker</div>
+                    <h3 class="font-bold text-xl mb-2">Cryptocurrency Tracker</h3>
                     <p class="text-xs mb-1">
                         ReactJS, TailwindCSS, Firebase, CoinGecko API
                     </p>
@@ -156,7 +159,7 @@
                 <img class="w-full" src="assets/ca.webp"
                     alt="CaloriCurve - Nutrition Tracking Web App by Abid Khan using HTML, CSS, JS, Firebase">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">CaloriCurve</div>
+                    <h3 class="font-bold text-xl mb-2">CaloriCurve</h3>
                     <p class="text-xs mb-1">
                         HTML, CSS, JS, Firebase
                     </p>
@@ -183,7 +186,7 @@
                     alt="LIYANA BEAUTY - Cosmetic Showcase Website by Abid Khan - beauty brand product display site">
 
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Cosmetic Showcase Website</div>
+                    <h3 class="font-bold text-xl mb-2">Cosmetic Showcase Website</h3>
                     <p class="text-xs mb-1">HTML, CSS, JS</p>
                     <p class="text-sm mb-1">
                         A sleek beauty brand site with product displays and contact info
@@ -208,7 +211,7 @@
                     alt="AERO ENTERPRISES - Company Landing Page developed by Abid Khan for industrial services website">
 
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2">Company Landing Page</div>
+                    <h3 class="font-bold text-xl mb-2">Company Landing Page</h3>
                     <p class="text-xs mb-1">HTML, CSS, JS</p>
                     <p class="text-sm mb-1">
                         A clean business site for industrial services and inquiries
@@ -232,7 +235,7 @@
     </section>
 
     <!-- Skills -->
-    <section class="h-auto flex flex-col bg-home " id="skills">
+    <section class="h-auto flex flex-col">
         <div class="self-center mb-5 md:mb-20 mt-10">
             <h2 class="text-3xl md:text-4xl font-bold">
                 Skills
@@ -242,13 +245,13 @@
         <div class="w-[95%] md:w-2/3 self-center">
 
             <div class="flex items-center justify-between gap-4 ">
-                <h6
+                <h4
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     HTML
-                </h6>
-                <h6 class="">
+                </h4>
+                <h5 class="">
                     90%
-                </h6>
+                </h5>
             </div>
             <div
                 class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-4">
@@ -258,14 +261,14 @@
             </div>
 
             <div class="flex items-center justify-between gap-4">
-                <h6
+                <h4
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     CSS
-                </h6>
-                <h6
+                </h4>
+                <h5
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     80%
-                </h6>
+                </h5>
             </div>
             <div
                 class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-4">
@@ -275,14 +278,14 @@
             </div>
 
             <div class="flex items-center justify-between gap-4">
-                <h6
+                <h4
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     JavaScript
-                </h6>
-                <h6
+                </h4>
+                <h5
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     70%
-                </h6>
+                </h5>
             </div>
             <div
                 class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-4">
@@ -292,14 +295,14 @@
             </div>
 
             <div class="flex items-center justify-between gap-4">
-                <h6
+                <h4
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     React
-                </h6>
-                <h6
+                </h4>
+                <h5
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     70%
-                </h6>
+                </h5>
             </div>
             <div
                 class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-4">
@@ -309,14 +312,14 @@
             </div>
 
             <div class="flex items-center justify-between gap-4 mb-2">
-                <h6
+                <h4
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     Bootstrap
-                </h6>
-                <h6
+                </h4>
+                <h5
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     80%
-                </h6>
+                </h5>
             </div>
             <div
                 class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-4">
@@ -326,14 +329,14 @@
             </div>
 
             <div class="flex items-center justify-between gap-4 mb-2">
-                <h6
+                <h4
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     Tailwind CSS
-                </h6>
-                <h6
+                </h4>
+                <h5
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     80%
-                </h6>
+                </h5>
             </div>
             <div
                 class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-4">
@@ -343,14 +346,14 @@
             </div>
 
             <div class="flex items-center justify-between gap-4 mb-2">
-                <h6
+                <h4
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     Python
-                </h6>
-                <h6
+                </h4>
+                <h5
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     50%
-                </h6>
+                </h5>
             </div>
             <div
                 class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-4">
@@ -360,14 +363,14 @@
             </div>
 
             <div class="flex items-center justify-between gap-4 mb-2">
-                <h6
+                <h4
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     C++
-                </h6>
-                <h6
+                </h4>
+                <h5
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     50%
-                </h6>
+                </h5>
             </div>
             <div
                 class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-4">
@@ -377,14 +380,14 @@
             </div>
 
             <div class="flex items-center justify-between gap-4 mb-2">
-                <h6
+                <h4
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     Git / Github
-                </h6>
-                <h6
+                </h4>
+                <h5
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     90%
-                </h6>
+                </h5>
             </div>
             <div
                 class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-4">
@@ -394,14 +397,14 @@
             </div>
 
             <div class="flex items-center justify-between gap-4 mb-2">
-                <h6
+                <h4
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     Vercel
-                </h6>
-                <h6
+                </h4>
+                <h5
                     class="block font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-blue-gray-900">
                     90%
-                </h6>
+                </h5>
             </div>
             <div
                 class="flex-start flex h-2.5 w-full overflow-hidden rounded-full bg-gray-200 font-sans text-xs font-medium mb-6">
@@ -416,7 +419,7 @@
 
 
     <!-- Contact -->
-    <section class="h-auto flex flex-col justify-center items-center" id="contact">
+    <section class="h-auto flex flex-col justify-center items-center bg-home">
         <div class="self-center mb-5 mt-10">
             <h2 class="text-3xl md:text-4xl font-bold">
                 Get in Touch

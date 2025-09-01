@@ -38,9 +38,6 @@
     --font-weight-bold: 700;
     --tracking-normal: 0em;
     --leading-relaxed: 1.625;
-    --animate-spin: spin 1s linear infinite;
-    --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --animate-bounce: bounce 1s infinite;
     --blur-3xl: 64px;
     --default-transition-duration: 150ms;
@@ -59,8 +56,8 @@
     --color-email: #e14434;
     --color-github: #181717;
     --color-linkedin: #0a66c2;
-    --color-home: #f5fffa;
-    --color-card: #f7fcfe;
+    --color-card: #f2f9fd;
+    --color-home: #f7fcfe;
   }
 }
 @layer base {
@@ -212,11 +209,20 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .relative {
     position: relative;
   }
   .sticky {
     position: sticky;
+  }
+  .-inset-2\.5 {
+    inset: calc(var(--spacing) * -2.5);
+  }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
   }
   .top-0 {
     top: calc(var(--spacing) * 0);
@@ -335,9 +341,6 @@
   }
   .animate-bounce {
     animation: var(--animate-bounce);
-  }
-  .animate-pulse {
-    animation: var(--animate-pulse);
   }
   .cursor-pointer {
     cursor: pointer;
@@ -524,6 +527,9 @@
   .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  .opacity-50 {
+    opacity: 50%;
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
@@ -819,6 +825,48 @@
     }
   }
 }
+@keyframes jumbo {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+.jumbo {
+  --stripes: repeating-linear-gradient(
+    100deg,
+    #fff 0%,
+    #fff 7%,
+    transparent 10%,
+    transparent 12%,
+    #fff 16%
+  );
+  --rainbow: repeating-linear-gradient(
+    100deg,
+    #60a5fa 10%,
+    #e879f9 15%,
+    #60a5fa 20%,
+    #5eead4 25%,
+    #60a5fa 30%
+  );
+  background-image: var(--stripes), var(--rainbow);
+  background-size: 300%, 200%;
+  background-position: 50% 50%, 50% 50%;
+  pointer-events: none;
+  filter: invert(100%);
+  mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
+}
+.jumbo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--stripes), var(--rainbow);
+  background-size: 200%, 100%;
+  animation: jumbo 60s linear infinite;
+  background-attachment: fixed;
+  mix-blend-mode: difference;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -1012,22 +1060,6 @@
   syntax: "*";
   initial-value: "";
   inherits: false;
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-@keyframes pulse {
-  50% {
-    opacity: 0.5;
-  }
 }
 @keyframes bounce {
   0%, 100% {
