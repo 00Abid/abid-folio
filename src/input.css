@@ -16,47 +16,32 @@
   --color-linkedin: #0a66c2;
   --color-card: #f2f9fd;
   --color-home: #f7fcfe;
-}
+  --color-1: #e3dac9;
+  --color-2: #ede6d6;
 
-@keyframes jumbo {
-  from {
-    background-position: 50% 50%, 50% 50%;
-  }
-  to {
-    background-position: 350% 50%, 350% 50%;
-  }
+  --color-3: #f2f3f4;
+  --color-4: #ffffff;
+  --color-5: #dbe9f4;
+  --color-6: #f0f8ff;
+  --color-7: #f7fcfe;
+  --color-8: #f5f5f5;
+  --color-9: #ddd6e1;
+  --color-10: #f8f4ff;
+  --color-11: #f8eeec;
+
+  --color-12: #FFFOF5;
+  
+  --color-13: #bfd4bf;
+  --color-14: #f1f9ec;
+  --color-15: #f5fffa;
+  --color-16: #e7eae5;
+  --color-17: #efdffb;
+  --color-18: #f1e9d2;
+  --color-19: #FFFAFO;
+  --color-20: #fdf5e6;
+  --color-21: #f9f8f9;
+  --color-22: #f2f3f2;
+  --color-23: #ecebec;
+  --color-24: #e6e6e4;
 }
-.jumbo {
-  --stripes: repeating-linear-gradient(
-    100deg,
-    #fff 0%,
-    #fff 7%,
-    transparent 10%,
-    transparent 12%,
-    #fff 16%
-  );
-  --rainbow: repeating-linear-gradient(
-    100deg,
-    #60a5fa 10%,
-    #e879f9 15%,
-    #60a5fa 20%,
-    #5eead4 25%,
-    #60a5fa 30%
-  );
-  background-image: var(--stripes), var(--rainbow);
-  background-size: 300%, 200%;
-  background-position: 50% 50%, 50% 50%;
-  pointer-events: none;
-  filter: invert(100%);
-  mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
-}
-.jumbo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: var(--stripes), var(--rainbow);
-  background-size: 200%, 100%;
-  animation: jumbo 60s linear infinite;
-  background-attachment: fixed;
-  mix-blend-mode: difference;
-}
+@import "tailwindcss";
