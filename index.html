@@ -103,15 +103,18 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="h-[80vh] flex justify-center items-center bg-5" id="home">
-        <div data-aos="zoom-in-down" class="w-[100vw] md:w-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 w-full">
-                Frontend Developer
-            </h1>
-            <p class="text-lg md:text-2xl animate-bounce ">
-                Clean code | creative design <br>
-                Turning ideas into smooth web apps
-            </p>
+    <section id="home">
+        <div class="h-[80vh] flex justify-center items-center bg-gradient-to-br from-[var(--color-1)] via-[var(--color-2)] to-[var(--color-3)] bg-[length:400%_400%] animate-gradient"
+            id="home">
+            <div data-aos="zoom-in-down" class="w-[100vw] md:w-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 w-full">
+                    Frontend Developer
+                </h1>
+                <p class="text-lg md:text-2xl animate-bounce">
+                    Clean code | creative design <br>
+                    Turning ideas into smooth web apps
+                </p>
+            </div>
         </div>
     </section>
 
@@ -232,7 +235,7 @@
     </section>
 
     <!-- Skills -->
-    <section class="h-auto flex flex-col bg-5">
+    <section class="h-auto flex flex-col bg-home">
         <div class="self-center mb-5 md:mb-20 mt-10">
             <h2 class="text-3xl md:text-4xl font-bold">
                 Skills
@@ -468,9 +471,9 @@
     </section>
 
     <footer class="flex justify-center items-center h-auto border-t">
-        <p class="text-sm p-4">
+        <h6 class="text-sm p-4">
             &#xA9; 2025 ABID KHAN | Frontend Developer
-        </p>
+        </h6>
     </footer>
 
 
