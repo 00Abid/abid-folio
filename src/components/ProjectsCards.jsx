@@ -19,9 +19,9 @@ const projects = [
     },
     {
         id: 3,
-        title: "Portfolio Website",
+        title: "Cosmetic Website",
         tech: "React, TailwindCSS, AOS Animations",
-        desc: "A modern developer portfolio with animations and 3D effects",
+        desc: "A modern, Professional Cosmetic Website made using React, Tailwind CSS",
         image: "/lb.webp",
         link: "https://abidkhan.vercel.app/",
     },
@@ -29,14 +29,14 @@ const projects = [
         id: 4,
         title: "AERO ENTERPRISES Website",
         tech: "React, TailwindCSS, SEO, Google Search Console, GTM",
-        desc: "Analyzes stock market data with real-time updates and predictions",
+        desc: "An seo optimized business website for AERO ENTERPRISES with Google Analytics tools",
         image: "/ae.webp",
         link: "https://stock-analyzer-ai.vercel.app/",
     },
 ];
 
 
-const ProjectCards = () => {            
+const ProjectCards = () => {
     return (
         <div className="relative z-10 min-h-screen text-white flex flex-col items-center justify-center px-4">
             <h2 className="text-4xl md:text-6xl font-bold text-center mb-10">
@@ -44,7 +44,7 @@ const ProjectCards = () => {
             </h2>
 
             <div className="container mx-auto max-w-7xl px-6 md:px-8 py-4 text-white">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project) => (
                         <div
                             key={project.id}
@@ -69,13 +69,7 @@ const ProjectCards = () => {
                                     <span className="relative text-white text-sm pr-4 pb-2 after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-white after:bottom-0 after:left-0 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                                         Live Preview
                                     </span>
-                                    <svg
-                                        className="w-8 h-3 -translate-x-2 group-hover:translate-x-0 transition-transform duration-300 fill-white"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 46 16"
-                                    >
-                                        <path d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" />
-                                    </svg>
+                                    
                                 </a>
                             </div>
                         </div>

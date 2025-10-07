@@ -36,6 +36,13 @@ const items = [
         ariaLabel: 'Contact',
         rotation: -8,
         hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
+    },
+    {
+        label: 'Resume',
+        href: '/Abid_Khan_Resume.pdf',
+        ariaLabel: 'Resume',
+        rotation: -8,
+        hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
     }
 ];
 

@@ -39,36 +39,6 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  /* .bg-html {
-    background-color: #e44d26;
-  }
-  .bg-css {
-    background-color: #264de4;
-  }
-  .bg-js {
-    background-color: #f7df1e;
-  }
-  .bg-react {
-    background-color: #61dafb;
-  }
-  .bg-bootstrap {
-    background-color: #7952b3;
-  }
-  .bg-tailwind {
-    background-color: #38bdf8;
-  }
-  .bg-python {
-    background-color: #3776ab;
-  }
-  .bg-cpp {
-    background-color: #00599c;
-  }
-  .bg-github {
-    background-color: #24292e;
-  }
-  .bg-vercel {
-    background-color: #000000;
-  } */
 }
 
 :root {
@@ -146,5 +116,35 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  .bg-html {
+    background-color: #e44d26;
+  }
+  .bg-css {
+    background-color: #264de4;
+  }
+  .bg-js {
+    background-color: #f7df1e;
+  }
+  .bg-react {
+    background-color: #61dafb;
+  }
+  .bg-bootstrap {
+    background-color: #7952b3;
+  }
+  .bg-tailwind {
+    background-color: #38bdf8;
+  }
+  .bg-python {
+    background-color: #3776ab;
+  }
+  .bg-cpp {
+    background-color: #00599c;
+  }
+  .bg-github {
+    background-color: #24292e;
+  }
+  .bg-vercel {
+    background-color: #000000;
   }
 }

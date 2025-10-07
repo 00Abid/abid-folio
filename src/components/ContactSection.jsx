@@ -91,7 +91,7 @@ const socialLinks = [
 const ContactSection = () => {
     return (
         <section className="h-auto flex flex-col justify-center items-center">
-            <div className="self-center mb-5 mt-10">
+            <div className="self-center my-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-white">Get in Touch</h2>
             </div>
 
@@ -99,7 +99,7 @@ const ContactSection = () => {
                 {socialLinks.map((link) => (
                     <a
                         key={link.id}
-                        className={`group flex w-1/4 items-center justify-center rounded-full text-white transition-all ${link.bgHover}`}
+                        className={`group flex w-[100%] items-center justify-center rounded-full text-white transition-all ${link.bgHover}`}
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
