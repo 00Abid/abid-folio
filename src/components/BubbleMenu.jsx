@@ -155,7 +155,6 @@ export default function BubbleMenu({
 
     return (
         <>
-            {/* Workaround for silly Tailwind capabilities */}
             <style>{`
         .bubble-menu .menu-line {
           transition: transform 0.3s ease, opacity 0.3s ease;
@@ -238,7 +237,7 @@ export default function BubbleMenu({
                         }}
                     >
                         {typeof logo === 'string' ? (
-                            <img src={logo} alt="Logo" className="bubble-logo max-h-[60%] max-w-full object-contain block" />
+                            <img src={logo} alt="Logo" className="bubble-logo max-h-[60%] max-w-full object-contain block" loading="lazy" width="120" height="48" />
                         ) : (
                             logo
                         )}

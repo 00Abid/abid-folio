@@ -63,7 +63,7 @@ const App = () => {
                 staggerDelay={0.12}
             />
             <div className="relative z-10 min-h-screen flex items-center justify-center text-center">
-                <div data-aos="zoom-in-down" className="inline-block">
+                <div className="inline-block">
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 w-full text-white">
                         Frontend Developer
                     </h1>

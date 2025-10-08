@@ -1,42 +1,44 @@
 import React from "react";
 
 const skills = [
-    { name: "HTML", level: 90, color: "bg-html" },
-    { name: "CSS", level: 80, color: "bg-css" },
-    { name: "JavaScript", level: 70, color: "bg-js" },
-    { name: "React", level: 70, color: "bg-react" },
-    { name: "Nextjs", level: 50, color: "bg-black" },
-    { name: "Bootstrap", level: 80, color: "bg-bootstrap" },
-    { name: "Tailwind CSS", level: 80, color: "bg-tailwind" },
-    { name: "Python", level: 50, color: "bg-python" },
-    { name: "C++", level: 50, color: "bg-cpp" },
-    { name: "Git / Github", level: 90, color: "bg-github" },
-    { name: "Vercel", level: 90, color: "bg-vercel" },
-    { name: "SEO", level: 80, color: "bg-white" },
+    { name: "HTML", icon: "fa-brands fa-html5 text-orange-500" },
+    { name: "CSS", icon: "fa-brands fa-css3-alt text-blue-500" },
+    { name: "JavaScript", icon: "fa-brands fa-js text-yellow-400" },
+    { name: "React", icon: "fa-brands fa-react text-cyan-400" },
+    { name: "Next JS", icon: "fa-solid fa-code text-white" },
+    { name: "Bootstrap", icon: "fa-brands fa-bootstrap text-purple-500" },
+    { name: "Tailwind CSS", icon: "fa-solid fa-wind text-sky-400" },
+    { name: "Python", icon: "fa-brands fa-python text-yellow-400" },
+    { name: "C++", icon: "fa-solid fa-code text-blue-400" },
+    { name: "Git / Github", icon: "fa-brands fa-github text-white" },
+    { name: "Vercel", icon: "fa-solid fa-cloud text-gray-300" },
+    { name: "SEO", icon: "fa-solid fa-chart-line text-emerald-400" },
 ];
 
 const SkillsSection = () => {
     return (
         <div className="relative z-10 min-h-screen text-white flex flex-col items-center justify-center px-4">
-            <h2 className="text-4xl md:text-6xl font-bold text-center my-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-center my-10">
                 Skills
             </h2>
 
-            <div className="w-[95%] md:w-2/3 self-center space-y-6">
-                {skills.map((skill, index) => (
-                    <div key={index}>
-                        <div className="flex items-center justify-between m-2">
-                            <h4 className="text-base font-semibold">{skill.name}</h4>
-                            <h5 className="text-base font-semibold">{skill.level}%</h5>
+            <div className="mt-10 w-[95%] md:w-2/3 self-center">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                    {skills.map((skill, index) => (
+                        <div
+                            key={index}
+                            className="w-[150px] h-[100px] bg-gray-800/60 border border-gray-700/50 rounded-xl p-4 flex flex-col items-center justify-center transition hover:scale-105 hover:shadow-lg hover:shadow-gray-700/30 duration-200"
+                        >
+                            <i
+                                className={`${skill.icon} text-5xl mb-2`}
+                                aria-hidden="true"
+                            ></i>
+                            <span className="text-xs font-semibold mt-2">
+                                {skill.name}
+                            </span>
                         </div>
-                        <div className="flex h-2.5 w-full overflow-hidden rounded-full bg-gray-700">
-                            <div
-                                className={`h-full ${skill.color} rounded-full`}
-                                style={{ width: `${skill.level}%` }}
-                            ></div>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );

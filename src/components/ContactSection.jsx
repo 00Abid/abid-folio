@@ -23,7 +23,7 @@ const socialLinks = [
     {
         id: 2,
         href: "https://x.com/kaabid1557",
-        bgHover: "hover:bg-gray-700 active:bg-gray-700",
+        bgHover: "hover:bg-gray-900 active:bg-gray-900",
         svg: (
             <svg
                 viewBox="0 0 16 16"
@@ -74,7 +74,7 @@ const socialLinks = [
     {
         id: 5,
         href: "/Abid_Khan_Resume.pdf",
-        bgHover: "hover:bg-gray-600 active:bg-gray-600",
+        bgHover: "hover:bg-slate-400 active:bg-slate-400",
         svg: (
             <svg
                 viewBox="0 0 24 24"
@@ -92,7 +92,7 @@ const ContactSection = () => {
     return (
         <section className="h-auto flex flex-col justify-center items-center">
             <div className="self-center my-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-white">Get in Touch</h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-white">Get in Touch</h2>
             </div>
 
             <div className="card flex h-16 w-64 mb-4">

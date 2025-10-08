@@ -4,7 +4,7 @@ const projects = [
     {
         id: 1,
         title: "Cryptocurrency Tracker",
-        tech: "ReactJS, TailwindCSS, Firebase, CoinGecko API",
+        tech: "React · Tailwind CSS · Firebase · CoinGecko API",
         desc: "Monitors live market prices for cryptocurrencies with portfolio access",
         image: "/cry.webp",
         link: "https://crypto-trackerrr.vercel.app/",
@@ -12,7 +12,7 @@ const projects = [
     {
         id: 2,
         title: "CaloriCurve - Nutrition Tracker",
-        tech: "React, Firebase, Flask, OpenFoodFacts API",
+        tech: "HTML · CSS · JS · Firebase",
         desc: "Track daily food intake and calories with smart recommendations",
         image: "/ca.webp",
         link: "https://caloricurve.vercel.app/",
@@ -20,16 +20,16 @@ const projects = [
     {
         id: 3,
         title: "Cosmetic Website",
-        tech: "React, TailwindCSS, AOS Animations",
-        desc: "A modern, Professional Cosmetic Website made using React, Tailwind CSS",
+        tech: "Next.js · Tailwind CSS · AOS · Shadcn UI",
+        desc: "A modern, Professional Cosmetic Website made using NextJS, Tailwind CSS",
         image: "/lb.webp",
         link: "https://abidkhan.vercel.app/",
     },
     {
         id: 4,
         title: "AERO ENTERPRISES Website",
-        tech: "React, TailwindCSS, SEO, Google Search Console, GTM",
-        desc: "An seo optimized business website for AERO ENTERPRISES with Google Analytics tools",
+        tech: "React · Tailwind CSS · SEO · AOS",
+        desc: "An seo optimized business website for AERO ENTERPRISES with Googletools",
         image: "/ae.webp",
         link: "https://stock-analyzer-ai.vercel.app/",
     },
@@ -39,7 +39,7 @@ const projects = [
 const ProjectCards = () => {
     return (
         <div className="relative z-10 min-h-screen text-white flex flex-col items-center justify-center px-4">
-            <h2 className="text-4xl md:text-6xl font-bold text-center mb-10">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">
                 Projects
             </h2>
 
@@ -48,13 +48,14 @@ const ProjectCards = () => {
                     {projects.map((project) => (
                         <div
                             key={project.id}
-                            data-aos="fade-up"
                             className="w-full rounded-2xl overflow-hidden shadow-xl bg-white/10 border border-white/10 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.02]"
                         >
                             <img
                                 className="w-full h-48 object-cover"
                                 src={project.image}
                                 alt={`${project.title} by Abid Khan`}
+                                loading="lazy"
+                                decoding="async"
                             />
                             <div className="px-6 py-5">
                                 <h3 className="font-bold text-xl mb-2 text-white">{project.title}</h3>
@@ -69,7 +70,7 @@ const ProjectCards = () => {
                                     <span className="relative text-white text-sm pr-4 pb-2 after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-white after:bottom-0 after:left-0 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                                         Live Preview
                                     </span>
-                                    
+
                                 </a>
                             </div>
                         </div>
