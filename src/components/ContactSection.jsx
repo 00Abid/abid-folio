@@ -44,7 +44,6 @@ const ContactSection = () => {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        data-aos = "zoom-in-up"
                     >
                         {link.icon}
                     </a>

@@ -48,7 +48,7 @@ const ProjectCards = () => {
                     {projects.map((project) => (
                         <div
                             key={project.id}
-                            className="w-full rounded-2xl overflow-hidden shadow-xl bg-white/10 border border-white/10 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.02]" data-aos = "fade-down-right"
+                            className="w-full rounded-2xl overflow-hidden shadow-xl bg-white/10 border border-white/10 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.02]"
                         >
                             <img
                                 className="w-full h-48 object-cover"
