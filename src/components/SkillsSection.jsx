@@ -39,7 +39,8 @@ const SkillsSection = () => {
                     {skills.map((skill, index) => (
                         <div
                             key={index}
-                            className="w-[150px] h-[100px] bg-gray-800/60 border border-gray-700/50 rounded-xl p-4 flex flex-col items-center justify-center transition hover:scale-105 hover:shadow-lg hover:shadow-gray-700/30 duration-200 backdrop-blur-sm" data-aos = "fade-right"
+                            className="w-[150px] h-[100px] bg-gray-800/60 border border-gray-700/50 rounded-xl p-4 flex flex-col items-center justify-center transition hover:scale-105 hover:shadow-lg hover:shadow-gray-700/30 duration-200 backdrop-blur-xs" 
+                            data-aos = "fade-down-left"
                         >
                             <div className="text-5xl mb-2">
                                 {skill.icon}

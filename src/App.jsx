@@ -50,7 +50,7 @@ const items = [
 
 const App = () => {
     return (
-        <section className='min-h-screen bg-black'>
+        <section className='min-h-screen bg-black overflow-hidden scroll-smooth'>
             <BubbleMenu
                 logo={<span style={{ fontWeight: 900, fontSize: '1.2rem' }}>ABID KHAN</span>}
                 items={items}
@@ -63,7 +63,7 @@ const App = () => {
                 staggerDelay={0.12}
             />
             <div className="relative z-10 min-h-screen flex items-center justify-center text-center">
-                <div className="inline-block">
+                <div className="inline-block" data-aos="zoom-in" >
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 w-full text-white">
                         Frontend Developer
                     </h1>
