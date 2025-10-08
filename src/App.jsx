@@ -67,7 +67,8 @@ const App = () => {
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 w-full text-white">
                         Frontend Developer
                     </h1>
-                    <p className="text-lg md:text-2xl animate-bounce text-white">
+                    <p className="text-lg md:text-2xl animate-bounce text-white"
+                    >
                         Clean code | creative design <br />
                         Turning ideas into smooth web apps
                     </p>
@@ -114,17 +115,22 @@ const App = () => {
                     }}
                 />
             </div>
+
+
             <div className="relative z-10 min-h-screen text-white">
                 <ProjectCards />
             </div>
+
 
             <div className="relative z-10 min-h-screen text-white">
                 <SkillsSection />
             </div>
 
+
             <div className="relative z-10 text-white">
                 <ContactSection />
             </div>
+
 
             <Footer />
 

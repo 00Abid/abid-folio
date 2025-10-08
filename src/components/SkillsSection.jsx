@@ -1,18 +1,30 @@
 import React from "react";
+import {
+    FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaPython, FaGithub, FaChartLine
+}
+    from "react-icons/fa";
+import {
+    SiNextdotjs, SiTailwindcss, SiCplusplus, SiVercel, SiGoogletagmanager, SiPagespeedinsights, SiLighthouse, SiGoogleanalytics
+}
+    from "react-icons/si";
 
 const skills = [
-    { name: "HTML", icon: "fa-brands fa-html5 text-orange-500" },
-    { name: "CSS", icon: "fa-brands fa-css3-alt text-blue-500" },
-    { name: "JavaScript", icon: "fa-brands fa-js text-yellow-400" },
-    { name: "React", icon: "fa-brands fa-react text-cyan-400" },
-    { name: "Next JS", icon: "fa-solid fa-code text-white" },
-    { name: "Bootstrap", icon: "fa-brands fa-bootstrap text-purple-500" },
-    { name: "Tailwind CSS", icon: "fa-solid fa-wind text-sky-400" },
-    { name: "Python", icon: "fa-brands fa-python text-yellow-400" },
-    { name: "C++", icon: "fa-solid fa-code text-blue-400" },
-    { name: "Git / Github", icon: "fa-brands fa-github text-white" },
-    { name: "Vercel", icon: "fa-solid fa-cloud text-gray-300" },
-    { name: "SEO", icon: "fa-solid fa-chart-line text-emerald-400" },
+    { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
+    { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
+    { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
+    { name: "React", icon: <FaReact className="text-cyan-400" /> },
+    { name: "Next JS", icon: <SiNextdotjs className="text-white" /> },
+    { name: "Bootstrap", icon: <FaBootstrap className="text-purple-500" /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400" /> },
+    { name: "Python", icon: <FaPython /> },
+    { name: "C++", icon: <SiCplusplus className="text-blue-400" /> },
+    { name: "Git / Github", icon: <FaGithub className="text-white" /> },
+    { name: "Vercel", icon: <SiVercel className="text-white" /> },
+    { name: "SEO", icon: <FaChartLine className="text-emerald-400" /> },
+    { name: "Google Analytics", icon: <SiGoogleanalytics className="text-orange-500" /> },
+    { name: "Google Tag Manager", icon: <SiGoogletagmanager className="text-blue-400" /> },
+    { name: "PageSpeed Insights", icon: <SiPagespeedinsights className="text-green-400" /> },
+    { name: "Google Lighthouse", icon: <SiLighthouse className="text-red-400" /> },
 ];
 
 const SkillsSection = () => {
@@ -27,12 +39,11 @@ const SkillsSection = () => {
                     {skills.map((skill, index) => (
                         <div
                             key={index}
-                            className="w-[150px] h-[100px] bg-gray-800/60 border border-gray-700/50 rounded-xl p-4 flex flex-col items-center justify-center transition hover:scale-105 hover:shadow-lg hover:shadow-gray-700/30 duration-200"
+                            className="w-[150px] h-[100px] bg-gray-800/60 border border-gray-700/50 rounded-xl p-4 flex flex-col items-center justify-center transition hover:scale-105 hover:shadow-lg hover:shadow-gray-700/30 duration-200 backdrop-blur-sm" data-aos = "fade-right"
                         >
-                            <i
-                                className={`${skill.icon} text-5xl mb-2`}
-                                aria-hidden="true"
-                            ></i>
+                            <div className="text-5xl mb-2">
+                                {skill.icon}
+                            </div>
                             <span className="text-xs font-semibold mt-2">
                                 {skill.name}
                             </span>

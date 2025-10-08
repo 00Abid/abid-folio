@@ -2,10 +2,42 @@
 
 A minimal React 19 + Vite 7 starter preconfigured with Tailwind CSS v4 and ESLint.
 
-- React: 19.x
-- Vite: 7.x with @vitejs/plugin-react
-- Tailwind CSS: 4.x via @tailwindcss/vite
-- ESLint: 9.x
+## Tech Stack and Libraries Used
+
+- React 19.x
+- Vite 7.x with @vitejs/plugin-react
+- Tailwind CSS 4.x via @tailwindcss/vite
+- tailwind-merge for class merging
+- tw-animate-css for utility animations
+- React Icons and Font Awesome Free for iconography
+- GSAP for animations
+- Lenis for smooth scrolling
+- Three.js and postprocessing (used by the Hyperspeed effect)
+- uuid for unique IDs
+- AOS (Animate On Scroll) for scroll-triggered animations
+- ESLint 9.x for linting
+
+Assets and SEO:
+- Public assets under /public (images, favicon, resume)
+- SEO setup in <mcfile name="index.html" path="c:\Users\crobb\OneDrive\Desktop\SEO\abid-folio\index.html"></mcfile> including Open Graph/Twitter meta, sitemap.xml, and robots.txt
+
+## AOS (Animate On Scroll)
+
+- Initialization is done globally in <mcfile name="main.jsx" path="c:\Users\crobb\OneDrive\Desktop\SEO\abid-folio\src\main.jsx"></mcfile> with sensible defaults (duration, easing, once, offset).
+- Use it in components via `data-aos` attributes, e.g. `data-aos="fade-up"`.
+- Example usage is present in <mcfile name="App.jsx" path="c:\Users\crobb\OneDrive\Desktop\SEO\abid-folio\src\App.jsx"></mcfile> where an element uses `data-aos="fade-up"`.
+
+## Key Components
+
+- BubbleMenu: Floating interactive menu.
+- Hyperspeed: 3D road effect powered by Three.js.
+- ProjectsCards, SkillsSection, ContactSection: Content sections using Tailwind and icon libraries.
+- Footer: Basic footer.
+
+## Notes
+
+- Tailwind is imported in <mcfile name="index.css" path="c:\Users\crobb\OneDrive\Desktop\SEO\abid-folio\src\index.css"></mcfile> and themed via CSS variables.
+- Vite configuration includes Tailwind plugin in <mcfile name="vite.config.js" path="c:\Users\crobb\OneDrive\Desktop\SEO\abid-folio\vite.config.js"></mcfile>.
 
 ## Prerequisites
 
