@@ -1,167 +1,135 @@
-# React + Tailwind (Vite)
+# Abid Khan - Portfolio Website
 
-A minimal React 19 + Vite 7 starter preconfigured with Tailwind CSS v4 and ESLint.
+A modern, interactive portfolio website showcasing frontend development skills with stunning 3D animations and smooth user experience.
 
-## Tech Stack and Libraries Used
+## 🚀 Features
+
+- **Interactive 3D Road Animation** - Hyperspeed effect using Three.js
+- **Floating Bubble Menu** - Smooth navigation with GSAP animations
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **Smooth Scrolling** - Enhanced UX with Lenis
+- **SEO Optimized** - Meta tags, sitemap, and robots.txt included
+- **Performance Focused** - Built with Vite for fast development and builds
+
+## 🛠️ Tech Stack
+
+**Frontend Framework:**
 
 - React 19.x
-- Vite 7.x with @vitejs/plugin-react
-- Tailwind CSS 4.x via @tailwindcss/vite
-- tailwind-merge for class merging
-- tw-animate-css for utility animations
-- React Icons and Font Awesome Free for iconography
-- GSAP for animations
-- Lenis for smooth scrolling
-- Three.js and postprocessing (used by the Hyperspeed effect)
-- uuid for unique IDs
-- AOS (Animate On Scroll) for scroll-triggered animations
-- ESLint 9.x for linting
+- Vite 7.x
 
-Assets and SEO:
-- Public assets under /public (images, favicon, resume)
-- SEO setup in <mcfile name="index.html" path="c:\Users\crobb\OneDrive\Desktop\SEO\abid-folio\index.html"></mcfile> including Open Graph/Twitter meta, sitemap.xml, and robots.txt
+**Styling & UI:**
 
-## AOS (Animate On Scroll)
+- Tailwind CSS 4.x
+- GSAP (animations)
+- React Icons & Font Awesome
 
-- Initialization is done globally in <mcfile name="main.jsx" path="c:\Users\crobb\OneDrive\Desktop\SEO\abid-folio\src\main.jsx"></mcfile> with sensible defaults (duration, easing, once, offset).
-- Use it in components via `data-aos` attributes, e.g. `data-aos="fade-up"`.
-- Example usage is present in <mcfile name="App.jsx" path="c:\Users\crobb\OneDrive\Desktop\SEO\abid-folio\src\App.jsx"></mcfile> where an element uses `data-aos="fade-up"`.
+**3D Graphics:**
 
-## Key Components
+- Three.js
+- Postprocessing
 
-- BubbleMenu: Floating interactive menu.
-- Hyperspeed: 3D road effect powered by Three.js.
-- ProjectsCards, SkillsSection, ContactSection: Content sections using Tailwind and icon libraries.
-- Footer: Basic footer.
+**Additional Libraries:**
 
-## Notes
+- Lenis (smooth scrolling)
+- UUID (unique identifiers)
+- Tailwind-merge (class optimization)
 
-- Tailwind is imported in <mcfile name="index.css" path="c:\Users\crobb\OneDrive\Desktop\SEO\abid-folio\src\index.css"></mcfile> and themed via CSS variables.
-- Vite configuration includes Tailwind plugin in <mcfile name="vite.config.js" path="c:\Users\crobb\OneDrive\Desktop\SEO\abid-folio\vite.config.js"></mcfile>.
+## 📁 Key Components
 
-## Prerequisites
+- **BubbleMenu** - Interactive floating navigation
+- **Hyperspeed** - 3D road effect with customizable colors
+- **ProjectCards** - Showcase of development projects
+- **SkillsSection** - Technical skills display
+- **ContactSection** - Contact information and links
+- **Footer** - Site footer with additional info
+
+## 🚀 Quick Start
+
+### Prerequisites
 
 - Node.js 18+ (LTS 20 recommended)
-- npm 9+ (or your preferred package manager)
+- npm 9+ or yarn/pnpm
 
-## Getting Started
+### Installation & Setup
 
-1. Install dependencies
+1. **Clone the repository**
+
+```bash
+git clone <repository-url>
+cd abid-portfolio
+```
+
+2. **Install dependencies**
 
 ```bash
 npm install
 ```
 
-2. Start the dev server
+3. **Start development server**
 
 ```bash
 npm run dev
 ```
 
-The app runs by default at http://localhost:5173
+Visit `http://localhost:5173` to view the site
 
-## Available Scripts
+### Available Scripts
 
-- dev: Start Vite dev server with HMR
-- build: Production build to the dist/ folder
-- preview: Preview the production build locally
-- lint: Run ESLint
+| Command           | Description                       |
+| ----------------- | --------------------------------- |
+| `npm run dev`     | Start development server with HMR |
+| `npm run build`   | Create production build           |
+
+
+## 📁 Project Structure
+
+```
+abid-portfolio/
+├── public/
+│   ├── profile.jpg           # Profile image
+│   ├── Abid_Khan_Resume.pdf  # Resume file
+│   ├── *.webp               # Project images
+│   ├── sitemap.xml          # SEO sitemap
+│   └── robots.txt           # SEO robots file
+├── src/
+│   ├── components/
+│   │   ├── BubbleMenu.jsx   # Navigation component
+│   │   ├── Hyperspeed.jsx   # 3D road animation
+│   │   ├── ProjectCards.jsx # Projects showcase
+│   │   ├── SkillsSection.jsx# Skills display
+│   │   ├── ContactSection.jsx# Contact info
+│   │   └── Footer.jsx       # Site footer
+│   ├── presets/            # Utility presets
+│   ├── App.jsx             # Main app component
+│   ├── main.jsx            # React entry point
+│   └── index.css           # Global styles
+├── index.html              # HTML template
+├── vite.config.js          # Vite configuration
+└── package.json            # Dependencies
+```
+
+## 🚀 Deployment
+
+
+### Preview Build Locally
 
 ```bash
 npm run dev
-npm run build
-npm run preview
-npm run lint
 ```
 
-## Tailwind CSS Setup
+## 🔧 Development Notes
 
-This project uses Tailwind CSS v4 with the official Vite plugin.
+- **Tailwind CSS v4** with Vite plugin integration
+- **SEO Ready** with meta tags and structured data
+- **Performance Optimized** with code splitting and lazy loading
+- **Accessibility Compliant** with proper ARIA labels
+- **Mobile Responsive** with touch-friendly interactions
 
-- vite.config.js includes the Tailwind plugin:
+## 📝 License
 
-```js
-import tailwindcss from '@tailwindcss/vite'
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-})
-```
+This project is open source and available under the [MIT License](LICENSE).
 
-- src/index.css imports Tailwind layers:
+---
 
-```css
-@import "tailwindcss";
-```
-
-Use Tailwind classes directly in your JSX, e.g.:
-
-```jsx
-<div className="p-6 rounded-xl bg-amber-800 text-white">Hello</div>
-```
-
-Note: Ensure you use valid Tailwind tokens (e.g., `bg-slate-500`, `bg-gray-200`). Shadeless color names like `bg-slate` or `bg-gray` are not valid.
-
-## Project Structure
-
-```
-react+tailwind/
-├─ public/
-│  └─ vite.svg
-├─ src/
-│  ├─ assets/
-│  │  └─ react.svg
-│  ├─ App.css
-│  ├─ App.jsx
-│  ├─ index.css
-│  └─ main.jsx
-├─ .gitignore
-├─ eslint.config.js
-├─ index.html
-├─ package.json
-├─ README.md
-└─ vite.config.js
-```
-
-Key entry points:
-- index.html: App mount point and module script
-- src/main.jsx: React root and global CSS import
-- src/App.jsx: Example component using Tailwind classes
-
-## Build & Deploy
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-- Output is written to dist/
-- Deploy the dist/ folder to any static host (e.g., Netlify, Vercel, GitHub Pages, S3 + CloudFront)
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
-
-## Linting
-
-```bash
-npm run lint
-```
-
-Adjust rules in eslint.config.js as needed.
-
-## Troubleshooting
-
-- Styles not applying:
-  - Confirm src/index.css is imported in src/main.jsx
-  - Ensure the Tailwind plugin is present in vite.config.js
-  - Use valid Tailwind class names with proper scales (e.g., `bg-gray-500`)
-- Dev server issues:
-  - Check Node.js version (>= 18)
-  - If the default port is busy, set a custom port in the Vite config or start command
-
-## License
-
-No license specified.
+**Built with ❤️ by Abid Khan**
