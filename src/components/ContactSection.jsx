@@ -5,27 +5,27 @@ const socialLinks = [
     {
         id: 1,
         href: "mailto:kaabid1557@gmail.com",
-        icon: <FaEnvelope size={40} className="text-red-500" />,
+        icon: <FaEnvelope size={40} />,
     },
     {
         id: 2,
         href: "https://x.com/kaabid1557",
-        icon: <FaTwitter size={40} className="text-blue-400" />,
+        icon: <FaTwitter size={40} />,
     },
     {
         id: 3,
         href: "https://github.com/00Abid",
-        icon: <FaGithub size={40} className="text-white" />, 
+        icon: <FaGithub size={40} />,
     },
     {
         id: 4,
         href: "https://www.linkedin.com/in/abid-khan-coder/",
-        icon: <FaLinkedin size={40} className="text-blue-700" />,
+        icon: <FaLinkedin size={40} />,
     },
     {
         id: 5,
         href: "/Abid_Khan_Resume.pdf",
-        icon: <FaFilePdf size={40} className="text-red-600" />,
+        icon: <FaFilePdf size={40} />,
     },
 ];
 

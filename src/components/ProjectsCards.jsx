@@ -23,7 +23,7 @@ const projects = [
         tech: "Next.js · Tailwind CSS · AOS · Shadcn UI",
         desc: "A modern, Professional Cosmetic Website made using NextJS, Tailwind CSS",
         image: "/lb.webp",
-        link: "https://abidkhan.vercel.app/",
+        link: "https://liyanabeauty.vercel.app/",
     },
     {
         id: 4,
@@ -31,7 +31,7 @@ const projects = [
         tech: "React · Tailwind CSS · SEO · AOS",
         desc: "An seo optimized business website for AERO ENTERPRISES with Googletools",
         image: "/ae.webp",
-        link: "https://stock-analyzer-ai.vercel.app/",
+        link: "https://aeroenyterprises.shop/",
     },
 ];
 
