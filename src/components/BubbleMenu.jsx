@@ -343,7 +343,7 @@ export default function BubbleMenu({
                                         ['--item-rot']: `${item.rotation ?? 0}deg`,
                                         ['--pill-bg']: menuBg,
                                         ['--pill-color']: menuContentColor,
-                                        ['--hover-bg']: item.hoverStyles?.bgColor || '#f3f4f6',
+                                        ['--hover-bg']: item.hoverStyles?.bgColor || '#03B3C3',
                                         ['--hover-color']: item.hoverStyles?.textColor || menuContentColor,
                                         background: 'var(--pill-bg)',
                                         color: 'var(--pill-color)',
@@ -357,6 +357,18 @@ export default function BubbleMenu({
                                     }}
                                     ref={el => {
                                         if (el) bubblesRef.current[idx] = el;
+                                    }}
+                                    onClick={(e) => {
+                                        const href = item.href || '#';
+                                        if (href.startsWith('#')) {
+                                            e.preventDefault();
+                                            const id = href.slice(1);
+                                            const el = document.getElementById(id);
+                                            if (el) {
+                                                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                            }
+                                            setIsMenuOpen(false);
+                                        }
                                     }}
                                 >
                                     <span

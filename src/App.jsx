@@ -5,45 +5,46 @@ import ProjectCards from './components/ProjectsCards.jsx'
 import SkillsSection from './components/SkillsSection.jsx';
 import ContactSection from './components/ContactSection.jsx';
 import Footer from './components/Footer.jsx';
+import ExperienceSection from './components/ExperienceSection.jsx';
 
 
 
 const items = [
     {
         label: 'Home',
-        href: '#',
+        href: '#home',
         ariaLabel: 'Home',
         rotation: -8,
-        hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
+        hoverStyles: { bgColor: '#03B3C3', textColor: '#ffffff' }
     },
     {
         label: 'Projects',
-        href: '#',
+        href: '#projects',
         ariaLabel: 'Projects',
         rotation: 8,
-        hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
+        hoverStyles: { bgColor: '#03B3C3', textColor: '#ffffff' }
     },
     {
         label: 'Skills',
-        href: '#',
+        href: '#skills',
         ariaLabel: 'Skills',
         rotation: 8,
-        hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
+        hoverStyles: { bgColor: '#03B3C3', textColor: '#ffffff' }
+    },
+    {
+        label: 'Experience',
+        href: '#experience',
+        ariaLabel: 'Experience',
+        rotation: 8,
+        hoverStyles: { bgColor: '#03B3C3', textColor: '#ffffff' }
     },
     {
         label: 'Contact',
-        href: '#',
+        href: '#contact',
         ariaLabel: 'Contact',
         rotation: -8,
-        hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
+        hoverStyles: { bgColor: '#03B3C3', textColor: '#ffffff' }
     },
-    {
-        label: 'Resume',
-        href: '/Abid_Khan_Resume.pdf',
-        ariaLabel: 'Resume',
-        rotation: -8,
-        hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
-    }
 ];
 
 
@@ -62,7 +63,7 @@ const App = () => {
                 animationDuration={0.5}
                 staggerDelay={0.12}
             />
-            <div className="relative z-10 min-h-screen flex items-center justify-center text-center">
+            <div className="relative z-10 min-h-screen flex items-center justify-center text-center" id="home">
                 <div className="inline-block" >
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 w-full text-white">
                         Frontend Developer
@@ -117,17 +118,20 @@ const App = () => {
             </div>
 
 
-            <div className="relative z-10 min-h-screen text-white">
+            <div className="relative z-10 min-h-screen text-white" id="projects">
                 <ProjectCards />
             </div>
 
 
-            <div className="relative z-10 min-h-screen text-white">
+            <div className="relative z-10 min-h-screen text-white" id="skills">
                 <SkillsSection />
             </div>
 
+            <div className="relative z-10 min-h-screen text-white" id="experience">
+                <ExperienceSection />
+            </div>
 
-            <div className="relative z-10 text-white">
+            <div className="relative z-10 text-white" id="contact">
                 <ContactSection />
             </div>
 

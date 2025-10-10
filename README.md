@@ -72,64 +72,110 @@ npm install
 npm run dev
 ```
 
-Visit `http://localhost:5173` to view the site
+The app runs by default at http://localhost:5173
 
-### Available Scripts
+## Available Scripts
 
-| Command           | Description                       |
-| ----------------- | --------------------------------- |
-| `npm run dev`     | Start development server with HMR |
-| `npm run build`   | Create production build           |
-
-
-## 📁 Project Structure
-
-```
-abid-portfolio/
-├── public/
-│   ├── profile.jpg           # Profile image
-│   ├── Abid_Khan_Resume.pdf  # Resume file
-│   ├── *.webp               # Project images
-│   ├── sitemap.xml          # SEO sitemap
-│   └── robots.txt           # SEO robots file
-├── src/
-│   ├── components/
-│   │   ├── BubbleMenu.jsx   # Navigation component
-│   │   ├── Hyperspeed.jsx   # 3D road animation
-│   │   ├── ProjectCards.jsx # Projects showcase
-│   │   ├── SkillsSection.jsx# Skills display
-│   │   ├── ContactSection.jsx# Contact info
-│   │   └── Footer.jsx       # Site footer
-│   ├── presets/            # Utility presets
-│   ├── App.jsx             # Main app component
-│   ├── main.jsx            # React entry point
-│   └── index.css           # Global styles
-├── index.html              # HTML template
-├── vite.config.js          # Vite configuration
-└── package.json            # Dependencies
-```
-
-## 🚀 Deployment
-
-
-### Preview Build Locally
+- dev: Start Vite dev server with HMR
+- build: Production build to the dist/ folder
+- preview: Preview the production build locally
+- lint: Run ESLint
 
 ```bash
 npm run dev
+npm run build
+npm run preview
+npm run lint
 ```
 
-## 🔧 Development Notes
+## Tailwind CSS Setup
 
-- **Tailwind CSS v4** with Vite plugin integration
-- **SEO Ready** with meta tags and structured data
-- **Performance Optimized** with code splitting and lazy loading
-- **Accessibility Compliant** with proper ARIA labels
-- **Mobile Responsive** with touch-friendly interactions
+This project uses Tailwind CSS v4 with the official Vite plugin.
 
-## 📝 License
+- vite.config.js includes the Tailwind plugin:
 
-This project is open source and available under the [MIT License](LICENSE).
+```js
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
+```
 
----
+- src/index.css imports Tailwind layers:
 
-**Built with ❤️ by Abid Khan**
+```css
+@import "tailwindcss";
+```
+
+Use Tailwind classes directly in your JSX, e.g.:
+
+```jsx
+<div className="p-6 rounded-xl bg-amber-800 text-white">Hello</div>
+```
+
+Note: Ensure you use valid Tailwind tokens (e.g., `bg-slate-500`, `bg-gray-200`). Shadeless color names like `bg-slate` or `bg-gray` are not valid.
+
+## Project Structure
+
+```
+react+tailwind/
+├─ public/
+│  └─ vite.svg
+├─ src/
+│  ├─ assets/
+│  │  └─ react.svg
+│  ├─ App.css
+│  ├─ App.jsx
+│  ├─ index.css
+│  └─ main.jsx
+├─ .gitignore
+├─ eslint.config.js
+├─ index.html
+├─ package.json
+├─ README.md
+└─ vite.config.js
+```
+
+Key entry points:
+- index.html: App mount point and module script
+- src/main.jsx: React root and global CSS import
+- src/App.jsx: Example component using Tailwind classes
+
+## Build & Deploy
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+- Output is written to dist/
+- Deploy the dist/ folder to any static host (e.g., Netlify, Vercel, GitHub Pages, S3 + CloudFront)
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Linting
+
+```bash
+npm run lint
+```
+
+Adjust rules in eslint.config.js as needed.
+
+## Troubleshooting
+
+- Styles not applying:
+  - Confirm src/index.css is imported in src/main.jsx
+  - Ensure the Tailwind plugin is present in vite.config.js
+  - Use valid Tailwind class names with proper scales (e.g., `bg-gray-500`)
+- Dev server issues:
+  - Check Node.js version (>= 18)
+  - If the default port is busy, set a custom port in the Vite config or start command
+
+## License
+
+No license specified.

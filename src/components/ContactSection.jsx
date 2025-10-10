@@ -24,7 +24,7 @@ const socialLinks = [
     },
     {
         id: 5,
-        href: "/Abid_Khan_Resume.pdf",
+        href: "/Abid_resume.pdf",
         icon: <FaFilePdf size={40} />,
     },
 ];
