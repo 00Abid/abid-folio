@@ -61,17 +61,15 @@ const ExperienceSection = () => {
 
                             {/* Body */}
                             <div className="px-6 pb-6 pt-4">
-                                <div className="m-3">
-                                    <p className="text-shadow-2xs text-gray-300 font-bold" >Job Description</p>
-
+                                <div>
+                                    <ul className="list-disc list-inside text-gray-300 space-y-2">
+                                        {exp.points.map((point, idx) => (
+                                            <li key={idx} className="text-[9px] md:text-sm">
+                                                {point}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-                                <ul className="list-none flex flex-wrap gap-2">
-                                    {exp.points.map((point, idx) => (
-                                        <li key={idx} className="text-xs md:text-sm bg-white/10 border border-white/10 rounded-full px-2 py-3 text-gray-200">
-                                            {point}
-                                        </li>
-                                    ))}
-                                </ul>
                             </div>
                         </div>
                     ))}

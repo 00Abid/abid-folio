@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaFilePdf } from "react-icons/fa";
+import { SiX } from "react-icons/si";
 
 const socialLinks = [
     {
@@ -10,7 +11,7 @@ const socialLinks = [
     {
         id: 2,
         href: "https://x.com/kaabid1557",
-        icon: <FaTwitter size={40} />,
+        icon: <SiX size={40} />,
     },
     {
         id: 3,
