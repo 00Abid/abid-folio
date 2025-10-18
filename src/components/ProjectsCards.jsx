@@ -13,7 +13,7 @@ const projects = [
         id: 2,
         title: "CaloriCurve - Nutrition Tracker",
         tech: "HTML · CSS · JS · Firebase",
-        desc: "Track meals, calories, and nutrients daily with AI powered Food recognition and smart recommendations",
+        desc: "AI powered nutrition tracker to log meals, track calories, and moniter progress",
         image: "/ca.webp",
         link: "https://caloricurve.vercel.app/",
     },
