@@ -17,12 +17,15 @@ const experiences = [
     },
 ];
 
+
 const ExperienceSection = () => {
     return (
         <div className="relative z-10 text-white flex flex-col items-center px-4 py-12 md:py-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-10">Experience</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">
+                Experience
+            </h2>
 
-            <div className="container mx-auto max-w-7xl px-6 md:px-8 py-2 text-white">
+            <div className=" mx-auto  px-6 md:px-8 py-2 text-white">
                 <div className="grid grid-cols-1 gap-8">
                     {experiences.map((exp) => (
                         <div

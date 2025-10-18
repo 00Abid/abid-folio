@@ -127,7 +127,7 @@ const App = () => {
                 <SkillsSection />
             </div>
 
-            <div className="relative z-10 min-h-screen text-white" id="experience">
+            <div className="relative z-10 text-white" id="experience">
                 <ExperienceSection />
             </div>
 
