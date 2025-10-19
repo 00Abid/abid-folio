@@ -129,7 +129,7 @@ const App = () => {
                     <SkillsSection />
                 </section>
 
-                <section className="relative z-10 min-h-screen text-white" id="experience" aria-labelledby="experience-heading">
+                <section className="relative z-10 text-white" id="experience" aria-labelledby="experience-heading">
                     <ExperienceSection />
                 </section>
 
