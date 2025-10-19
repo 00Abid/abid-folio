@@ -7,10 +7,10 @@ const experiences = [
         role: "SDE Intern",
         period: "Sep 2025 – Present",
         location: "USA - Remote",
-        logo: "/sai.webp", // placeholder company logo
+        logo: "/sai.webp",
         points: [
             "SEO-friendly UIs with React/Next.js + SSR",
-            "Remote collaboration with cross‑functional teams",
+            "Remote collaboration with cross functional teams",
             "Performance optimization across devices/browsers",
             "Code reviews, SEO fixes with Lighthouse & GSC",
         ],
@@ -21,14 +21,14 @@ const experiences = [
 const ExperienceSection = () => {
     return (
         <div className="relative z-10 text-white flex flex-col items-center px-4 py-12 md:py-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">
+            <h2 id="experience-heading" className="text-4xl md:text-5xl font-bold text-center mb-10">
                 Experience
             </h2>
 
             <div className=" mx-auto  px-6 md:px-8 py-2 text-white">
                 <div className="grid grid-cols-1 gap-8">
                     {experiences.map((exp) => (
-                        <div
+                        <article
                             key={exp.id}
                             className="w-full rounded-2xl overflow-hidden shadow-xl bg-white/10 border border-white/10 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.02]"
                             data-aos="fade-up"
@@ -62,7 +62,6 @@ const ExperienceSection = () => {
                                 </div>
                             </div>
 
-                            {/* Body */}
                             <div className="px-6 pb-6 pt-4">
                                 <div>
                                     <ul className="list-disc list-inside text-gray-300 space-y-2">
@@ -74,7 +73,7 @@ const ExperienceSection = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>

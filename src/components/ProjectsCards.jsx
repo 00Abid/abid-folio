@@ -13,7 +13,7 @@ const projects = [
         id: 2,
         title: "CaloriCurve - Nutrition Tracker",
         tech: "HTML · CSS · JS · Firebase",
-        desc: "AI powered nutrition tracker to log meals, track calories, and moniter progress",
+        desc: "AI powered nutrition tracker to log meals, track calories, and monitor progress",
         image: "/ca.webp",
         link: "https://caloricurve.vercel.app/",
     },
@@ -39,14 +39,14 @@ const projects = [
 const ProjectCards = () => {
     return (
         <div className="relative z-10 min-h-screen text-white flex flex-col items-center justify-center px-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">
+            <h2 id="projects-heading" className="text-4xl md:text-5xl font-bold text-center mb-10">
                 Projects
             </h2>
 
             <div className="container mx-auto max-w-7xl px-6 md:px-8 py-4 text-white">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project) => (
-                        <div
+                        <article
                             key={project.id}
                             className="w-full rounded-2xl overflow-hidden shadow-xl bg-white/10 border border-white/10 backdrop-blur-sm transition-transform duration-300 hover:scale-[1.02]"
                         >
@@ -56,6 +56,8 @@ const ProjectCards = () => {
                                 alt={`${project.title} by Abid Khan`}
                                 loading="lazy"
                                 decoding="async"
+                                width="400"
+                                height="192"
                             />
                             <div className="px-6 py-5">
                                 <h3 className="font-bold text-xl mb-2 text-white">{project.title}</h3>
@@ -66,6 +68,7 @@ const ProjectCards = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center bg-transparent border-none cursor-pointer group mt-4"
+                                    aria-label={`View ${project.title} live demo`}
                                 >
                                     <span className="relative text-white text-sm pr-4 pb-2 after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-white after:bottom-0 after:left-0 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 group-hover:after:origin-bottom-left">
                                         Live Preview
@@ -73,7 +76,7 @@ const ProjectCards = () => {
 
                                 </a>
                             </div>
-                        </div>
+                        </article>
                     ))}
                 </div>
             </div>

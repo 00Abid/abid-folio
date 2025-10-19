@@ -30,18 +30,19 @@ const skills = [
 const SkillsSection = () => {
     return (
         <div className="relative z-10 min-h-screen text-white flex flex-col items-center justify-center px-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-center my-10">
+            <h2 id="skills-heading" className="text-4xl md:text-5xl font-bold text-center my-10">
                 Skills
             </h2>
 
             <div className="mt-10 w-[95%] md:w-2/3 self-center">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6" role="list" aria-label="Technical skills">
                     {skills.map((skill, index) => (
                         <div
                             key={index}
+                            role="listitem"
                             className="w-[150px] h-[100px] bg-white/10 border border-white/10 rounded-xl p-4 flex flex-col items-center justify-center transition hover:scale-105 hover:shadow-lg  duration-200 backdrop-blur-xs"
                         >
-                            <div className="text-5xl mb-2">
+                            <div className="text-5xl mb-2" aria-hidden="true">
                                 {skill.icon}
                             </div>
                             <span className="text-xs font-semibold mt-2">

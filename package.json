@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "update-sitemap": "node scripts/update-sitemap.js",
+    "prebuild": "npm run update-sitemap"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
