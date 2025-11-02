@@ -122,18 +122,22 @@ const App = () => {
                 </div>
 
                 <section className="relative z-10 min-h-screen text-white" id="projects" aria-labelledby="projects-heading">
+                    <h2 id="projects-heading" className="sr-only">Featured Projects and Portfolio Work</h2>
                     <ProjectCards />
                 </section>
 
                 <section className="relative z-10 min-h-screen text-white" id="skills" aria-labelledby="skills-heading">
+                    <h2 id="skills-heading" className="sr-only">Technical Skills and Expertise</h2>
                     <SkillsSection />
                 </section>
 
                 <section className="relative z-10 text-white" id="experience" aria-labelledby="experience-heading">
+                    <h2 id="experience-heading" className="sr-only">Professional Experience and Background</h2>
                     <ExperienceSection />
                 </section>
 
                 <section className="relative z-10 text-white" id="contact" aria-labelledby="contact-heading">
+                    <h2 id="contact-heading" className="sr-only">Contact Information and Social Links</h2>
                     <ContactSection />
                 </section>
             </main>

@@ -1,5 +1,24 @@
 User-agent: *
 Allow: /
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
 
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://abid-folio.vercel.app/sitemap.xml
+
+# Host preference
 Host: abid-folio.vercel.app
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

@@ -9,14 +9,16 @@ const experiences = [
         location: "USA - Remote",
         logo: "/sai.webp",
         points: [
-            "SEO-friendly UIs with React/Next.js + SSR",
-            "Remote collaboration with cross functional teams",
-            "Performance optimization across devices/browsers",
-            "Code reviews, SEO fixes with Lighthouse & GSC",
+            "Built fast, accessible interfaces with React, Next.js, and Tailwind CSS, boosting organic traffic and discoverability.",
+            "Researched AI journaling trends and analyzed competitor features to recommend product and UX improvements.",
+            "Implemented advanced SEO measures, raising search rankings and expanding organic reach by 20%.",
+            "Led marketing automation and journey projects, improving user retention by 20%.",
+            "Enhanced performance and accessibility for voice first apps, lifting Lighthouse scores and lowering bounce rates.",
+            "Delivered UI features with cross functional teams, speeding up releases and aligning product with business goals."
         ],
     },
-];
 
+];
 
 const ExperienceSection = () => {
     return (

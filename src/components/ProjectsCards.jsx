@@ -29,7 +29,7 @@ const projects = [
         id: 4,
         title: "AERO ENTERPRISES Website",
         tech: "React · Tailwind CSS · SEO · AOS",
-        desc: "An seo optimized business website for AERO ENTERPRISES with Googletools",
+        desc: "An SEO optimized business website for AERO ENTERPRISES with Google Tools integration.",
         image: "/ae.webp",
         link: "https://www.aeroenterprises.shop/",
     },
