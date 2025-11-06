@@ -1,31 +1,66 @@
 import React from "react";
 import {
-    FaHtml5, FaCss3Alt, FaJs, FaReact, FaBootstrap, FaPython, FaGithub, FaChartLine
-}
-    from "react-icons/fa";
+    FaHtml5,
+    FaCss3Alt,
+    FaJs,
+    FaReact,
+    FaBootstrap,
+    FaPython,
+    FaGithub,
+    FaChartLine,
+    FaSearch,
+    FaPenNib,
+    FaCode,
+    FaExternalLinkAlt,
+} from "react-icons/fa";
+
 import {
-    SiNextdotjs, SiTailwindcss, SiCplusplus, SiVercel, SiGoogletagmanager, SiPagespeedinsights, SiLighthouse, SiGoogleanalytics
-}
-    from "react-icons/si";
+    SiNextdotjs,
+    SiTailwindcss,
+    SiCplusplus,
+    SiVercel,
+    SiFirebase,
+    SiGoogletagmanager,
+    SiPagespeedinsights,
+    SiLighthouse,
+    SiGoogleanalytics,
+} from "react-icons/si";
+
 
 const skills = [
+    // 🧱 Frontend & Core
     { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
     { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
     { name: "React", icon: <FaReact className="text-cyan-400" /> },
-    { name: "Next JS", icon: <SiNextdotjs className="text-white" /> },
-    { name: "Bootstrap", icon: <FaBootstrap className="text-purple-500" /> },
+    { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400" /> },
-    { name: "Python", icon: <FaPython /> },
+    { name: "Bootstrap", icon: <FaBootstrap className="text-purple-500" /> },
+    { name: "Python", icon: <FaPython className="text-yellow-400" /> },
     { name: "C++", icon: <SiCplusplus className="text-blue-400" /> },
-    { name: "Git / Github", icon: <FaGithub className="text-white" /> },
+
+    // ⚙️ Tools & Platforms
+    { name: "Git / GitHub", icon: <FaGithub className="text-white" /> },
     { name: "Vercel", icon: <SiVercel className="text-white" /> },
-    { name: "SEO", icon: <FaChartLine className="text-emerald-400" /> },
-    { name: "Google Analytics", icon: <SiGoogleanalytics className="text-orange-500" /> },
+    { name: "Firebase", icon: <SiFirebase className="text-amber-400" /> },
+
+    // 🔍 SEO & Analytics Core
+    { name: "SEO Auditing", icon: <FaChartLine className="text-emerald-400" /> },
+    { name: "Technical SEO", icon: <SiGoogleanalytics className="text-green-400" /> },
+    { name: "On-Page Optimization", icon: <SiGoogletagmanager className="text-blue-400" /> },
+    { name: "Off-Page SEO", icon: <FaExternalLinkAlt className="text-gray-300" /> },
+    { name: "Keyword Research", icon: <FaSearch className="text-yellow-400" /> },
+    { name: "Content Optimization", icon: <FaPenNib className="text-pink-400" /> },
+    { name: "Structured Data", icon: <FaCode className="text-indigo-400" /> },
+
+    // 📊 SEO Tools & Monitoring
+    { name: "Google Search Console", icon: <SiGoogleanalytics className="text-orange-500" /> },
     { name: "Google Tag Manager", icon: <SiGoogletagmanager className="text-blue-400" /> },
-    { name: "PageSpeed Insights", icon: <SiPagespeedinsights className="text-green-400" /> },
+    { name: "Google Analytics", icon: <SiGoogleanalytics className="text-red-500" /> },
     { name: "Google Lighthouse", icon: <SiLighthouse className="text-red-400" /> },
+    { name: "PageSpeed Insights", icon: <SiPagespeedinsights className="text-green-400" /> },
 ];
+
 
 const SkillsSection = () => {
     return (
@@ -45,7 +80,7 @@ const SkillsSection = () => {
                             <div className="text-5xl mb-2" aria-hidden="true">
                                 {skill.icon}
                             </div>
-                            <span className="text-xs font-semibold mt-2">
+                            <span className="text-[10px] font-semibold mt-2">
                                 {skill.name}
                             </span>
                         </div>

@@ -6,6 +6,7 @@ import SkillsSection from './components/SkillsSection.jsx';
 import ContactSection from './components/ContactSection.jsx';
 import Footer from './components/Footer.jsx';
 import ExperienceSection from './components/ExperienceSection.jsx';
+import BlogSection from './components/BlogSection.jsx';
 
 
 
@@ -70,11 +71,11 @@ const App = () => {
                 <section className="relative z-10 min-h-screen flex items-center justify-center text-center" id="home" aria-label="Hero section">
                     <div className="inline-block">
                         <h1 className="text-3xl md:text-6xl font-bold mb-6 text-white">
-                            Abid Khan<br />Frontend Developer
+                            SEO Specialist & <br /> Frontend Dev
                         </h1>
                         <p className="text-lg md:text-2xl animate-bounce text-white">
-                            Clean code | creative design <br />
-                            Turning ideas into smooth web apps
+                            Smarter SEO. Faster Web. Better Results.
+
                         </p>
                     </div>
                 </section>
@@ -134,6 +135,11 @@ const App = () => {
                 <section className="relative z-10 text-white" id="experience" aria-labelledby="experience-heading">
                     <h2 id="experience-heading" className="sr-only">Professional Experience and Background</h2>
                     <ExperienceSection />
+                </section>
+
+                <section className="relative z-10 text-white" id="experience" aria-labelledby="experience-heading">
+                    <h2 id="experience-heading" className="sr-only">Professional Experience and Background</h2>
+                    <BlogSection />
                 </section>
 
                 <section className="relative z-10 text-white" id="contact" aria-labelledby="contact-heading">
