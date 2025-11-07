@@ -1,11 +1,16 @@
+# =============================
+# robots.txt for abid-folio.vercel.app
+# Last updated: Nov 2025
+# =============================
+
+# Default rule — allow all crawlers full access
 User-agent: *
 Allow: /
 
-
-# Sitemap location
+# Sitemap location (helps bots discover your site structure)
 Sitemap: https://abid-folio.vercel.app/sitemap.xml
 
-# Allow specific bots
+# Explicitly allow major search engine bots
 User-agent: Googlebot
 Allow: /
 
@@ -14,3 +19,18 @@ Allow: /
 
 User-agent: LinkedInBot
 Allow: /
+
+# Optional: Include social media and indexing bots
+User-agent: Twitterbot
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+# Disallow server files or environment configs (security best practice)
+Disallow: /api/
+Disallow: /server/
+Disallow: /private/
+Disallow: /*.env$
+
+
