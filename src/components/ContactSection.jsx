@@ -29,7 +29,7 @@ const socialLinks = [
     },
     {
         id: 5,
-        href: "/",
+        href: "/Resume_Abid_Khan.pdf",
         icon: <FaFilePdf size={40} />,
         label: "Download Abid Khan's resume (PDF)"
     },

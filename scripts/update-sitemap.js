@@ -20,37 +20,15 @@ const getCurrentDate = () => {
 const generateSitemap = () => {
     const currentDate = getCurrentDate();
 
+    // Use canonical paths (avoid fragment URLs). Include key site sections and case-studies.
     const urls = [
-        {
-            loc: SITE_URL + '/',
-            lastmod: currentDate,
-            changefreq: 'weekly',
-            priority: '1.0'
-        },
-        {
-            loc: SITE_URL + '/#projects',
-            lastmod: currentDate,
-            changefreq: 'weekly',
-            priority: '0.8'
-        },
-        {
-            loc: SITE_URL + '/#skills',
-            lastmod: currentDate,
-            changefreq: 'monthly',
-            priority: '0.7'
-        },
-        {
-            loc: SITE_URL + '/#experience',
-            lastmod: currentDate,
-            changefreq: 'monthly',
-            priority: '0.7'
-        },
-        {
-            loc: SITE_URL + '/#contact',
-            lastmod: currentDate,
-            changefreq: 'monthly',
-            priority: '0.6'
-        }
+        { loc: SITE_URL + '/', lastmod: currentDate, changefreq: 'weekly', priority: '1.0' },
+        { loc: SITE_URL + '/projects', lastmod: currentDate, changefreq: 'weekly', priority: '0.9' },
+        { loc: SITE_URL + '/skills', lastmod: currentDate, changefreq: 'monthly', priority: '0.8' },
+        { loc: SITE_URL + '/experience', lastmod: currentDate, changefreq: 'monthly', priority: '0.8' },
+        { loc: SITE_URL + '/blog', lastmod: currentDate, changefreq: 'weekly', priority: '0.8' },
+        { loc: SITE_URL + '/case-studies', lastmod: currentDate, changefreq: 'monthly', priority: '0.7' },
+        { loc: SITE_URL + '/contact', lastmod: currentDate, changefreq: 'monthly', priority: '0.6' }
     ];
 
     const urlEntries = urls.map(url => `  <url>

@@ -364,8 +364,31 @@ export default function BubbleMenu({
                                             e.preventDefault();
                                             const id = href.slice(1);
                                             const el = document.getElementById(id);
-                                            if (el) {
+
+                                            // If we're already on the homepage and the element exists, just scroll.
+                                            if (window.location.pathname === '/' && el) {
                                                 el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                                setIsMenuOpen(false);
+                                                return;
+                                            }
+
+                                            // Otherwise navigate to the homepage first, then attempt to scroll after render.
+                                            if (typeof window !== 'undefined') {
+                                                window.history.pushState({}, '', '/');
+                                                window.dispatchEvent(new PopStateEvent('popstate'));
+                                                // small delay to allow the home sections to mount, then scroll
+                                                setTimeout(() => {
+                                                    const el2 = document.getElementById(id);
+                                                    if (el2) el2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                                }, 120);
+                                            }
+                                            setIsMenuOpen(false);
+                                        } else if (href.startsWith('/')) {
+                                            // client-side navigation for internal pages (no full reload)
+                                            e.preventDefault();
+                                            if (typeof window !== 'undefined') {
+                                                window.history.pushState({}, '', href);
+                                                window.dispatchEvent(new PopStateEvent('popstate'));
                                             }
                                             setIsMenuOpen(false);
                                         }

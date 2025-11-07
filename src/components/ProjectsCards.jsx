@@ -39,8 +39,8 @@ const projects = [
         id: 5,
         title: "Ammu Cosmetics - SEO Cosmetic Website",
         tech: "Next.js · Tailwind CSS · SEO",
-        desc: "Created a modern, professional cosmetic brand website with a clean UI, responsive design, and engaging animations for an enhanced user experience.",
-        image: "/lb.webp",
+        desc: "Developed a modern, SEO optimized cosmetic website with structured data, dynamic metadata, and keyword rich content, improving crawlability, Core Web Vitals, and organic rankings through faster load times and mobile responsiveness.",
+        image: "/ac.webp",
         link: "https://ammu-cosmetics.vercel.app/",
     },
 ];

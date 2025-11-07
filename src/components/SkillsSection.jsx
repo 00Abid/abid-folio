@@ -9,6 +9,7 @@ import {
     FaGithub,
     FaChartLine,
     FaSearch,
+    FaGlobe,
     FaPenNib,
     FaCode,
     FaExternalLinkAlt,
@@ -52,6 +53,11 @@ const skills = [
     { name: "Keyword Research", icon: <FaSearch className="text-yellow-400" /> },
     { name: "Content Optimization", icon: <FaPenNib className="text-pink-400" /> },
     { name: "Structured Data", icon: <FaCode className="text-indigo-400" /> },
+    // Enterprise SEO additions
+    { name: "Site Management", icon: <FaCode className="text-yellow-400" /> },
+    { name: "Crawl Management", icon: <FaChartLine className="text-emerald-300" /> },
+    { name: "Programmatic SEO", icon: <FaExternalLinkAlt className="text-indigo-300" /> },
+    { name: "Multiregional SEO", icon: <FaGlobe className="text-sky-300" /> },
 
     // 📊 SEO Tools & Monitoring
     { name: "Google Search Console", icon: <SiGoogleanalytics className="text-orange-500" /> },
