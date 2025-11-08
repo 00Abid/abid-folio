@@ -521,11 +521,9 @@ const BlogSection = () => {
     return (
         <div className="relative min-h-screen py-8 px-4 text-white">
             <div className="max-w-7xl mx-auto relative z-10">
-                {/* BlogPosting JSON-LD for posts (rendered inline) */}
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogGraph) }} />
-                {/* FAQ JSON-LD moved to index.html */}
-                <header className="my-10">
-                    <h2 id="experience-heading" className="text-3xl md:text-4xl font-bold text-center mb-6">
+                <header className="my-14">
+                    <h2 id="experience-heading" className="text-3xl md:text-4xl font-bold text-center mb-6 ">
                         Enterprise SEO Resources
                     </h2>
                     <p className="text-sm text-gray-300 mt-1 text-center">Guides, playbooks and tools for technical and enterprise level SEO strategy.</p>
@@ -533,7 +531,7 @@ const BlogSection = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {posts.map(post => (
-                        <article key={post.id} className="bg-white/5 border border-white/6 rounded-lg overflow-hidden shadow-sm">
+                        <article key={post.id} className="bg-white/5 border border-white/6 rounded-lg overflow-hidden shadow-sm backdrop-blur-sm">
                             <div className="p-4">
                                 {/* Date is omitted as no date field in data */}
                                 <h3 className="text-sm md:text-base font-semibold text-white mt-1">{post.title}</h3>

@@ -9,13 +9,15 @@ const experiences = [
         location: "New York, USA",
         logo: "/sai.webp",
         points: [
-            "Conducted comprehensive SEO audits to enhance crawlability, indexing, and Core Web Vitals performance across AI journaling products.",
-            "Implemented structured data, meta tags, and advanced on-page SEO strategies to improve discoverability and boost search visibility by 20%.",
-            "Configured and managed Google Search Console, Google Tag Manager, and Bing Webmaster Tools for performance tracking and analytics insights.",
-            "Optimized site architecture and content hierarchy, leading to faster indexing and improved ranking consistency.",
-            "Collaborated with product and marketing teams to align SEO strategy with content goals, increasing organic reach and engagement.",
-            "Monitored Lighthouse scores and PageSpeed metrics, ensuring high accessibility, performance, and user retention across all platforms."
-        ],
+            "Built fast, accessible interfaces using React, Next.js, and Tailwind CSS, improving performance, Core Web Vitals, and organic reach.",
+            "Conducted comprehensive SEO audits to enhance crawlability, indexing, and overall site performance across AI journaling platforms.",
+            "Implemented on-page SEO optimizations including title tags, meta descriptions, alt text, and structured data, boosting search visibility and rankings.",
+            "Performed keyword research, market research, and competitor feature analysis to recommend product and UX improvements based on emerging trends.",
+            "Executed organic marketing campaigns on LinkedIn and X (Twitter) to improve brand visibility, drive traffic, and support SEO-driven content distribution.",
+            "Collaborated with product and marketing teams to align SEO strategy with content goals, achieving a 20% increase in organic traffic.",
+            "Monitored website performance using Lighthouse and PageSpeed Insights, optimizing load times, accessibility, and user experience."
+        ]
+
     },
 
 

@@ -8,8 +8,8 @@ import Footer from './components/Footer.jsx';
 import ExperienceSection from './components/ExperienceSection.jsx';
 import BlogPreview from './components/BlogPreview.jsx';
 import BlogSection from './pages/BlogSection.jsx';
+import CasePreview from './components/CasePreview.jsx';
 import CaseStudies from './pages/CaseStudies.jsx';
-
 
 
 const items = [
@@ -45,6 +45,13 @@ const items = [
         label: 'Blog',
         href: '/blog',
         ariaLabel: 'Navigate to blog section',
+        rotation: 8,
+        hoverStyles: { bgColor: '#03B3C3', textColor: '#ffffff' }
+    },
+    {
+        label: 'Case Studies',
+        href: '/case-studies',
+        ariaLabel: 'Navigate to case studies page',
         rotation: 8,
         hoverStyles: { bgColor: '#03B3C3', textColor: '#ffffff' }
     },
@@ -118,9 +125,25 @@ const App = () => {
 
     const blogPreset = {
         ...homePreset,
-        // slightly different look for blog; increase light pairs for richer background
         lightPairsPerRoadWay: 60,
         speedUp: 1.6
+    }
+
+    const casePreset = {
+        ...homePreset,
+        // case studies use a calmer, deeper palette and slower motion
+        lightPairsPerRoadWay: 30,
+        speedUp: 1.2,
+        colors: {
+            roadColor: 0x060606,
+            islandColor: 0x070707,
+            background: 0x05030a,
+            shoulderLines: 0x999999,
+            brokenLines: 0x999999,
+            leftCars: [0x8B5CF6, 0x7C3AED],
+            rightCars: [0x06B6D4, 0x0EA5A9],
+            sticks: 0x06B6D4,
+        }
     }
 
 
@@ -142,7 +165,7 @@ const App = () => {
                 />
             </header>
 
-            <Hyperspeed effectOptions={isBlogPage ? blogPreset : homePreset} />
+            <Hyperspeed effectOptions={isBlogPage ? blogPreset : isCaseStudies ? casePreset : homePreset} />
 
             <main>
                 {isBlogPage ? (
@@ -183,7 +206,7 @@ const App = () => {
                         <section className="relative z-10 text-white" id="blog" aria-labelledby="blog-heading">
                             <h2 id="blog-heading" className="sr-only">Blog posts and articles</h2>
                             <BlogPreview />
-                            {/* Case Studies Preview to be added later */}
+                            <CasePreview />
                         </section>
 
                         <section className="relative z-10 text-white" id="contact" aria-labelledby="contact-heading">
