@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrums";
+import Script from 'next/script';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata = {
     title: "Abid Khan | Enterprise SEO Strategist & Frontend Developer",
@@ -153,15 +155,34 @@ export default function RootLayout({ children }) {
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
+                <link rel="preconnect" href="https://www.clarity.ms" />
+                <link rel="preconnect" href="https://www.googletagmanager.com" />
             </head>
             <body className="antialiased bg-[#050505] text-white">
+                {/* BEST PRACTICE: GTM component handles head/body placement automatically */}
+                <GoogleTagManager gtmId="GTM-555QRSRF" />
+
+                {/* BEST PRACTICE: Clarity loads AFTER the page is functional */}
+                <Script
+                    id="clarity-script"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "v2t4n7gp7x");
+            `,
+                    }}
+                />
                 <header role="banner" className="relative z-[110]">
                     <Navbar />
                     <Breadcrumbs />
                 </header>
 
                 {/* Main Content Area */}
-                <div id="skip-nav-target" className="relative">
+                <div id="main-content" role="main" className="relative">
                     {children}
                 </div>
 

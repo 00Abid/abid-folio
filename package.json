@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.1.3",
     "clsx": "latest",
     "framer-motion": "latest",
     "lucide-react": "^0.562.0",
