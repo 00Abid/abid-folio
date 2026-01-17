@@ -62,6 +62,7 @@ export default function Navbar() {
                     ))}
                     <Link
                         href="/#contact"
+                        data-gtm="Navbar Inquiry"
                         className="ml-4 bg-white text-black px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-cyan-500 transition-all flex items-center gap-2"
                     >
                         Inquiry <ArrowUpRight size={14} />
