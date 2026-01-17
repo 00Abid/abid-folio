@@ -36,7 +36,7 @@ const ContactSection = () => {
     return (
         <section id="contact" className="py-20 px-6 bg-[#050505] relative overflow-hidden">
             {/* Background Grid Accent */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
+            <div aria-hidden="true" className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
                 backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
                 backgroundSize: '100px 100px'
             }} />

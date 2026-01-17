@@ -106,6 +106,7 @@ const ProjectCards = () => {
                                     <a
                                         href={project.link}
                                         target="_blank"
+                                        aria-label={`Visit ${project.title}`}
                                         className="p-4 bg-white/5 rounded-2xl hover:bg-cyan-500 hover:text-black transition-all"
                                     >
                                         <ArrowUpRight size={20} />

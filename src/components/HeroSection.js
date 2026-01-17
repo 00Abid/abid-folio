@@ -6,8 +6,8 @@ const HeroSection = () => {
     return (
         <section id="home" className="relative pt-32 pb-20 px-6 min-h-screen flex flex-col justify-center">
             {/* Background Decor */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] -z-10 opacity-50" />
-            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[100px] -z-10 opacity-30" />
+            <div aria-hidden="true" className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] -z-10 opacity-50" />
+            <div aria-hidden="true" className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[100px] -z-10 opacity-30" />
 
             <div className="max-w-7xl mx-auto w-full">
                 <div className="flex flex-col lg:flex-row items-center gap-12">

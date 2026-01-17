@@ -39,7 +39,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto flex justify-between items-center">
 
                 {/* LOGO */}
-                <Link href="/" className="flex items-center gap-2 group relative z-[110]">
+                <Link href="/" aria-label="Abid Khan SEO Portfolio" className="flex items-center gap-2 group relative z-[110]">
                     <div className="w-8 h-8 bg-cyan-500 rounded flex items-center justify-center transition-transform duration-500 group-hover:rotate-90">
                         <Terminal size={18} className="text-black" />
                     </div>
