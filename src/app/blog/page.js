@@ -43,7 +43,7 @@ export default function BlogPage() {
 
                 {/* BLOG LIST: Engineered for Skimmability */}
                 <div className="grid grid-cols-1 gap-4">
-                    {blogs.map((post) => (
+                    {blogs.map((post, index) => (
                         <Link
                             key={post.id}
                             href={`/blog/${post.slug}`}
@@ -55,6 +55,7 @@ export default function BlogPage() {
                                     src={post.image}
                                     alt={post.title}
                                     fill
+                                    priority={index === 0}
                                     className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                                     sizes="(max-width: 1024px) 100vw, 300px"
                                 />

@@ -6,7 +6,6 @@ const footerLinks = [
     { name: "Technical Skills", href: "/#skills" },
     { name: "Career Path", href: "/#experience" },
     { name: "SEO Insights", href: "/blog" },
-    { name: "Case Studies", href: "/case-studies" },
 ];
 
 export default function Footer() {

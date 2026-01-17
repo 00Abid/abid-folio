@@ -39,13 +39,14 @@ const HeroSection = () => {
                             >
                                 Start Project <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <Link
+                            <a
                                 href="/Abid-Khan-Resume.pdf"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="px-8 py-4 bg-transparent border border-white/20 text-white rounded-full font-black uppercase tracking-widest hover:bg-white/5 transition-all flex items-center gap-2"
                             >
                                 Resume <Download size={18} />
-                            </Link>
+                            </a>
                         </div>
 
                         <div className="pt-12 flex items-center gap-8 text-sm text-slate-500 font-mono">

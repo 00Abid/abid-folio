@@ -67,7 +67,7 @@ const ContactSection = () => {
                             <a
                                 key={link.id}
                                 href={link.href}
-                                target={link.id === 4 ? "_self" : "_blank"}
+                                target={link.id === 1 ? "_self" : "_blank"}
                                 rel="noopener noreferrer"
                                 className="group p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.05] transition-all duration-300 flex flex-col justify-between min-h-[180px]"
                             >

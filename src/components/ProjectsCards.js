@@ -9,7 +9,7 @@ const projects = [
         subtitle: "Industrial Technical SEO & Next.js 16",
         tech: ["Next.js 16", "Schema", "GSC", "Perplexity AI"],
         desc: "Achieved 1,000+ views and 260 directions. Optimized for AI Overviews and Perplexity citations with 100% GSC indexing and 95+ Lighthouse scores.",
-        image: "/ae.webp", 
+        image: "/ae.webp",
         link: "https://www.aeroenterprises.shop/",
         performance: "95+ LHR",
         impact: "260 Directions"
@@ -69,7 +69,7 @@ const ProjectCards = () => {
 
                 {/* PROJECTS BENTO GRID */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {projects.map((project) => (
+                    {projects.map((project, index) => (
                         <article
                             key={project.id}
                             className="group relative bg-white/[0.02] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-cyan-500/30 transition-all duration-500"
@@ -80,6 +80,7 @@ const ProjectCards = () => {
                                     src={project.image}
                                     alt={project.title}
                                     fill
+                                    priority={index === 0}
                                     className="object-cover transform group-hover:scale-105 transition-transform duration-700"
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                 />
