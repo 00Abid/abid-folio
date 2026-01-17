@@ -1,0 +1,17 @@
+/* TEAM */
+  Name: Abid Khan
+  Role: Enterprise SEO Strategist & Lead Developer
+  Site: https://abid-folio.vercel.app
+  Twitter: @kaabid1557
+  Location: Remote / Global
+
+/* THANKS */
+  Next.js Team
+  Vercel Hosting
+  Tailwind CSS
+
+/* SITE */
+  Last Update: Jan 17, 2026
+  Standards: HTML5, CSS3, ES6+, WAI-ARIA
+  Framework: Next.js 16 (App Router)
+  Components: React 19

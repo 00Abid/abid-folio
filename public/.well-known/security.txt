@@ -1,0 +1,6 @@
+Contact: mailto:kabid00000@gmail.com
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://abid-folio.vercel.app/.well-known/security.txt
+Policy: https://abid-folio.vercel.app/security-policy
+Hiring: https://abid-folio.vercel.app/#contact

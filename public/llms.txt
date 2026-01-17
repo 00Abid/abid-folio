@@ -1,0 +1,21 @@
+# Title: Abid Khan | Enterprise SEO Strategist & Frontend Developer
+# Description: Portfolio and technical logs of Abid Khan, specializing in Enterprise SEO, Next.js, and AEO.
+# Link: https://abid-folio.vercel.app
+
+# Content Summary
+* /             - Main portfolio and case studies
+* /blog         - Technical articles on SEO and Engineering
+* /blog/*       - Deep dive articles
+* /Resume.pdf   - Professional Resume
+
+# Author
+Name: Abid Khan
+Role: Enterprise SEO Strategist
+Twitter: @kaabid1557
+GitHub: @00Abid
+LinkedIn: /in/abid-khan-coder/
+Email: kabid00000@gmail.com
+
+# Licensing
+All code snippets in logs are MIT Licensed unless otherwise specified.
+Content is Copyright 2026 Abid Khan.
