@@ -44,6 +44,10 @@ export const metadata = {
     metadataBase: new URL("https://abid-folio.vercel.app"),
     alternates: {
         canonical: "./",
+        languages: {
+            'en-US': '/en-US', // Validates this content is specifically for US English speakers
+            'x-default': '/',   // Fallback for all other regions
+        },
     },
 };
 

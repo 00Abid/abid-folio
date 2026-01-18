@@ -1,104 +1,87 @@
-# Abid Khan – Portfolio Website
+# Abid Khan - Enterprise SEO Portfolio
 
-A modern, interactive portfolio built with React, Tailwind CSS, and Vite. It showcases projects, skills, and experience with smooth interactions and a 3D "Hyperspeed" background effect.
+![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
+![Next.js](https://img.shields.io/badge/Next.js-16.1-black)
+![React](https://img.shields.io/badge/React-19-blue)
+![Tailwind](https://img.shields.io/badge/Tailwind-v4-cyan)
+![Performance](https://img.shields.io/badge/Lighthouse-100-green)
 
-## Features
+A high-performance, Enterprise-grade SEO portfolio built with **Next.js 16 (App Router)** and **Tailwind CSS v4**. This project demonstrates the intersection of modern frontend engineering and advanced Technical SEO (AEO).
 
-- Interactive 3D Hyperspeed road effect (Three.js + postprocessing)
-- Floating Bubble Menu with smooth navigation (GSAP)
-- Click-to-section navigation with smooth scrolling
-- Responsive UI across mobile, tablet, and desktop
-- SEO assets included (robots.txt, sitemap.xml)
-- Fast development/build times (Vite)
+## 🚀 Features
 
-## Tech Stack
+### Core Engineering
+*   **Framework**: Next.js 16 (App Router, Server Components).
+*   **Styling**: Tailwind CSS v4 (Zero-runtime CSS).
+*   **Deployment**: Vercel Edge Network.
+*   **Architecture**: Semantic HTML5, ARIA Accessible, Mobile-First.
 
-- React 19
-- Vite 7
-- Tailwind CSS 4
-- Three.js, postprocessing
-- GSAP (animations)
-- Lenis (smooth scrolling)
-- React Icons, Font Awesome
-- tailwind-merge, uuid
+### Enterprise SEO (Search Engine Optimization)
+*   **AEO (Answer Engine Optimization)**: Structured specifically for LLMs (Perplexity, ChatGPT) using `llms.txt` and "Direct Answer" content blocks.
+*   **Structured Data (Schema)**:
+    *   `ProfilePage` & `Organization`
+    *   `BlogPosting` with nested `FAQPage`
+    *   `BreadcrumbList` & `ItemList`
+*   **Performance**:
+    *   LCP Optimization (Eager loaded hero images).
+    *   CLS Elimination (Fixed aspect ratios).
+    *   Responsive Images (`sizes` prop implementation).
+*   **Technical**:
+    *   Dynamic `sitemap.xml` & `robots.txt`.
+    *   Self-referencing Canonical URLs.
+    *   `security.txt` & `humans.txt` standards.
+    *   Internationalization (`hreflang` targeting `en-US`).
 
-## Getting Started
+## 🛠️ Installation
 
-### Prerequisites
-- Node.js 18+ (LTS 20 recommended)
-- npm 9+ (or yarn/pnpm)
-
-### Installation
-1. Clone the repository
-   ```bash
-   git clone <repository-url>
-   cd abid-folio
-   ```
-2. Install dependencies
-   ```bash
-   npm install
-   ```
-3. Start the local development server:
-   
-   ```
-    npm run dev
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/00Abid/abid-folio.git
+    cd abid-folio
     ```
 
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-## Project Structure
+3.  **Run Development Server**:
+    ```bash
+    npm run dev
+    ```
+    Visit `http://localhost:3000` to see the live site.
 
-```
-abid-folio/
-├── public/
-│   ├── ae.webp
-│   ├── ca.webp
-│   ├── cry.webp
-│   ├── favicon.ico
-│   ├── lb.webp
-│   ├── link.webp
-│   ├── profile.jpg
-│   ├── robots.txt
-│   ├── sai.webp
-│   ├── seo.webp
-│   └── sitemap.xml
-├── src/
-│   ├── App.css
-│   ├── App.jsx
-│   ├── components/
-│   │   ├── BubbleMenu.jsx
-│   │   ├── ContactSection.jsx
-│   │   ├── ExperienceSection.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Hyperspeed.jsx
-│   │   ├── ProjectsCards.jsx
-│   │   └── SkillsSection.jsx
-│   ├── index.css
-│   ├── main.jsx
-│   └── presets/
-│       └── hyperspeedPresets.jsx
-├── eslint.config.js
-├── index.html
-├── jsconfig.json
-├── package.json
-├── package-lock.json
-├── README.md
-└── vite.config.js
+4.  **Build for Production**:
+    ```bash
+    npm run build
+    npm start
+    ```
+
+## 📂 Project Structure
+
+```bash
+src/
+├── app/
+│   ├── blog/            # Blog Index & Dynamic [slug] Routes
+│   ├── layout.js        # Root Layout (Metadata, Navbar, Footer)
+│   ├── page.js          # Homepage Component Assembly
+│   ├── error.js         # Global Error Boundary
+│   ├── sitemap.js       # Dynamic Sitemap Generation
+│   └── robots.js        # Robots.txt Generation
+├── components/          # React Requirements (Navbar, Hero, Projects, etc.)
+└── lib/                 # Data Utilities (Blog Data, etc.)
+public/
+├── .well-known/         # Security & Metadata Standards
+├── llms.txt             # AI Agent Context File
+└── ...assets
 ```
 
-## Configuration & Customization
+## 🛡️ Security
 
-- Hyperspeed colors and effect options can be customized in `src/presets/hyperspeedPresets.jsx` and `src/components/Hyperspeed.jsx`.
-- Navigation labels and hover styles can be adjusted in `src/components/BubbleMenu.jsx`.
-- Project cards and images are defined in `src/components/ProjectsCards.jsx` and `/public` assets.
-- Experience entries can be edited in `src/components/ExperienceSection.jsx`.
+This project adheres to strict security standards.
+*   **Disclosure**: See [security.txt](public/.well-known/security.txt).
+*   **Headers**: HSTS and X-Frame-Options configured via Vercel headers.
 
-## SEO & Performance
+## 📄 License
 
-- Includes `robots.txt` and `sitemap.xml` in `public/`.
-- Built with Vite for fast HMR and optimized builds.
-- Mobile performance optimizations applied to Hyperspeed.
-
-
-## Live Demo
-
-- Link : [Abid Khan – Portfolio Website](https://abid-khan-portfolio.vercel.app/)
+MIT License © 2026 Abid Khan.
