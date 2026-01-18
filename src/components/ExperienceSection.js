@@ -36,8 +36,8 @@ const ExperienceSection = () => {
                         </div>
                         <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">
                             Professional <br /> <span className="text-white/10 italic font-serif lowercase">Experience</span>
-                   
-                     </h2>
+
+                        </h2>
                     </div>
                     <p className="text-slate-500 font-mono text-xs uppercase tracking-widest hidden md:block">
                         Ver: 1.0.4 // Last Sync: Jan 2026

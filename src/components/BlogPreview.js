@@ -8,13 +8,13 @@ const featuredPosts = blogs.slice(0, 2);
 
 const BlogPreview = () => {
     return (
-        <section id="blog-preview" className="py-20 px-6 bg-[#050505]">
+        <section id="blog-preview" className="py-20 px-6 bg-background">
             <div className="max-w-7xl mx-auto">
 
                 {/* HEADER */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
                     <div className="max-w-2xl">
-                        <div className="flex gap-2 mb-4">
+                        <div className="flex items-center gap-2 mb-4">
                             <span className="w-12 h-px bg-cyan-500" />
                             <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500">
                                 Knowledge Base
@@ -42,7 +42,7 @@ const BlogPreview = () => {
                         <Link
                             key={post.id}
                             href={`/blog/${post.slug}`}
-                            className="group flex flex-col md:flex-row justify-between p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.04] transition-all duration-500"
+                            className="group flex flex-col md:flex-row justify-between p-8 rounded-4xl bg-white/2 border border-white/5 hover:border-cyan-500/30 hover:bg-white/4 transition-all duration-500"
                         >
                             <div className="space-y-4">
                                 <div className="flex items-center gap-4">
