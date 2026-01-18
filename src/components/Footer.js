@@ -30,7 +30,7 @@ export default function Footer() {
                             Developing high-performance digital architectures that dominate search results.
                             Specializing in Technical SEO and Next.js engineering.
                         </p>
-                        <div className="flex gap-4 pt-2" data-gtm={link.label}>
+                        <div className="flex gap-4 pt-2">
                             <a href="https://github.com/00Abid" className="p-2 bg-white/5 rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-300" aria-label="GitHub">
                                 <Github size={18} />
                             </a>
