@@ -6,7 +6,6 @@ export default function robots() {
                 allow: '/',
                 disallow: [
                     '/private/',     // Your private route
-                    '/_next/',       // Prevents crawling of internal Next.js build files
                     '/api/',         // Prevents crawling of serverless functions
                     '/admin/',       // Potential future admin paths
                 ],
@@ -15,7 +14,7 @@ export default function robots() {
                 // Advanced: Instructions for AI Bots
                 userAgent: ['GPTBot', 'ChatGPT-User', 'PerplexityBot'],
                 allow: ['/', '/blog/'],
-                disallow: ['/_next/', '/api/'],
+                disallow: ['/api/'],
             }
         ],
         sitemap: 'https://abid-folio.vercel.app/sitemap.xml',

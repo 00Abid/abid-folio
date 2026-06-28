@@ -86,7 +86,7 @@ export default async function BlogPost({ params }) {
     };
 
     return (
-        <main className="min-h-screen bg-[#050505] text-white pt-15 pb-20 px-6">
+        <main className="min-h-screen bg-[#050505] text-white pt-30 pb-20 px-6">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             <div className="max-w-4xl mx-auto">
 

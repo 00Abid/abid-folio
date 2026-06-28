@@ -156,7 +156,7 @@ export default function RootLayout({ children }) {
                     <Navbar />
                 </header>
 
-                <main role="main" className="pt-8">
+                <main role="main" className="pt-12">
                     {children}
                 </main>
 
