@@ -4,18 +4,44 @@ import { Briefcase, MapPin, Calendar, Terminal, CheckCircle2 } from "lucide-reac
 const experiences = [
     {
         id: 1,
-        company: "SENTARI AI",
-        role: "Technical SEO & Frontend Engineer",
-        period: "Sep 2025 - Nov 2025",
-        location: "New York, USA",
-        metrics: "20% Organic Lift",
+        company: "Industrial Automation India",
+        role: "Technical SEO Specialist",
+        period: "Feb 2026 - Present",
+        location: "Andheri, India (Remote)",
+        metrics: "24% Click Growth",
         points: [
-            "Engineered high-performance interfaces using Next.js and Tailwind, achieving 100/100 Core Web Vital scores.",
-            "Performed deep-crawl technical audits to resolve indexing bottlenecks and rendering debt.",
-            "Architected JSON-LD structured data strategy to capture rich result snippets in SERPs.",
-            "Reduced LCP (Largest Contentful Paint) by 40% through advanced image optimization and code splitting.",
-            "Aligned product roadmaps with search intent data to improve user retention and UX flow.",
-            "Automated SEO reporting using Lighthouse CI and PageSpeed Insights API for continuous monitoring."
+            "Led SEO for a B2B platform with 32,000+ subscribers, driving a 24% growth in organic clicks and 10% in impressions.",
+            "Achieved 1,373% growth in events section traffic and 304% growth in AI content vertical clicks.",
+            "Conducted full GSC audits diagnosing 13,403 non-indexed pages; resolved 1,700+ broken URLs via pattern-based 301 redirects and Next.js middleware.",
+            "Designed a Hub-and-Spoke URL taxonomy for 145+ city and country hubs, directing developer implementation with JSON-LD ItemList schema[cite: 1].",
+            "Upgraded 5,000+ company entities from H6 to H3 and configured robots.txt and structured data (Expert Person Schema) for GPTBot and ClaudeBot to position the platform as a primary AI citation source[cite: 1]."
+        ]
+    },
+    {
+        id: 2,
+        company: "Freelance",
+        role: "SEO Specialist",
+        period: "Jun 2025 - Present",
+        location: "Vasai, India",
+        metrics: "₹2.6M+ Revenue Generated",
+        points: [
+            "Managed SEO for 2 industrial B2B clients, generating over ₹2.6M in verified revenue over 10 months[cite: 1].",
+            "Built a 15+ product PSEO system using Next.js dynamic slug routing, resulting in 100% GSC indexing for all pages[cite: 1].",
+            "Achieved Top 3 Local Pack rankings for high-intent local queries with verified 5.2% CTR and Avg Position 3.9[cite: 1].",
+            "Deployed 5 Next.js sites achieving 95+ Lighthouse scores and 100% Core Web Vitals, including error-free domain migrations[cite: 1]."
+        ]
+    },
+    {
+        id: 3,
+        company: "SENTARI AI",
+        role: "SDE Intern",
+        period: "Sep 2025 - Nov 2025",
+        location: "New York, USA (Remote)",
+        metrics: "95+ Lighthouse Score",
+        points: [
+            "Improved mobile Lighthouse performance from 70s to 95+ through strategic code-splitting, lazy loading, and WebP optimization[cite: 1].",
+            "Deployed site-wide JSON-LD and Open Graph tags, successfully resolving critical crawl errors and indexing gaps[cite: 1].",
+            "Built a real-time notification system using Server-Sent Events while collaborating with distributed US engineering teams[cite: 1]."
         ]
     }
 ];
@@ -29,19 +55,14 @@ const ExperienceSection = () => {
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-4">
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <span className="w-12 h-px bg-cyan-500" />
                             <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500">
                                 Career Logbook
                             </p>
                         </div>
                         <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">
-                            Professional <br /> <span className="text-white/10 italic font-serif lowercase">Experience</span>
-
+                            Professional <br /> <span className="text-white/10 italic font-serif lowercase">Experience.</span>
                         </h2>
                     </div>
-                    <p className="text-slate-500 font-mono text-xs uppercase tracking-widest hidden md:block">
-                        Ver: 1.0.4 // Last Sync: Jan 2026
-                    </p>
                 </div>
 
                 {/* EXPERIENCE LIST */}
@@ -51,7 +72,7 @@ const ExperienceSection = () => {
                             key={exp.id}
                             className="group relative grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-cyan-500/20 transition-all duration-500"
                         >
-                            {/* LEFT COL: Identity & Meta */}
+                            {/* LEFT COL */}
                             <div className="lg:col-span-4 space-y-6">
                                 <div>
                                     <h3 className="text-2xl font-black uppercase tracking-tight text-white group-hover:text-cyan-500 transition-colors">
@@ -73,19 +94,19 @@ const ExperienceSection = () => {
 
                                 <div className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full">
                                     <p className="text-[10px] font-black uppercase tracking-widest text-cyan-500">
-                                        Impact: {exp.metrics}
+                                        {exp.metrics}
                                     </p>
                                 </div>
                             </div>
 
-                            {/* RIGHT COL: Technical Points */}
+                            {/* RIGHT COL */}
                             <div className="lg:col-span-8">
                                 <div className="flex items-center gap-2 mb-6 text-slate-700">
                                     <Terminal size={16} />
                                     <span className="text-[10px] font-black uppercase tracking-widest">Execution Logs</span>
                                 </div>
 
-                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                                <ul className="grid grid-cols-1 gap-y-6">
                                     {exp.points.map((point, idx) => (
                                         <li key={idx} className="flex items-start gap-4 group/item">
                                             <CheckCircle2 size={16} className="text-slate-800 group-hover/item:text-cyan-500 transition-colors shrink-0 mt-1" />
@@ -97,7 +118,7 @@ const ExperienceSection = () => {
                                 </ul>
                             </div>
 
-                            {/* ACCENT DECOR */}
+                            {/* ACCENT */}
                             <div className="absolute top-8 right-8 text-slate-900 font-black text-6xl select-none opacity-20 group-hover:opacity-40 transition-opacity">
                                 0{exp.id}
                             </div>

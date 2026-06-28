@@ -47,17 +47,16 @@ const ContactSection = () => {
                     {/* LEFT: SEO Conversion Pitch */}
                     <div>
                         <div className="flex items-center gap-2 mb-6">
-                            <span className="w-12 h-px bg-cyan-500" />
                             <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500">
                                 Connection Portal
                             </p>
                         </div>
                         <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
-                            Let's build <br />
-                            <span className="text-white/10 italic font-serif lowercase">Authority.</span>
+                            Drive <br />
+                            <span className="text-white/10 italic font-serif lowercase">Revenue.</span>
                         </h2>
                         <p className="text-slate-400 text-lg font-medium max-w-md leading-relaxed">
-                            Available for technical audits, Next.js migrations, and programmatic SEO consulting. Drop a message to start the synchronization.
+                            I help businesses scale through SEO - AEO - GEO, programmatic SEO, and high-performance site architecture. Let's start a project.
                         </p>
                     </div>
 
@@ -95,8 +94,8 @@ const ContactSection = () => {
                                     <Send size={24} strokeWidth={2.5} />
                                 </div>
                                 <div>
-                                    <p className="text-black font-black uppercase text-sm tracking-tighter leading-none">Instant Inquiry</p>
-                                    <p className="text-black/60 text-[10px] font-bold uppercase tracking-widest mt-1">Average Response: &lt; 2 Hours</p>
+                                    <p className="text-black font-black uppercase text-sm tracking-tighter leading-none">Inquire Now</p>
+                                    <p className="text-black/60 text-[10px] font-bold uppercase tracking-widest mt-1">Ready for 2026 Growth</p>
                                 </div>
                             </div>
                             <a href="mailto:kabid00000@gmail.com" className="w-full md:w-auto text-center px-10 py-4 bg-black text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-slate-900 transition-colors">
@@ -109,8 +108,8 @@ const ContactSection = () => {
                 {/* SEO Metadata Footer Tag */}
                 <div className="mt-32 pt-12 border-t border-white/5 flex justify-between items-center text-[9px] font-mono text-slate-700 uppercase tracking-[0.3em]">
                     <span>Endpoint: Verified</span>
-                    <span>Encrypted Submission Available</span>
-                    <span className="hidden md:block italic">Crafting search dominance since 2023</span>
+                    <span>Growth Focused</span>
+                    <span className="hidden md:block italic">Building revenue-first web systems</span>
                 </div>
             </div>
         </section>

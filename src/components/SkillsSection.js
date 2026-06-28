@@ -1,39 +1,36 @@
 import React from "react";
-import {
-    BarChart3,
-    Code2,
-    Zap,
-    Database,
-    Search,
-    MapPin,
-    ShieldCheck
-} from "lucide-react";
+import { BarChart3, Code2, Zap, Search, MapPin, ShieldCheck, Cpu } from "lucide-react";
 
 const skillGroups = [
     {
-        category: "Development & Architecture",
+        category: "Full-Stack Execution",
         icon: <Code2 size={16} />,
-        items: ["Next.js", "React", "Python", "Tailwind CSS", "GitHub", "Vercel"]
+        items: ["Next.js", "React", "Python", "Tailwind CSS", "Vercel", "Git"]
     },
     {
-        category: "Technical SEO & Performance",
+        category: "Technical SEO & CWV",
         icon: <Zap size={16} />,
-        items: ["Lighthouse (CWV)", "Schema Markup", "IndexNow", "Bing Webmaster", "100% Indexing"]
+        items: ["Lighthouse (100/100)", "Schema Markup", "JSON-LD", "Crawl Budget", "Indexing"]
     },
     {
-        category: "Analytics & SEO Tools",
+        category: "Growth & Analytics",
         icon: <BarChart3 size={16} />,
-        items: ["GA4", "GTM", "GSC", "SEMrush", "Ahrefs", "Screaming Frog", "PageSpeed Insights"]
+        items: ["GA4", "GTM", "GSC", "Ahrefs", "Screaming Frog", "Data Automation"]
     },
     {
-        category: "On-Page & AEO Strategy",
+        category: "Strategic SEO & AEO",
         icon: <Search size={16} />,
-        items: ["Title Optimization", "Meta Tags", "H1-H6 Structure", "Internal Linking", "Content Clusters", "AEO"]
+        items: ["AEO (Answer Engines)", "Programmatic SEO", "Content Clusters", "Entity SEO"]
     },
     {
-        category: "Local SEO & Optimization",
+        category: "Local & GEO Authority",
         icon: <MapPin size={16} />,
-        items: ["GBP/GMB Optimization", "GBP Everywhere", "Local Citations", "Review Schema"]
+        items: ["GBP Optimization", "Review Schema", "Local Pack Ranking", "GEO Strategy"]
+    },
+    {
+        category: "Independent Ops",
+        icon: <Cpu size={16} />,
+        items: ["Zero Dev Dependency", "API Automation", "Middleware SEO", "Full Ownership"]
     }
 ];
 
@@ -45,18 +42,17 @@ const SkillsSection = () => {
                 {/* HEADER */}
                 <div className="mb-24">
                     <div className="flex items-center gap-2 mb-4">
-                        <span className="w-12 h-px bg-cyan-500" />
                         <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500">
-                            Technical Stack
+                            Core Competencies
                         </p>
                     </div>
                     <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter">
-                        Skill <span className="text-white/10 italic font-serif lowercase">Infrastructure.</span>
+                        Revenue <br /><span className="text-white/10 italic font-serif lowercase">Stack.</span>
                     </h2>
                 </div>
 
                 {/* BENTO GRID */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {skillGroups.map((group, index) => (
                         <div
                             key={index}
@@ -75,7 +71,7 @@ const SkillsSection = () => {
                                 {group.items.map((skill, idx) => (
                                     <div
                                         key={idx}
-                                        className="px-4 py-2 bg-white/[0.03] border border-white/5 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-white group-hover:border-white/20 transition-all"
+                                        className="px-4 py-2 bg-white/[0.03] border border-white/5 rounded-full text-[10px] font-bold uppercase tracking-wider text-slate-400 group-hover:text-white transition-all"
                                     >
                                         {skill}
                                     </div>
@@ -90,13 +86,13 @@ const SkillsSection = () => {
                     <div className="flex items-center gap-4">
                         <ShieldCheck size={32} strokeWidth={2.5} />
                         <div>
-                            <p className="font-black uppercase text-sm tracking-tighter">Production Grade Standards</p>
-                            <p className="text-[10px] font-bold uppercase opacity-70">All deployments optimized for indexability and speed.</p>
+                            <p className="font-black uppercase text-sm tracking-tighter">Full-Stack Autonomy</p>
+                            <p className="text-[10px] font-bold uppercase opacity-70">I ship SEO, schema, and performance code—no developer needed.</p>
                         </div>
                     </div>
                     <div className="flex gap-4">
-                        <div className="px-4 py-2 border-2 border-black rounded-lg text-[10px] font-black uppercase">CWV 100/100</div>
-                        <div className="px-4 py-2 border-2 border-black rounded-lg text-[10px] font-black uppercase">SSR Native</div>
+                        <div className="px-4 py-2 border-2 border-black rounded-lg text-[10px] font-black uppercase">Revenue-First</div>
+                        <div className="px-4 py-2 border-2 border-black rounded-lg text-[10px] font-black uppercase">Developer-Free</div>
                     </div>
                 </div>
             </div>

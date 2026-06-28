@@ -13,31 +13,35 @@ const HeroSection = () => {
                 <div className="flex flex-col lg:flex-row items-center gap-12">
 
                     <div className="lg:w-2/3 space-y-8">
+                        {/* Status Tag */}
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20">
                             <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                             </span>
-                            <span className="text-xs font-bold text-cyan-500 uppercase tracking-wider">Available for new projects</span>
+                            <span className="text-xs font-bold text-cyan-500 uppercase tracking-wider">Available for new projects and role</span>
                         </div>
 
+                        {/* H1 Heading */}
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.1]">
-                            GROWTH <br />
+                            SEO, AEO & GEO <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-                                ENGINEER.
+                                SPECIALIST
                             </span>
                         </h1>
 
+                        {/* Description */}
                         <p className="text-lg md:text-xl text-slate-400 max-w-2xl leading-relaxed font-medium">
-                            Enterprise SEO Strategist & Frontend Developer. I help large sites scale organic traffic through technical SEO, programmatic content, and high-performance Next.js architectures.
+                            Full-Stack SEO Specialist who ships the code that drives growth and revenue. I generate real revenue by fixing technical architecture, schema, and crawl issues independently no developer needed. I've driven over <strong>₹2.6M+ in verified client revenue</strong>.
                         </p>
 
+                        {/* Buttons */}
                         <div className="flex flex-wrap gap-4 pt-4">
                             <Link
                                 href="/#contact"
                                 className="px-8 py-4 bg-cyan-500 text-black rounded-full font-black uppercase tracking-widest hover:bg-cyan-400 transition-all flex items-center gap-2 group"
                             >
-                                Start Project <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                Hire Me <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <a
                                 href="/Abid-Khan-Resume.pdf"
@@ -49,23 +53,18 @@ const HeroSection = () => {
                             </a>
                         </div>
 
+                        {/* Skill Tags */}
                         <div className="pt-12 flex items-center gap-8 text-sm text-slate-500 font-mono">
                             <div className="flex items-center gap-2">
                                 <Terminal size={16} className="text-cyan-500" />
-                                <span>Next.js Expert</span>
+                                <span>SEO | AEO | GEO</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Terminal size={16} className="text-cyan-500" />
-                                <span>Technical SEO</span>
+                                <span>Revenue-Focused</span>
                             </div>
                         </div>
                     </div>
-
-                    {/* Optional: Hero Image or Graphic could go here */}
-                    <div className="hidden lg:block lg:w-1/3">
-                        {/* Abstract Code graphic or similar can be added here */}
-                    </div>
-
                 </div>
             </div>
         </section>

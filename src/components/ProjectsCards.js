@@ -1,51 +1,47 @@
 import React from "react";
 import Image from "next/image";
-import { ArrowUpRight, Globe, Zap, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, Zap } from "lucide-react";
 
 const projects = [
     {
         id: 1,
         title: "Aero Enterprises",
-        subtitle: "Industrial Technical SEO & Next.js 16",
-        tech: ["Next.js 16", "Schema", "GSC", "Perplexity AI"],
-        desc: "Achieved 1,000+ views and 260 directions. Optimized for AI Overviews and Perplexity citations with 100% GSC indexing and 95+ Lighthouse scores.",
+        subtitle: "Enterprise Technical Architecture",
+        tech: ["Next.js", "Schema", "JSON-LD"],
+        desc: "Owned the full-stack architecture. Rebuilt the site independently, eliminating crawl debt to secure 260+ high-intent conversions and contributing to ₹2.6M+ in verified client revenue.",
         image: "/ae.webp",
         link: "https://www.aeroenterprises.shop/",
-        performance: "95+ LHR",
-        impact: "260 Directions"
+        performance: "₹2.6M+ Revenue",
     },
     {
         id: 2,
         title: "Raja Buffing Works",
-        subtitle: "Local Pack Domination & Growth",
-        tech: ["Next.js", "Local SEO", "Review Schema"],
-        desc: "Secured Top 3 ranking for 'Buffing Vasai'. Drove 284 direction clicks in 5 months with a 5.2% CTR and GSC-verified Position 3.9.",
+        subtitle: "Local & GEO Dominance",
+        tech: ["Next.js", "Review Schema", "GSC"],
+        desc: "Executed a zero-dependency strategy to secure Top 3 Local Pack rankings. Drove 284+ verified direction clicks, directly converting search intent into local customer revenue.",
         image: "/rbw.webp",
         link: "https://rajabuffing.shop/",
-        performance: "100% CWV",
-        impact: "Top 3 Rank"
+        performance: "Verified ROI",
     },
     {
         id: 3,
         title: "Titan SEO Auditor",
-        subtitle: "Python Automation & NLP",
-        tech: ["Python", "PageSpeed API", "SpaCy NLP"],
-        desc: "Built a custom SEO auditor that automates PageSpeed analysis and NLP-based content audits for 5+ client sites simultaneously.",
+        subtitle: "Full-Stack Automation",
+        tech: ["Python", "API", "NLP"],
+        desc: "Engineered an automation engine to fix revenue-leaking errors 5x faster than manual audits. Currently scaling technical oversight for 5+ production environments.",
         image: "/titan.webp",
         link: "https://github.com/00Abid/ai-visibility-checker",
-        performance: "Automation",
-        impact: "5+ Site Audits"
+        performance: "Scalable Growth",
     },
     {
         id: 4,
-        title: "AI Visibility Checker",
-        subtitle: "AEO (Answer Engine Optimization)",
-        tech: ["HEEB API", "Python", "LLM Tracking"],
-        desc: "Developed a tool to track brand mentions across ChatGPT and Perplexity, validating Answer Engine visibility for industrial brands.",
+        title: "AI Visibility Tracker",
+        subtitle: "AEO & Brand Authority",
+        tech: ["Python", "LLM API", "AEO"],
+        desc: "Developed a proprietary AEO stack to track and capture brand authority in Perplexity and ChatGPT. Protects market share and revenue in AI-driven search environments.",
         image: "/ai.webp",
         link: "https://github.com/00Abid/ai-visibility-checker",
-        performance: "AEO Ready",
-        impact: "Brand Tracking"
+        performance: "Market Leadership",
     },
 ];
 
@@ -56,14 +52,11 @@ const ProjectCards = () => {
 
                 {/* HEADER */}
                 <div className="mb-20">
-                    <div className="flex items-center gap-2 mb-4">
-                        <span className="w-12 h-px bg-cyan-500" />
-                        <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500">
-                            Case Studies & Deployments
-                        </p>
-                    </div>
+                    <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500 mb-4">
+                        Case Studies
+                    </p>
                     <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter">
-                        Technical <br /> <span className="text-white/10 italic font-serif lowercase">Audit.</span>
+                        Revenue <br /> <span className="text-white/10 italic font-serif lowercase">Generated.</span>
                     </h2>
                 </div>
 
@@ -75,14 +68,13 @@ const ProjectCards = () => {
                             className="group relative bg-white/[0.02] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-cyan-500/30 transition-all duration-500"
                         >
                             {/* Image Container */}
-                            <div className="relative aspect-[16/9] overflow-hidden  group-hover:transition-all duration-700">
+                            <div className="relative aspect-[16/9] overflow-hidden">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
                                     fill
                                     priority={index === 0}
                                     className="object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                    sizes="(max-width: 768px) 100vw, 50vw"
                                 />
                                 <div className="absolute top-6 right-6">
                                     <div className="bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-2">
@@ -106,14 +98,13 @@ const ProjectCards = () => {
                                     <a
                                         href={project.link}
                                         target="_blank"
-                                        aria-label={`Visit ${project.title}`}
                                         className="p-4 bg-white/5 rounded-2xl hover:bg-cyan-500 hover:text-black transition-all"
                                     >
                                         <ArrowUpRight size={20} />
                                     </a>
                                 </div>
 
-                                <p className="text-slate-500 text-sm leading-relaxed mb-8 font-medium">
+                                <p className="text-slate-400 text-sm leading-relaxed mb-8 font-medium">
                                     {project.desc}
                                 </p>
 

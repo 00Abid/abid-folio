@@ -112,7 +112,7 @@ export default function Navbar() {
                     <Link
                         href="/#contact"
                         onClick={() => setIsOpen(false)}
-                        className="block text-4xl sm:text-5xl font-black uppercase tracking-tighter text-cyan-500"
+                        className="block text-4xl sm:text-5xl font-black uppercase tracking-tighter text-white"
                     >
                         Contact
                     </Link>

@@ -6,49 +6,30 @@ import Script from 'next/script';
 import { GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata = {
-    title: "Abid Khan | Enterprise SEO Strategist & Frontend Developer",
-    description: "Enterprise SEO strategist helping large sites scale organic traffic via technical SEO, site migrations, programmatic content, and performance optimization.",
+    title: "Abid Khan | SEO Specialist & Scaling Revenue and Growth",
+    description: "I engineer high-performance SEO strategies that turn site architecture into organic revenue. Specialized in technical audits, AEO, and programmatic growth for B2B brands.",
     openGraph: {
-        title: "Abid Khan | Enterprise SEO Strategist & Frontend Developer",
-        description: "Enterprise SEO strategist helping large sites scale organic traffic via migrations, technical SEO, programmatic content, and performance optimization.",
+        title: "Abid Khan | SEO Specialist & Scaling Revenue and Growth",
+        description: "I engineer high-performance SEO strategies that turn site architecture into organic revenue. Specialized in technical audits, AEO, and programmatic growth for B2B brands.",
         url: "https://abid-folio.vercel.app/",
         siteName: "Abid Khan Portfolio",
-        images: [
-            {
-                url: "/seo.webp",
-                width: 1200,
-                height: 630,
-                alt: "Abid Khan | Enterprise SEO Social Card",
-            },
-        ],
+        images: [{ url: "/seo.webp", width: 1200, height: 630, alt: "Abid Khan | Revenue Growth SEO" }],
         locale: "en_US",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Abid Khan | Enterprise SEO Strategist & Frontend Developer",
-        description: "Enterprise SEO strategist for large sites - migrations, crawl budget, technical SEO, and data-driven growth.",
+        title: "Abid Khan | SEO Specialist & Scaling Revenue and Growth",
+        description: "Turning site architecture into organic revenue. Technical audits, AEO, and programmatic growth.",
         creator: "@kaabid1557",
         images: ["/seo.webp"],
     },
-    icons: {
-        icon: "/favicon.ico",
-    },
-    other: {
-        "msvalidate.01": "B406A713428734B7264507731D5DC69A",
-        "google-site-verification": "ytfTCtnXBBd9JGVolRG9rVjjZ0nGgZEO0uEfnJQUFvY",
-    },
-    // Additional SEO Meta Tags
-    keywords: "Enterprise SEO, Technical SEO, Site Migration, Programmatic SEO, Crawl Budget, Web Performance, Frontend Development, React, JavaScript",
-    category: "technology",
+    // Fixed: Removed the language alternates to resolve the 404/indexing issues
     metadataBase: new URL("https://abid-folio.vercel.app"),
     alternates: {
-        canonical: "./",
-        languages: {
-            'en-US': '/en-US', // Validates this content is specifically for US English speakers
-            'x-default': '/',   // Fallback for all other regions
-        },
+        canonical: "/",
     },
+    keywords: "SEO, Revenue Growth, AEO, Programmatic SEO, B2B SEO, Performance Engineering, Enterprise SEO",
 };
 
 export const viewport = {
@@ -153,44 +134,32 @@ export default function RootLayout({ children }) {
     };
 
     return (
-        <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
+        <html lang="en" className="scroll-smooth">
             <head>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
-                <link rel="preconnect" href="https://www.clarity.ms" />
-                <link rel="preconnect" href="https://www.googletagmanager.com" />
             </head>
             <body className="antialiased bg-[#050505] text-white">
-                {/* BEST PRACTICE: GTM component handles head/body placement automatically */}
                 <GoogleTagManager gtmId="GTM-555QRSRF" />
 
-                {/* BEST PRACTICE: Clarity loads AFTER the page is functional */}
                 <Script
                     id="clarity-script"
                     strategy="afterInteractive"
                     dangerouslySetInnerHTML={{
-                        __html: `
-              (function(c,l,a,r,i,t,y){
-                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "v2t4n7gp7x");
-            `,
+                        __html: `(function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt"; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "v2t4n7gp7x");`,
                     }}
                 />
-                <header role="banner" className="relative z-[110]">
+
+                <header role="banner" className="fixed w-full z-[110] bg-[#050505x]/80 backdrop-blur-md">
                     <Navbar />
-                    <Breadcrumbs />
                 </header>
 
-                {/* Main Content Area */}
-                <div id="main-content" role="main" className="relative">
+                <main role="main" className="pt-8">
                     {children}
-                </div>
+                </main>
 
-                {/* Site Footer */}
                 <Footer />
             </body>
         </html>

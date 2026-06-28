@@ -4,19 +4,19 @@ import { Terminal, ArrowUpRight, Github, Linkedin, Mail, Twitter } from "lucide-
 const footerLinks = [
     { name: "Projects", href: "/#projects" },
     { name: "Technical Skills", href: "/#skills" },
-    { name: "Career Path", href: "/#experience" },
-    { name: "SEO Insights", href: "/blog" },
+    { name: "Experience", href: "/#experience" },
+    { name: "Blog", href: "/blog" },
 ];
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer role="contentinfo" className="bg-[#050505] border-t border-white/5 pt-24 pb-12 px-6">
+        <footer role="contentinfo" className="bg-slate-900/40 border-t border-white/5 pt-24 pb-12 px-6">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
 
-                    {/* BRAND ARCHITECTURE */}
+                    {/* BRAND */}
                     <div className="lg:col-span-2 space-y-6">
                         <div className="flex items-center gap-2">
                             <div className="w-6 h-6 bg-cyan-500 rounded flex items-center justify-center">
@@ -27,8 +27,8 @@ export default function Footer() {
                             </span>
                         </div>
                         <p className="text-slate-500 text-sm leading-relaxed max-w-sm font-medium">
-                            Developing high-performance digital architectures that dominate search results.
-                            Specializing in Technical SEO and Next.js engineering.
+                            I build high-performance sites that convert traffic into revenue. 
+                            I specialize in SEO, AEO and GEO with Next.js to scale your revenue.
                         </p>
                         <div className="flex gap-4 pt-2">
                             <a href="https://github.com/00Abid" className="p-2 bg-white/5 rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-300" aria-label="GitHub">
@@ -43,9 +43,9 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* SITE MAPPING (SEO Internal Links) */}
+                    {/* NAVIGATION */}
                     <div>
-                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500 mb-8">Navigation</h4>
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500 mb-8">Menu</h4>
                         <ul className="space-y-4">
                             {footerLinks.map((link) => (
                                 <li key={link.name}>
@@ -61,22 +61,22 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* SYSTEM STATUS (Conversion Info) */}
+                    {/* WORK WITH ME */}
                     <div>
-                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500 mb-8">Availability</h4>
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500 mb-8">Work With Me</h4>
                         <div className="space-y-4">
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
-                                <p className="text-sm font-bold">Open for 2026 Projects</p>
+                                <p className="text-sm font-bold">Taking new projects for 2026</p>
                             </div>
                             <p className="text-xs text-slate-500 leading-relaxed font-medium">
-                                Focusing on Programmatic SEO and Next.js performance auditing.
+                                Let's optimize your site to increase sales and drive revenue.
                             </p>
                             <a
                                 href="mailto:kabid00000@gmail.com"
                                 className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-white border-b border-cyan-500 pb-1 hover:text-cyan-500 transition-colors"
                             >
-                                Start Technical Inquiry <Mail size={12} />
+                                Send me an email <Mail size={12} />
                             </a>
                         </div>
                     </div>
@@ -85,7 +85,7 @@ export default function Footer() {
                 {/* BOTTOM LEGAL STRIP */}
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">
-                        © {currentYear} ALL RIGHTS RESERVED / BUILT FOR PERFORMANCE
+                        © {currentYear} Abid Khan
                     </p>
                     <div className="flex gap-8">
                         <span className="text-[10px] font-mono text-slate-700 uppercase">Core Web Vitals: 100/100</span>
