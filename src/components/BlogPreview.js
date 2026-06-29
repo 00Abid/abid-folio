@@ -20,7 +20,7 @@ const BlogPreview = () => {
                             </p>
                         </div>
                         <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-6">
-                            SEO strategy <br /> <span className="text-white/10 italic font-serif lowercase">blogs.</span>
+                            SEO strategy <br /> <span className="text-white/50 italic font-serif lowercase">blogs.</span>
                         </h2>
                         <p className="text-slate-500 text-lg font-medium leading-relaxed">
                             Hard-won insights on scaling programmatic SEO, automating technical infrastructure, and capturing market share in the age of AI.

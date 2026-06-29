@@ -47,7 +47,7 @@ const SkillsSection = () => {
                         </p>
                     </div>
                     <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter">
-                        Revenue <br /><span className="text-white/10 italic font-serif lowercase">Stack.</span>
+                        Revenue <br /><span className="text-white/50 italic font-serif lowercase">Stack.</span>
                     </h2>
                 </div>
 

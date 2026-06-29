@@ -13,8 +13,8 @@ const experiences = [
             "Led SEO for a B2B platform with 32,000+ subscribers, driving a 24% growth in organic clicks and 10% in impressions.",
             "Achieved 1,373% growth in events section traffic and 304% growth in AI content vertical clicks.",
             "Conducted full GSC audits diagnosing 13,403 non-indexed pages; resolved 1,700+ broken URLs via pattern-based 301 redirects and Next.js middleware.",
-            "Designed a Hub-and-Spoke URL taxonomy for 145+ city and country hubs, directing developer implementation with JSON-LD ItemList schema[cite: 1].",
-            "Upgraded 5,000+ company entities from H6 to H3 and configured robots.txt and structured data (Expert Person Schema) for GPTBot and ClaudeBot to position the platform as a primary AI citation source[cite: 1]."
+            "Designed a Hub-and-Spoke URL taxonomy for 145+ city and country hubs, directing developer implementation with JSON-LD ItemList schema.",
+            "Upgraded 5,000+ company entities from H6 to H3 and configured robots.txt and structured data (Expert Person Schema) for GPTBot and ClaudeBot to position the platform as a primary AI citation source."
         ]
     },
     {
@@ -25,10 +25,10 @@ const experiences = [
         location: "Vasai, India",
         metrics: "₹2.6M+ Revenue Generated",
         points: [
-            "Managed SEO for 2 industrial B2B clients, generating over ₹2.6M in verified revenue over 10 months[cite: 1].",
-            "Built a 15+ product PSEO system using Next.js dynamic slug routing, resulting in 100% GSC indexing for all pages[cite: 1].",
-            "Achieved Top 3 Local Pack rankings for high-intent local queries with verified 5.2% CTR and Avg Position 3.9[cite: 1].",
-            "Deployed 5 Next.js sites achieving 95+ Lighthouse scores and 100% Core Web Vitals, including error-free domain migrations[cite: 1]."
+            "Managed SEO for 2 industrial B2B clients, generating over ₹2.6M in verified revenue over 10 months.",
+            "Built a 15+ product PSEO system using Next.js dynamic slug routing, resulting in 100% GSC indexing for all pages.",
+            "Achieved Top 3 Local Pack rankings for high-intent local queries with verified 5.2% CTR and Avg Position 3.9.",
+            "Deployed 5 Next.js sites achieving 95+ Lighthouse scores and 100% Core Web Vitals, including error-free domain migrations."
         ]
     },
     {
@@ -39,9 +39,9 @@ const experiences = [
         location: "New York, USA (Remote)",
         metrics: "95+ Lighthouse Score",
         points: [
-            "Improved mobile Lighthouse performance from 70s to 95+ through strategic code-splitting, lazy loading, and WebP optimization[cite: 1].",
-            "Deployed site-wide JSON-LD and Open Graph tags, successfully resolving critical crawl errors and indexing gaps[cite: 1].",
-            "Built a real-time notification system using Server-Sent Events while collaborating with distributed US engineering teams[cite: 1]."
+            "Improved mobile Lighthouse performance from 70s to 95+ through strategic code-splitting, lazy loading, and WebP optimization.",
+            "Deployed site-wide JSON-LD and Open Graph tags, successfully resolving critical crawl errors and indexing gaps.",
+            "Built a real-time notification system using Server-Sent Events while collaborating with distributed US engineering teams."
         ]
     }
 ];
@@ -60,7 +60,7 @@ const ExperienceSection = () => {
                             </p>
                         </div>
                         <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">
-                            Professional <br /> <span className="text-white/10 italic font-serif lowercase">Experience.</span>
+                            Professional <br /> <span className="text-white/50 italic font-serif lowercase">Experience.</span>
                         </h2>
                     </div>
                 </div>

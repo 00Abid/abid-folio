@@ -56,7 +56,7 @@ const ProjectCards = () => {
                         Case Studies
                     </p>
                     <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter">
-                        Revenue <br /> <span className="text-white/10 italic font-serif lowercase">Generated.</span>
+                        Revenue <br /> <span className="text-white/50 italic font-serif lowercase">Generated.</span>
                     </h2>
                 </div>
 

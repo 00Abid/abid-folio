@@ -53,7 +53,7 @@ const ContactSection = () => {
                         </div>
                         <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
                             Drive <br />
-                            <span className="text-white/10 italic font-serif lowercase">Revenue.</span>
+                            <span className="text-white/50 italic font-serif lowercase">Revenue.</span>
                         </h2>
                         <p className="text-slate-400 text-lg font-medium max-w-md leading-relaxed">
                             I help businesses scale through SEO - AEO - GEO, programmatic SEO, and high-performance site architecture. Let's start a project.

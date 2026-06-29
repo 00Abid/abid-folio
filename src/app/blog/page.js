@@ -65,7 +65,7 @@ export default function BlogPage() {
                         </p>
                     </div>
                     <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6">
-                        SEO <span className="text-white/10 italic font-serif lowercase">Blogs.</span>
+                        SEO <span className="text-white/50 italic font-serif lowercase">Blogs.</span>
                     </h1>
                     <p className="max-w-2xl text-slate-400 text-lg font-medium leading-relaxed">
                         Strategic frameworks for <Link href="/#skills" className="text-cyan-500 hover:underline">SEO</Link> and <Link href="/#projects" className="text-cyan-500 hover:underline">Next.js performance</Link>.
