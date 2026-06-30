@@ -12,9 +12,9 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer role="contentinfo" className="bg-slate-900/40 border-t border-white/5 pt-24 pb-12 px-6">
+        <footer role="contentinfo" className="bg-slate-900/20 border-t border-white/5 pt-16 md:pt-24 pb-10 md:pb-12 px-4 md:px-6">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16 md:mb-24">
 
                     {/* BRAND */}
                     <div className="lg:col-span-2 space-y-6">
@@ -27,17 +27,16 @@ export default function Footer() {
                             </span>
                         </div>
                         <p className="text-slate-500 text-sm leading-relaxed max-w-sm font-medium">
-                            I build high-performance sites that convert traffic into revenue. 
-                            I specialize in SEO, AEO and GEO with Next.js to scale your revenue.
+                            I build fast websites that make more money. I specialize in SEO, AEO, and GEO to grow business revenue.
                         </p>
                         <div className="flex gap-4 pt-2">
-                            <a href="https://github.com/00Abid" className="p-2 bg-white/5 rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-300" aria-label="GitHub">
+                            <a href="https://github.com/00Abid" className="p-2 bg-white/[0.05] rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-300" aria-label="GitHub">
                                 <Github size={18} />
                             </a>
-                            <a href="https://www.linkedin.com/in/abid-khan-coder/" className="p-2 bg-white/5 rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-300" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/abid-khan-coder/" className="p-2 bg-white/[0.05] rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-300" aria-label="LinkedIn">
                                 <Linkedin size={18} />
                             </a>
-                            <a href="https://x.com/kaabid1557" className="p-2 bg-white/5 rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-300" aria-label="Twitter">
+                            <a href="https://x.com/kaabid1557" className="p-2 bg-white/[0.05] rounded-lg hover:bg-cyan-500 hover:text-black transition-all duration-300" aria-label="Twitter">
                                 <Twitter size={18} />
                             </a>
                         </div>
@@ -45,7 +44,7 @@ export default function Footer() {
 
                     {/* NAVIGATION */}
                     <div>
-                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500 mb-8">Menu</h4>
+                        <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500 mb-8">Menu</h3>
                         <ul className="space-y-4">
                             {footerLinks.map((link) => (
                                 <li key={link.name}>
@@ -63,7 +62,7 @@ export default function Footer() {
 
                     {/* WORK WITH ME */}
                     <div>
-                        <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500 mb-8">Work With Me</h4>
+                        <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500 mb-8">Work With Me</h3>
                         <div className="space-y-4">
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
@@ -91,6 +90,13 @@ export default function Footer() {
                         <span className="text-[10px] font-mono text-slate-700 uppercase">Core Web Vitals: 100/100</span>
                         <span className="text-[10px] font-mono text-slate-700 uppercase">SSR: ACTIVE</span>
                     </div>
+                </div>
+
+                {/* Giant Background Text Brand Signature */}
+                <div className="mt-16 text-center select-none pointer-events-none overflow-hidden">
+                    <span className="text-[15vw] md:text-[12vw] font-black text-white leading-none uppercase tracking-tighter block whitespace-nowrap select-none">
+                        ABID KHAN
+                    </span>
                 </div>
             </div>
         </footer>

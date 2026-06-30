@@ -34,7 +34,7 @@ const socialLinks = [
 
 const ContactSection = () => {
     return (
-        <section id="contact" className="py-20 px-6 bg-[#050505] relative overflow-hidden">
+        <section id="contact" className="py-16 md:py-20 px-4 md:px-6 bg-[#050505] relative overflow-hidden">
             {/* Background Grid Accent */}
             <div aria-hidden="true" className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
                 backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
@@ -42,7 +42,7 @@ const ContactSection = () => {
             }} />
 
             <div className="max-w-7xl mx-auto relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
 
                     {/* LEFT: SEO Conversion Pitch */}
                     <div>
@@ -52,11 +52,11 @@ const ContactSection = () => {
                             </p>
                         </div>
                         <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
-                            Drive <br />
-                            <span className="text-white/50 italic font-serif lowercase">Revenue.</span>
+                            Let's <br />
+                            <span className="text-white/50 italic font-serif lowercase">collaborate.</span>
                         </h2>
-                        <p className="text-slate-400 text-lg font-medium max-w-md leading-relaxed">
-                            I help businesses scale through SEO - AEO - GEO, programmatic SEO, and high-performance site architecture. Let's start a project.
+                        <p className="text-slate-400 text-sm md:text-base leading-relaxed font-medium">
+                            I help companies grow their revenue using custom SEO, AEO, and GEO strategies. Let’s work together.
                         </p>
                     </div>
 
@@ -68,7 +68,7 @@ const ContactSection = () => {
                                 href={link.href}
                                 target={link.id === 1 ? "_self" : "_blank"}
                                 rel="noopener noreferrer"
-                                className="group p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.05] transition-all duration-300 flex flex-col justify-between min-h-[180px]"
+                                className="group p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-white/[0.05] border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.07] transition-all duration-300 flex flex-col justify-between min-h-[160px]"
                             >
                                 <div className="text-cyan-500 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500">
                                     {link.icon}
@@ -88,7 +88,7 @@ const ContactSection = () => {
                         ))}
 
                         {/* DIRECT CTA BOX */}
-                        <div className="sm:col-span-2 mt-4 p-8 rounded-[2rem] bg-cyan-500 flex flex-col md:flex-row items-center justify-between gap-6 group cursor-pointer transition-transform hover:scale-[1.01]">
+                        <div className="sm:col-span-2 mt-4 p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-cyan-500 flex flex-col md:flex-row items-center justify-between gap-6 group cursor-pointer transition-transform hover:scale-[1.01]">
                             <div className="flex items-center gap-4">
                                 <div className="p-3 bg-black rounded-2xl text-cyan-500">
                                     <Send size={24} strokeWidth={2.5} />

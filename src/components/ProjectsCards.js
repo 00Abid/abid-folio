@@ -47,73 +47,79 @@ const projects = [
 
 const ProjectCards = () => {
     return (
-        <section id="projects" className="py-20 px-6 bg-[#050505]">
+        <section id="projects" className="py-16 md:py-20 px-4 md:px-6 bg-[#050505]">
             <div className="max-w-7xl mx-auto">
 
                 {/* HEADER */}
-                <div className="mb-20">
+                <div className="mb-12 md:mb-16">
                     <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500 mb-4">
                         Case Studies
                     </p>
-                    <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter">
-                        Revenue <br /> <span className="text-white/50 italic font-serif lowercase">Generated.</span>
+                    <h2 className="text-4xl sm:text-5xl md:text-8xl font-black uppercase tracking-tighter">
+                        SEO <br /> <span className="text-white/50 italic font-serif lowercase">proof.</span>
                     </h2>
+                    <p className="text-slate-400 text-sm md:text-base max-w-2xl mt-6 leading-relaxed font-medium">
+                        Real results for real brands. I use SEO, AEO, and GEO to grow search traffic and make more money for clients.
+                    </p>
                 </div>
 
-                {/* PROJECTS BENTO GRID */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* PROJECTS BENTO GRID (Compact Modern Feel) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3">
                     {projects.map((project, index) => (
                         <article
                             key={project.id}
-                            className="group relative bg-white/[0.02] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-cyan-500/30 transition-all duration-500"
+                            className="group relative bg-white/[0.05] border border-white/5 rounded-[1.5rem] overflow-hidden hover:border-cyan-500/30 transition-all duration-500 flex flex-col justify-between"
                         >
-                            {/* Image Container */}
-                            <div className="relative aspect-[16/9] overflow-hidden">
+                            {/* Image & Performance Overlay */}
+                            <div className="relative aspect-[16/10] overflow-hidden bg-black/40">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
                                     fill
                                     priority={index === 0}
-                                    className="object-cover transform group-hover:scale-105 transition-transform duration-700"
+                                    className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                                 />
-                                <div className="absolute top-6 right-6">
-                                    <div className="bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 flex items-center gap-2">
-                                        <Zap size={12} className="text-cyan-500" />
-                                        <span className="text-[10px] font-black text-white">{project.performance}</span>
+                                <div className="absolute top-3 right-3">
+                                    <div className="bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 flex items-center gap-1.5">
+                                        <Zap size={10} className="text-cyan-500 animate-pulse" />
+                                        <span className="text-[8px] font-black text-white tracking-wide uppercase">{project.performance}</span>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Content */}
-                            <div className="p-10">
-                                <div className="flex justify-between items-start mb-6">
-                                    <div>
-                                        <h3 className="text-3xl font-black uppercase tracking-tighter text-white mb-1">
-                                            {project.title}
-                                        </h3>
-                                        <p className="text-[10px] font-bold text-cyan-500 uppercase tracking-widest">
-                                            {project.subtitle}
-                                        </p>
+                            {/* Content Body */}
+                            <div className="p-6 flex flex-col justify-between flex-grow">
+                                <div className="space-y-4">
+                                    <div className="flex justify-between items-start gap-2">
+                                        <div>
+                                            <h3 className="text-lg font-black uppercase tracking-tight text-white group-hover:text-cyan-400 transition-colors">
+                                                {project.title}
+                                            </h3>
+                                            <p className="text-[8px] font-bold text-cyan-500/80 uppercase tracking-widest mt-0.5">
+                                                {project.subtitle}
+                                            </p>
+                                        </div>
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-2.5 bg-white/5 rounded-xl hover:bg-cyan-500 hover:text-black transition-all shrink-0"
+                                        >
+                                            <ArrowUpRight size={14} />
+                                        </a>
                                     </div>
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        className="p-4 bg-white/5 rounded-2xl hover:bg-cyan-500 hover:text-black transition-all"
-                                    >
-                                        <ArrowUpRight size={20} />
-                                    </a>
+
+                                    <p className="text-slate-400 text-xs leading-relaxed font-medium line-clamp-4">
+                                        {project.desc}
+                                    </p>
                                 </div>
 
-                                <p className="text-slate-400 text-sm leading-relaxed mb-8 font-medium">
-                                    {project.desc}
-                                </p>
-
-                                {/* Tags */}
-                                <div className="flex flex-wrap gap-2">
+                                {/* Tech Tags */}
+                                <div className="flex flex-wrap gap-1.5 pt-6 mt-auto">
                                     {project.tech.map((tag) => (
                                         <span
                                             key={tag}
-                                            className="text-[9px] font-black uppercase tracking-widest px-3 py-1.5 bg-white/5 border border-white/5 rounded-lg text-slate-400"
+                                            className="text-[8px] font-black uppercase tracking-wider px-2 py-1 bg-white/5 border border-white/5 rounded text-slate-400"
                                         >
                                             {tag}
                                         </span>

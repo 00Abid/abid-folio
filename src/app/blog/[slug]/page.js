@@ -42,6 +42,8 @@ export default async function BlogPost({ params }) {
 
     if (!post) notFound(); // Triggers your custom 404
 
+    const relatedPosts = blogs.filter((b) => b.slug !== slug).slice(0, 2);
+
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -86,7 +88,7 @@ export default async function BlogPost({ params }) {
     };
 
     return (
-        <main className="min-h-screen bg-[#050505] text-white pt-30 pb-20 px-6">
+        <main className="min-h-screen bg-[#050505] text-white pt-24 md:pt-30 pb-16 md:pb-20 px-4 md:px-6">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             <div className="max-w-4xl mx-auto">
 
@@ -98,9 +100,9 @@ export default async function BlogPost({ params }) {
                             <Clock size={12} /> {post.readTime}
                         </div>
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-tight mb-8">{post.title}</h1>
-                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/5">
-                        <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center font-black text-black text-xs">AK</div>
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase tracking-tighter leading-tight mb-8">{post.title}</h1>
+                    <div className="flex items-center gap-4 p-4 bg-white/[0.05] rounded-[1rem] sm:rounded-2xl border border-white/5">
+                        <div className="w-10 h-10 bg-cyan-500 rounded-full flex items-center justify-center font-black text-black text-xs shrink-0">AK</div>
                         <div>
                             <p className="text-[10px] font-black uppercase tracking-widest text-white">{post.author}</p>
                             <p className="text-[9px] font-bold uppercase text-slate-500">Technical SEO • Verified: {post.date}</p>
@@ -109,28 +111,32 @@ export default async function BlogPost({ params }) {
                 </header>
 
                 {/* REDUCED HERO IMAGE */}
-                <div className="relative aspect-video w-full md:w-[60%] h-64 rounded-[2rem] overflow-hidden border border-white/10 mb-16">
+                <div className="relative aspect-video w-full md:w-[70%] rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden border border-white/10 mb-12 md:mb-16">
                     <Image src={post.image} alt={post.title} fill className="object-cover" priority />
                 </div>
 
-                {/* CORE INQUIRY & ANSWER */}
-                <section className="mb-12 p-8 bg-cyan-500/5 border border-cyan-500/20 rounded-3xl">
-                    <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500 mb-4">Core Inquiry</h2>
-                    <p className="text-2xl font-black uppercase tracking-tight text-white italic">"{post.mainQuestion}"</p>
-                </section>
-
-                <section className="mb-12">
-                    <div className="flex items-center gap-2 mb-4">
-                        <CheckCircle2 size={16} className="text-cyan-500" />
-                        <h3 className="text-xs font-black uppercase tracking-widest">Direct Resolution</h3>
+                {/* CORE INQUIRY & ANSWER (AEO-Optimized Box) */}
+                <section className="mb-12 p-6 sm:p-8 bg-cyan-500/5 border border-cyan-500/20 rounded-[1.5rem] sm:rounded-3xl">
+                    <div className="space-y-6">
+                        <div>
+                            <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-cyan-500 mb-3">Core Inquiry</h2>
+                            <p className="text-xl sm:text-2xl font-black uppercase tracking-tight text-white italic">"{post.mainQuestion}"</p>
+                        </div>
+                        
+                        <div className="pt-6 border-t border-white/5">
+                            <div className="flex items-center gap-2 mb-3">
+                                <CheckCircle2 size={16} className="text-cyan-500" />
+                                <h3 className="text-xs font-black uppercase tracking-widest">Direct Answer</h3>
+                            </div>
+                            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-medium">
+                                {post.directAnswer}
+                            </p>
+                        </div>
                     </div>
-                    <p className="text-xl text-slate-300 leading-relaxed font-medium bg-white/5 p-6 rounded-2xl border-l-4 border-cyan-500">
-                        {post.directAnswer}
-                    </p>
                 </section>
 
                 {/* TL;DR SUMMARY */}
-                <section className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-6 p-8 bg-white/[0.02] border border-white/5 rounded-[2.5rem]">
+                <section className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-6 p-6 sm:p-8 bg-white/[0.05] border border-white/5 rounded-[1.5rem] sm:rounded-[2.5rem]">
                     <div>
                         <h3 className="text-xs font-black uppercase tracking-widest mb-4">TL;DR Summary</h3>
                         <ul className="space-y-3">
@@ -152,8 +158,8 @@ export default async function BlogPost({ params }) {
                 <div className="space-y-16 mb-20">
                     {post.contentSections.map((section, i) => (
                         <section key={i} className="max-w-3xl">
-                            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-6">{section.heading}</h2>
-                            <p className="text-slate-400 text-lg leading-relaxed font-medium mb-6">{section.body}</p>
+                            <h2 className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-6">{section.heading}</h2>
+                            <p className="text-slate-400 text-sm sm:text-base md:text-lg leading-relaxed font-medium mb-6">{section.body}</p>
                             <div className="flex gap-6 text-[10px] font-black uppercase tracking-widest">
                                 <Link href="/#skills" className="text-cyan-500 hover:text-white">→ View Technical Stack</Link>
                                 <Link href="/#projects" className="text-cyan-500 hover:text-white">→ Explore Case Studies</Link>
@@ -162,8 +168,30 @@ export default async function BlogPost({ params }) {
                     ))}
                 </div>
 
+                {/* RELATED ARTICLES */}
+                <section className="mb-20 pt-12 border-t border-white/5">
+                    <h3 className="text-xs font-black uppercase tracking-widest text-cyan-500 mb-8">More SEO, AEO & GEO Insights</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {relatedPosts.map((rPost) => (
+                            <Link
+                                key={rPost.id}
+                                href={`/blog/${rPost.slug}`}
+                                className="group p-6 rounded-[1.5rem] bg-white/[0.05] border border-white/5 hover:border-cyan-500/30 transition-all flex flex-col justify-between"
+                            >
+                                <div>
+                                    <span className="px-2.5 py-1 bg-cyan-500/10 text-cyan-500 text-[8px] font-black uppercase tracking-widest rounded border border-cyan-500/20">{rPost.category}</span>
+                                    <h4 className="text-lg font-black uppercase tracking-tight text-white mt-4 group-hover:text-cyan-500 transition-colors">{rPost.title}</h4>
+                                </div>
+                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-cyan-500 mt-6 inline-flex items-center gap-1 group-hover:text-white transition-colors">
+                                    Read Analysis →
+                                </span>
+                            </Link>
+                        ))}
+                    </div>
+                </section>
+
                 {/* OPTIMIZED REVENUE CTA */}
-                <section className="p-8 rounded-[2rem] bg-cyan-500 flex flex-col md:flex-row items-center justify-between gap-6 md:w-[70%] mx-auto">
+                <section className="p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-cyan-500 flex flex-col md:flex-row items-center justify-between gap-6 md:w-[80%] mx-auto">
                     <div className="text-center md:text-left">
                         <h2 className="text-2xl font-black uppercase tracking-tighter text-black mb-1">Need a technical audit?</h2>
                         <p className="font-bold uppercase tracking-[0.2em] text-[9px] text-black/70">Stop losing revenue to performance issues.</p>

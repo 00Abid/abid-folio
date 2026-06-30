@@ -36,29 +36,32 @@ const skillGroups = [
 
 const SkillsSection = () => {
     return (
-        <section id="skills" className="py-20 px-6 bg-[#050505] overflow-hidden">
+        <section id="skills" className="py-16 md:py-20 px-4 md:px-6 bg-[#050505] overflow-hidden">
             <div className="max-w-7xl mx-auto">
 
                 {/* HEADER */}
-                <div className="mb-24">
+                <div className="mb-12 md:mb-16">
                     <div className="flex items-center gap-2 mb-4">
                         <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500">
                             Core Competencies
                         </p>
                     </div>
-                    <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter">
-                        Revenue <br /><span className="text-white/50 italic font-serif lowercase">Stack.</span>
+                    <h2 className="text-4xl sm:text-5xl md:text-8xl font-black uppercase tracking-tighter">
+                        Core <br /><span className="text-white/50 italic font-serif lowercase">capabilities.</span>
                     </h2>
+                    <p className="text-slate-400 text-sm md:text-base max-w-2xl mt-6 leading-relaxed font-medium">
+                        These are the skills I use to build SEO, AEO, and GEO systems. I handle everything from technical setups to strategies that drive client revenue.
+                    </p>
                 </div>
 
                 {/* BENTO GRID */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {skillGroups.map((group, index) => (
                         <div
                             key={index}
-                            className="group p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-500"
+                            className="group p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-white/[0.05] border border-white/5 hover:border-cyan-500/30 transition-all duration-500"
                         >
-                            <div className="flex items-center gap-3 mb-8 text-cyan-500">
+                            <div className="flex items-center gap-3 mb-6 sm:mb-8 text-cyan-500">
                                 <div className="p-2 bg-cyan-500/10 rounded-lg">
                                     {group.icon}
                                 </div>
@@ -82,7 +85,7 @@ const SkillsSection = () => {
                 </div>
 
                 {/* SEO ADVANTAGE BAR */}
-                <div className="mt-4 p-8 rounded-[2rem] bg-cyan-500 text-black flex flex-col md:flex-row justify-between items-center gap-6">
+                <div className="mt-8 p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-cyan-500 text-black flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="flex items-center gap-4">
                         <ShieldCheck size={32} strokeWidth={2.5} />
                         <div>

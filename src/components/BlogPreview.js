@@ -8,28 +8,28 @@ const featuredPosts = blogs.slice(0, 2);
 
 const BlogPreview = () => {
     return (
-        <section id="blog-preview" className="py-20 px-6 bg-[#050505]">
+        <section id="blog-preview" className="py-16 md:py-20 px-4 md:px-6 bg-[#050505]">
             <div className="max-w-7xl mx-auto">
 
                 {/* HEADER */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-8">
                     <div className="max-w-2xl">
                         <div className="flex items-center gap-2 mb-4">
                             <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500">
                                 Growth Intelligence
                             </p>
                         </div>
-                        <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-6">
-                            SEO strategy <br /> <span className="text-white/50 italic font-serif lowercase">blogs.</span>
+                        <h2 className="text-4xl sm:text-5xl md:text-8xl font-black uppercase tracking-tighter mb-6">
+                            SEO <br /> <span className="text-white/50 italic font-serif lowercase">strategy.</span>
                         </h2>
-                        <p className="text-slate-500 text-lg font-medium leading-relaxed">
-                            Hard-won insights on scaling programmatic SEO, automating technical infrastructure, and capturing market share in the age of AI.
+                        <p className="text-slate-400 text-sm md:text-base leading-relaxed font-medium">
+                            My notes on using SEO, AEO, and GEO to get search traffic, build automation, and grow client revenue.
                         </p>
                     </div>
 
                     <Link
                         href="/blog"
-                        className="group flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-white border border-white/10 px-8 py-4 rounded-full hover:bg-white hover:text-black transition-all"
+                        className="group flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-white border border-white/10 px-8 py-4 rounded-full hover:bg-white hover:text-black transition-all shrink-0 self-start md:self-end"
                     >
                         View Full Library <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </Link>
@@ -41,7 +41,7 @@ const BlogPreview = () => {
                         <Link
                             key={post.id}
                             href={`/blog/${post.slug}`}
-                            className="group flex flex-col md:flex-row justify-between p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.04] transition-all duration-500"
+                            className="group flex flex-col md:flex-row justify-between p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-white/[0.05] border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.07] transition-all duration-500"
                         >
                             <div className="space-y-4">
                                 <div className="flex items-center gap-4">
@@ -53,12 +53,12 @@ const BlogPreview = () => {
                                         {post.readTime}
                                     </div>
                                 </div>
-                                <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white group-hover:text-cyan-500 transition-colors">
+                                <h3 className="text-xl sm:text-2xl md:text-3xl font-black uppercase tracking-tight text-white group-hover:text-cyan-500 transition-colors">
                                     {post.title}
                                 </h3>
                             </div>
 
-                            <div className="mt-6 md:mt-0 flex flex-col items-start md:items-end gap-2">
+                            <div className="mt-6 md:mt-0 flex flex-col items-start md:items-end justify-between gap-4">
                                 <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest">{post.date}</p>
                                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-700 group-hover:bg-cyan-500 group-hover:text-black transition-all">
                                     <ArrowUpRight size={20} />

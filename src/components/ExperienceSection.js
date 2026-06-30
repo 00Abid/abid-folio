@@ -48,21 +48,20 @@ const experiences = [
 
 const ExperienceSection = () => {
     return (
-        <section id="experience" className="py-20 px-6 bg-[#050505]">
+        <section id="experience" className="py-16 md:py-20 px-4 md:px-6 bg-[#050505]">
             <div className="max-w-7xl mx-auto">
 
                 {/* SECTION HEADER */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-4">
-                    <div>
-                        <div className="flex items-center gap-2 mb-4">
-                            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500">
-                                Career Logbook
-                            </p>
-                        </div>
-                        <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter">
-                            Professional <br /> <span className="text-white/50 italic font-serif lowercase">Experience.</span>
-                        </h2>
-                    </div>
+                <div className="mb-12 md:mb-16">
+                    <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500 mb-4">
+                        Career Logbook
+                    </p>
+                    <h2 className="text-4xl sm:text-5xl md:text-8xl font-black uppercase tracking-tighter">
+                        Work <br /> <span className="text-white/50 italic font-serif lowercase">Experience.</span>
+                    </h2>
+                    <p className="text-slate-400 text-sm md:text-base max-w-2xl mt-4 leading-relaxed font-medium">
+                        Companies and clients I worked with using SEO, AEO, and GEO strategies to scale organic traffic and business revenue.
+                    </p>
                 </div>
 
                 {/* EXPERIENCE LIST */}
@@ -70,7 +69,7 @@ const ExperienceSection = () => {
                     {experiences.map((exp) => (
                         <article
                             key={exp.id}
-                            className="group relative grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 md:p-12 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-cyan-500/20 transition-all duration-500"
+                            className="group relative grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 md:p-12 rounded-[1.5rem] sm:rounded-[2.5rem] bg-white/[0.05] border border-white/5 hover:bg-white/[0.07] hover:border-cyan-500/20 transition-all duration-500"
                         >
                             {/* LEFT COL */}
                             <div className="lg:col-span-4 space-y-6">

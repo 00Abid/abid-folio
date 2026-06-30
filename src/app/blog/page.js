@@ -5,12 +5,13 @@ import { blogs } from '@/lib/Blog-data';
 import { Clock, Calendar, ArrowRight, Zap, BarChart3, ShieldCheck, Mail } from 'lucide-react';
 
 export const metadata = {
-    title: "SEO Insights & AEO | GEO Strategy Blog | Abid Khan",
-    description: "Deep-dives into AEO, technical audits, site architecture, and automation. Learn how to scale organic traffic with Python, Next.js, and modern SEO workflows.",
+    title: "SEO, AEO & GEO Strategy Blogs | Abid Khan",
+    description: "Deep-dives into SEO, AEO, and GEO strategy. Learn how to scale organic traffic, optimize websites, and grow business revenue.",
     alternates: {
         canonical: "https://abid-folio.vercel.app/blog",
     },
 };
+
 
 export default function BlogPage() {
     const jsonLd = {
@@ -53,34 +54,33 @@ export default function BlogPage() {
     };
 
     return (
-        <main className="min-h-screen bg-[#050505] text-white pt-30 pb-20 px-6">
+        <main className="min-h-screen bg-[#050505] text-white pt-24 md:pt-30 pb-16 md:pb-20 px-4 md:px-6">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             <div className="max-w-7xl mx-auto">
 
                 {/* HEADER */}
-                <header className="mb-20">
+                <header className="mb-12 md:mb-16">
                     <div className="flex items-center gap-2 mb-4">
                         <p className="text-[10px] font-black uppercase tracking-[0.4em] text-cyan-500">
                             Master SEO
                         </p>
                     </div>
-                    <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6">
-                        SEO <span className="text-white/50 italic font-serif lowercase">Blogs.</span>
+                    <h1 className="text-4xl sm:text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-6">
+                        SEO <br /> <span className="text-white/50 italic font-serif lowercase">Blogs.</span>
                     </h1>
-                    <p className="max-w-2xl text-slate-400 text-lg font-medium leading-relaxed">
-                        Strategic frameworks for <Link href="/#skills" className="text-cyan-500 hover:underline">SEO</Link> and <Link href="/#projects" className="text-cyan-500 hover:underline">Next.js performance</Link>.
-                        Every post is engineered to turn technical architecture into long-term organic revenue.
+                    <p className="max-w-2xl text-slate-400 text-sm md:text-base leading-relaxed font-medium">
+                        Simple guides on <Link href="/#skills" className="text-cyan-500 hover:underline">SEO</Link> and <Link href="/#projects" className="text-cyan-500 hover:underline">Next.js speed</Link>. Learn how to build sites that rank high and bring in sales.
                     </p>
                 </header>
 
                 {/* SEO METHODOLOGY SECTION */}
-                <section className="mb-24 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <section className="mb-16 md:mb-24 grid grid-cols-1 md:grid-cols-3 gap-6">
                     {[
                         { title: "Technical Audits", icon: <ShieldCheck size={20} />, desc: "Diagnostic-first approach to crawl depth, indexation control, and rendering." },
                         { title: "Growth Engineering", icon: <Zap size={20} />, desc: "Leveraging Next.js and programmatic systems to scale organic visibility." },
                         { title: "Revenue Automation", icon: <BarChart3 size={20} />, desc: "Aligning search signals with high-intent landing pages for maximum ROI." }
                     ].map((item, i) => (
-                        <div key={i} className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all">
+                        <div key={i} className="p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-white/[0.05] border border-white/5 hover:border-cyan-500/30 transition-all">
                             <div className="text-cyan-500 mb-6">{item.icon}</div>
                             <h3 className="font-black uppercase tracking-widest text-[10px] mb-2">{item.title}</h3>
                             <p className="text-[12px] text-slate-500 leading-relaxed">{item.desc}</p>
@@ -89,11 +89,11 @@ export default function BlogPage() {
                 </section>
 
                 {/* BLOG LIST */}
-                <div className="grid grid-cols-1 gap-6 mb-24">
+                <div className="grid grid-cols-1 gap-6 mb-16 md:mb-24">
                     {blogs.map((post, index) => (
                         <article
                             key={post.id}
-                            className="group flex flex-col lg:flex-row gap-8 p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-500"
+                            className="group flex flex-col lg:flex-row gap-8 p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] bg-white/[0.05] border border-white/5 hover:border-cyan-500/30 transition-all duration-500"
                         >
                             <div className="relative w-full lg:w-72 aspect-video lg:aspect-square overflow-hidden rounded-3xl shrink-0">
                                 <Image src={post.image} alt={post.title} fill className="object-cover" />
@@ -104,8 +104,11 @@ export default function BlogPage() {
                                         <span className="px-3 py-1 bg-cyan-500/10 text-cyan-500 text-[9px] font-black uppercase tracking-widest rounded-md border border-cyan-500/20">{post.category}</span>
                                         <span className="text-[10px] font-bold text-slate-600 uppercase tracking-widest">{post.readTime}</span>
                                     </div>
-                                    <h2 className="text-3xl font-black uppercase tracking-tight text-white mb-4 leading-none">{post.title}</h2>
-                                    <p className="text-slate-400 text-sm italic mb-6">{post.directAnswer}</p>
+                                    <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white mb-4 leading-none">{post.title}</h2>
+                                    <div className="mb-6 p-4 rounded-xl bg-cyan-500/5 border border-cyan-500/10">
+                                        <p className="text-[9px] font-black uppercase tracking-wider text-cyan-500 mb-1">Direct Answer</p>
+                                        <p className="text-slate-300 text-xs sm:text-sm font-medium leading-relaxed">{post.directAnswer}</p>
+                                    </div>
                                 </div>
                                 <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-white hover:text-cyan-500 transition-colors">
                                     Read Full Analysis <ArrowRight size={14} />
@@ -116,7 +119,7 @@ export default function BlogPage() {
                 </div>
 
                 {/* CTA SECTION - Compact Design */}
-                <section className="mt-20 p-8 rounded-[2rem] bg-cyan-500 flex flex-col md:flex-row items-center justify-between gap-6">
+                <section className="mt-12 md:mt-20 p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-cyan-500 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div className="text-center md:text-left">
                         <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tighter text-black mb-1">
                             Need a technical audit?

@@ -6,12 +6,12 @@ import Script from 'next/script';
 import { GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata = {
-    title: "Abid Khan | SEO Specialist & Scaling Revenue and Growth",
-    description: "I engineer high-performance SEO strategies that turn site architecture into organic revenue. Specialized in technical audits, AEO, and programmatic growth for B2B brands.",
+    title: "Abid Khan | SEO, AEO & GEO Specialist - Scaling Organic Revenue",
+    description: "I build custom SEO, AEO, and GEO strategies that turn site architecture into organic revenue and sales. No developers needed, I write the code myself.",
     openGraph: {
-        title: "Abid Khan | SEO Specialist & Scaling Revenue and Growth",
-        description: "I engineer high-performance SEO strategies that turn site architecture into organic revenue. Specialized in technical audits, AEO, and programmatic growth for B2B brands.",
-        url: "https://abid-folio.vercel.app/",
+        title: "Abid Khan | SEO, AEO & GEO Specialist - Scaling Organic Revenue",
+        description: "I build custom SEO, AEO, and GEO strategies that turn site architecture into organic revenue and sales. No developers needed, I write the code myself.",
+        url: "https://abid-folio.vercel.app",
         siteName: "Abid Khan Portfolio",
         images: [{ url: "/seo.webp", width: 1200, height: 630, alt: "Abid Khan | Revenue Growth SEO" }],
         locale: "en_US",
@@ -19,17 +19,16 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Abid Khan | SEO Specialist & Scaling Revenue and Growth",
-        description: "Turning site architecture into organic revenue. Technical audits, AEO, and programmatic growth.",
+        title: "Abid Khan | SEO, AEO & GEO Specialist - Scaling Organic Revenue",
+        description: "SEO, AEO, and GEO strategies turning site architecture into organic sales and revenue.",
         creator: "@kaabid1557",
         images: ["/seo.webp"],
     },
-    // Fixed: Removed the language alternates to resolve the 404/indexing issues
     metadataBase: new URL("https://abid-folio.vercel.app"),
     alternates: {
         canonical: "/",
     },
-    keywords: "SEO, Revenue Growth, AEO, Programmatic SEO, B2B SEO, Performance Engineering, Enterprise SEO",
+    keywords: "SEO, AEO, GEO, Revenue Growth, Programmatic SEO, B2B SEO, Performance Engineering, Enterprise SEO",
 };
 
 export const viewport = {
@@ -45,6 +44,7 @@ export default function RootLayout({ children }) {
         "@graph": [
             {
                 "@type": "Organization",
+                "@id": "https://abid-folio.vercel.app/#organization",
                 "name": "Abid Khan",
                 "url": "https://abid-folio.vercel.app",
                 "logo": "https://abid-folio.vercel.app/logo.png",
@@ -56,43 +56,55 @@ export default function RootLayout({ children }) {
             },
             {
                 "@type": "Person",
+                "@id": "https://abid-folio.vercel.app/#person",
                 "name": "Abid Khan",
                 "url": "https://abid-folio.vercel.app",
                 "image": "https://abid-folio.vercel.app/seo.webp",
-                "jobTitle": "Enterprise SEO Strategist",
-                "description": "Enterprise SEO strategist helping large sites scale organic traffic via technical SEO, site migrations, programmatic content, and performance optimization.",
+                "jobTitle": "SEO, AEO & GEO Specialist",
+                "description": "SEO, AEO, and GEO specialist helping businesses scale organic sales and revenue via technical search optimization, schemas, and clean code setups.",
                 "sameAs": [
                     "https://www.linkedin.com/in/abid-khan-coder/",
                     "https://github.com/00Abid",
                     "https://x.com/kaabid1557"
-                ]
+                ],
+                "worksFor": {
+                    "@id": "https://abid-folio.vercel.app/#organization"
+                }
             },
             {
                 "@type": "WebSite",
-                "url": "https://abid-folio.vercel.app/",
+                "@id": "https://abid-folio.vercel.app/#website",
+                "url": "https://abid-folio.vercel.app",
                 "name": "Abid Khan Portfolio",
                 "inLanguage": "en",
-                "description": "Enterprise SEO strategist portfolio showcasing migrations, technical SEO, and case studies with measurable impact."
+                "description": "SEO, AEO, and GEO specialist portfolio showcasing technical search optimization and case studies with measurable revenue impact.",
+                "publisher": {
+                    "@id": "https://abid-folio.vercel.app/#person"
+                }
             },
             {
                 "@type": "WebPage",
-                "url": "https://abid-folio.vercel.app/",
-                "name": "Abid Khan — Enterprise SEO Strategist & Frontend Developer",
+                "@id": "https://abid-folio.vercel.app/#webpage",
+                "url": "https://abid-folio.vercel.app",
+                "name": "Abid Khan - SEO, AEO & GEO Specialist",
                 "inLanguage": "en",
+                "isPartOf": {
+                    "@id": "https://abid-folio.vercel.app/#website"
+                },
                 "primaryImageOfPage": {
                     "@type": "ImageObject",
                     "url": "https://abid-folio.vercel.app/seo.webp"
                 },
-                "description": "Enterprise SEO strategist helping large sites scale organic traffic via technical SEO, site migrations, programmatic content, and performance optimization.",
+                "description": "I build custom SEO, AEO, and GEO strategies that turn site architecture into organic revenue and sales.",
                 "publisher": {
-                    "@type": "Organization",
-                    "name": "Abid Khan"
+                    "@id": "https://abid-folio.vercel.app/#organization"
                 }
             },
             {
                 "@type": "BreadcrumbList",
+                "@id": "https://abid-folio.vercel.app/#breadcrumb",
                 "itemListElement": [
-                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://abid-folio.vercel.app/" },
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://abid-folio.vercel.app" },
                     { "@type": "ListItem", "position": 2, "name": "Projects", "item": "https://abid-folio.vercel.app/#projects" },
                     { "@type": "ListItem", "position": 3, "name": "Skills", "item": "https://abid-folio.vercel.app/#skills" },
                     { "@type": "ListItem", "position": 4, "name": "Experience", "item": "https://abid-folio.vercel.app/#experience" },
@@ -102,6 +114,7 @@ export default function RootLayout({ children }) {
             },
             {
                 "@type": "FAQPage",
+                "@id": "https://abid-folio.vercel.app/#faq",
                 "mainEntity": [
                     {
                         "@type": "Question",
@@ -159,7 +172,6 @@ export default function RootLayout({ children }) {
                 <main role="main" className="pt-12">
                     {children}
                 </main>
-
                 <Footer />
             </body>
         </html>
