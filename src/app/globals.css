@@ -5,6 +5,10 @@
   --color-background: #050505;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-background);
   color: #fff;
