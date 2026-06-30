@@ -8,7 +8,15 @@ const projects = [
         title: "Aero Enterprises",
         subtitle: "Enterprise Technical Architecture",
         tech: ["Next.js", "Schema", "JSON-LD"],
-        desc: "Owned the full-stack architecture. Rebuilt the site independently, eliminating crawl debt to secure 260+ high-intent conversions and contributing to ₹2.6M+ in verified client revenue.",
+        desc: (
+            <>
+                Owned the full-stack architecture. Rebuilt the site independently, eliminating crawl debt at{" "}
+                <a href="https://www.aeroenterprises.shop/" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:underline">
+                    Aero Enterprises
+                </a>{" "}
+                to secure 260+ high-intent conversions and contributing to ₹2.6M+ in verified client revenue.
+            </>
+        ),
         image: "/ae.webp",
         link: "https://www.aeroenterprises.shop/",
         performance: "₹2.6M+ Revenue",
@@ -18,7 +26,15 @@ const projects = [
         title: "Raja Buffing Works",
         subtitle: "Local & GEO Dominance",
         tech: ["Next.js", "Review Schema", "GSC"],
-        desc: "Executed a zero-dependency strategy to secure Top 3 Local Pack rankings. Drove 284+ verified direction clicks, directly converting search intent into local customer revenue.",
+        desc: (
+            <>
+                Executed a zero-dependency strategy to secure Top 3 Local Pack rankings at{" "}
+                <a href="https://rajabuffing.shop/" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:underline">
+                    Raja Buffing Works
+                </a>
+                . Drove 284+ verified direction clicks, directly converting search intent into local customer revenue.
+            </>
+        ),
         image: "/rbw.webp",
         link: "https://rajabuffing.shop/",
         performance: "Verified ROI",
