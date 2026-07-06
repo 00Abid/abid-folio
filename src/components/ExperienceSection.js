@@ -23,9 +23,9 @@ const experiences = [
         role: "SEO Specialist",
         period: "Jun 2025 - Present",
         location: "Vasai, India",
-        metrics: "₹2.6M+ Revenue Generated",
+        metrics: "2.6M+ Revenue Generated",
         points: [
-            "Managed SEO for 2 industrial B2B clients, generating over ₹2.6M in verified revenue over 10 months.",
+            "Managed SEO for 2 industrial B2B clients, generating over 2.6M in verified revenue over 10 months.",
             "Built a 15+ product PSEO system using Next.js dynamic slug routing, resulting in 100% GSC indexing for all pages.",
             "Achieved Top 3 Local Pack rankings for high-intent local queries with verified 5.2% CTR and Avg Position 3.9.",
             "Deployed 5 Next.js sites achieving 95+ Lighthouse scores and 100% Core Web Vitals, including error-free domain migrations."

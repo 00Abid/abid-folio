@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Github, Linkedin, Mail, FileText, Send, ArrowRight } from "lucide-react";
 
 const socialLinks = [
@@ -7,28 +8,32 @@ const socialLinks = [
         href: "mailto:kabid00000@gmail.com",
         icon: <Mail size={24} />,
         label: "Email",
-        value: "kabid00000@gmail.com"
+        value: "kabid00000@gmail.com",
+        isExternal: false
     },
     {
         id: 2,
         href: "https://github.com/00Abid",
         icon: <Github size={24} />,
         label: "GitHub",
-        value: "@00Abid"
+        value: "@00Abid",
+        isExternal: true
     },
     {
         id: 3,
         href: "https://www.linkedin.com/in/abid-khan-coder/",
         icon: <Linkedin size={24} />,
         label: "LinkedIn",
-        value: "abid-khan-coder"
+        value: "abid-khan-coder",
+        isExternal: true
     },
     {
         id: 4,
-        href: "/Abid-Khan-Resume.pdf",
+        href: "/resume",
         icon: <FileText size={24} />,
         label: "Resume",
-        value: "Download PDF"
+        value: "View Resume",
+        isExternal: false
     },
 ];
 
@@ -62,30 +67,46 @@ const ContactSection = () => {
 
                     {/* RIGHT: High-Speed Link Matrix */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {socialLinks.map((link) => (
-                            <a
-                                key={link.id}
-                                href={link.href}
-                                target={link.id === 1 ? "_self" : "_blank"}
-                                rel="noopener noreferrer"
-                                className="group p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-white/[0.05] border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.07] transition-all duration-300 flex flex-col justify-between min-h-[160px]"
-                            >
-                                <div className="text-cyan-500 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500">
-                                    {link.icon}
-                                </div>
-                                <div>
-                                    <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">
-                                        {link.label}
-                                    </p>
-                                    <div className="flex items-center justify-between">
-                                        <span className="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors">
-                                            {link.value}
-                                        </span>
-                                        <ArrowRight size={16} className="text-slate-700 group-hover:text-cyan-500 group-hover:translate-x-1 transition-all" />
+                        {socialLinks.map((link) => {
+                            const linkEl = (
+                                <span className="flex flex-col justify-between min-h-[160px] w-full">
+                                    <div className="text-cyan-500 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500">
+                                        {link.icon}
                                     </div>
-                                </div>
-                            </a>
-                        ))}
+                                    <div>
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-1">
+                                            {link.label}
+                                        </p>
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                                {link.value}
+                                            </span>
+                                            <ArrowRight size={16} className="text-slate-700 group-hover:text-cyan-500 group-hover:translate-x-1 transition-all" />
+                                        </div>
+                                    </div>
+                                </span>
+                            );
+
+                            return link.isExternal ? (
+                                <a
+                                    key={link.id}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-white/[0.05] border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.07] transition-all duration-300 flex flex-col justify-between min-h-[160px]"
+                                >
+                                    {linkEl}
+                                </a>
+                            ) : (
+                                <Link
+                                    key={link.id}
+                                    href={link.href}
+                                    className="group p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-white/[0.05] border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.07] transition-all duration-300 flex flex-col justify-between min-h-[160px]"
+                                >
+                                    {linkEl}
+                                </Link>
+                            );
+                        })}
 
                         {/* DIRECT CTA BOX */}
                         <div className="sm:col-span-2 mt-4 p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-cyan-500 flex flex-col md:flex-row items-center justify-between gap-6 group cursor-pointer transition-transform hover:scale-[1.01]">

@@ -14,12 +14,12 @@ const projects = [
                 <a href="https://www.aeroenterprises.shop/" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:underline">
                     Aero Enterprises
                 </a>{" "}
-                to secure 260+ high-intent conversions and contributing to ₹2.6M+ in verified client revenue.
+                to secure 260+ high-intent conversions and contributing to 2.6M+ in verified client revenue.
             </>
         ),
         image: "/ae.webp",
         link: "https://www.aeroenterprises.shop/",
-        performance: "₹2.6M+ Revenue",
+        performance: "2.6M+ Revenue",
     },
     {
         id: 2,

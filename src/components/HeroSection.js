@@ -45,14 +45,12 @@ const HeroSection = () => {
                             >
                                 Hire Me <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <a
-                                href="/Abid-Khan-Resume.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <Link
+                                href="/resume"
                                 className="px-6 sm:px-8 py-3.5 sm:py-4 bg-transparent border border-white/10 text-white rounded-full font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-white/5 transition-all flex items-center gap-2"
                             >
-                                Resume <Download size={14} />
-                            </a>
+                                Resume <ArrowRight size={14} />
+                            </Link>
                         </div>
 
                         {/* Core Features */}

@@ -6,10 +6,10 @@ import Script from 'next/script';
 import { GoogleTagManager } from '@next/third-parties/google';
 
 export const metadata = {
-    title: "Abid Khan | SEO, AEO & GEO Specialist - Scaling Organic Revenue",
+    title: "Abid Khan | SEO, AEO & GEO Specialist - Scaling Organic Revenue and Sales",
     description: "I build custom SEO, AEO, and GEO strategies that turn site architecture into organic revenue and sales. No developers needed, I write the code myself.",
     openGraph: {
-        title: "Abid Khan | SEO, AEO & GEO Specialist - Scaling Organic Revenue",
+        title: "Abid Khan | SEO, AEO & GEO Specialist - Scaling Organic Revenue and Sales",
         description: "I build custom SEO, AEO, and GEO strategies that turn site architecture into organic revenue and sales. No developers needed, I write the code myself.",
         url: "https://abid-folio.vercel.app",
         siteName: "Abid Khan Portfolio",
@@ -19,7 +19,7 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Abid Khan | SEO, AEO & GEO Specialist - Scaling Organic Revenue",
+        title: "Abid Khan | SEO, AEO & GEO Specialist - Scaling Organic Revenue and Sales",
         description: "SEO, AEO, and GEO strategies turning site architecture into organic sales and revenue.",
         creator: "@kaabid1557",
         images: ["/seo.webp"],
@@ -165,14 +165,16 @@ export default function RootLayout({ children }) {
                     }}
                 />
 
-                <header role="banner" className="fixed w-full z-[110] bg-[#050505x]/80 backdrop-blur-md">
+                <header role="banner" className="fixed w-full z-[110] bg-[#050505x]/80 backdrop-blur-md print:hidden">
                     <Navbar />
                 </header>
 
                 <main role="main" className="pt-12">
                     {children}
                 </main>
-                <Footer />
+                <div className="print:hidden">
+                    <Footer />
+                </div>
             </body>
         </html>
     );

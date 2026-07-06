@@ -36,7 +36,7 @@ export default function RevenueStats() {
                             
                             <div className="flex items-baseline gap-1 sm:gap-2 mb-2 flex-wrap">
                                 <span className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white">
-                                    ₹2.6M
+                                    2.6M
                                 </span>
                                 <span className="text-3xl sm:text-4xl md:text-6xl font-black text-cyan-500">+</span>
                             </div>
