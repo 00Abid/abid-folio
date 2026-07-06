@@ -120,7 +120,7 @@ export default function ResumePage() {
                 "isPartOf": {
                     "@id": "https://abid-folio.vercel.app/#website"
                 },
-                "about": {
+                "mainEntity": {
                     "@type": "Person",
                     "@id": "https://abid-folio.vercel.app/#person",
                     "name": "Abid Khan",
