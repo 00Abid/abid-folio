@@ -16,6 +16,7 @@ export default function sitemap() {
     const routes = [
         { path: '', freq: 'weekly', priority: 1.0 },      // Home is high priority
         { path: '/blog', freq: 'daily', priority: 0.8 },  // Blog index updates often
+        { path: '/resume', freq: 'monthly', priority: 0.8 }, // Resume page
     ].map((route) => ({
         url: `${baseUrl}${route.path}`,
         lastModified: new Date().toISOString().split('T')[0],
