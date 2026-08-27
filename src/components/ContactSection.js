@@ -5,10 +5,10 @@ import { Github, Linkedin, Mail, FileText, Send, ArrowRight } from "lucide-react
 const socialLinks = [
     {
         id: 1,
-        href: "mailto:kabid00000@gmail.com",
+        href: "mailto:khanabid.dev@gmail.com",
         icon: <Mail size={24} />,
         label: "Email",
-        value: "kabid00000@gmail.com",
+        value: "khanabid.dev@gmail.com",
         isExternal: false
     },
     {
@@ -119,7 +119,7 @@ const ContactSection = () => {
                                     <p className="text-black/60 text-[10px] font-bold uppercase tracking-widest mt-1">Ready for 2026 Growth</p>
                                 </div>
                             </div>
-                            <a href="mailto:kabid00000@gmail.com" className="w-full md:w-auto text-center px-10 py-4 bg-black text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-slate-900 transition-colors">
+                            <a href="mailto:khanabid.dev@gmail.com" className="w-full md:w-auto text-center px-10 py-4 bg-black text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-slate-900 transition-colors">
                                 Send Message
                             </a>
                         </div>

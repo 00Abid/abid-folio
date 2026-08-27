@@ -72,7 +72,7 @@ export default function Footer() {
                                 Let's optimize your site to increase sales and drive revenue.
                             </p>
                             <a
-                                href="mailto:kabid00000@gmail.com"
+                                href="mailto:khanabid.dev@gmail.com"
                                 className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-white border-b border-cyan-500 pb-1 hover:text-cyan-500 transition-colors"
                             >
                                 Send me an email <Mail size={12} />

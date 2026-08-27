@@ -23,7 +23,7 @@ const resumeData = {
     personal: {
         name: "Abid Khan",
         title: "SEO Specialist | Technical SEO | AEO, GEO | Programmatic SEO | Next.js",
-        email: "kabid00000@gmail.com",
+        email: "khanabid.dev@gmail.com",
         phone: "+919096105019",
         location: "Vasai, India",
         linkedin: "https://www.linkedin.com/in/abid-khan-coder/",
@@ -125,7 +125,7 @@ export default function ResumePage() {
                     "@id": "https://abid-folio.vercel.app/#person",
                     "name": "Abid Khan",
                     "jobTitle": "SEO Specialist",
-                    "email": "kabid00000@gmail.com",
+                    "email": "khanabid.dev@gmail.com",
                     "telephone": "+919096105019",
                     "address": {
                         "@type": "PostalAddress",

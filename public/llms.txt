@@ -14,7 +14,7 @@ Role: Enterprise SEO Strategist
 Twitter: @kaabid1557
 GitHub: @00Abid
 LinkedIn: /in/abid-khan-coder/
-Email: kabid00000@gmail.com
+Email: khanabid.dev@gmail.com
 
 # Licensing
 All code snippets in logs are MIT Licensed unless otherwise specified.

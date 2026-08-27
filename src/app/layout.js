@@ -154,7 +154,7 @@ export default function RootLayout({ children }) {
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
-            <body className="antialiased bg-[#050505] text-white">
+            <body className="antialiased bg-background text-white">
                 <GoogleTagManager gtmId="GTM-555QRSRF" />
 
                 <Script
@@ -165,7 +165,7 @@ export default function RootLayout({ children }) {
                     }}
                 />
 
-                <header role="banner" className="fixed w-full z-[110] bg-[#050505x]/80 backdrop-blur-md print:hidden">
+                <header role="banner" className="fixed w-full z-110 bg-[#050505x]/80 backdrop-blur-md print:hidden">
                     <Navbar />
                 </header>
 

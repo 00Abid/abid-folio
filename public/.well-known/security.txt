@@ -1,4 +1,4 @@
-Contact: mailto:kabid00000@gmail.com
+Contact: mailto:khanabid.dev@gmail.com
 Expires: 2027-01-01T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://abid-folio.vercel.app/.well-known/security.txt
