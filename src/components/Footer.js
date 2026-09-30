@@ -4,7 +4,6 @@ import { Terminal, ArrowUpRight, Github, Linkedin, Mail, Twitter } from "lucide-
 const footerLinks = [
     { name: "Projects", href: "/#projects" },
     { name: "Technical Skills", href: "/#skills" },
-    { name: "Experience", href: "/#experience" },
     { name: "Blog", href: "/blog" },
 ];
 

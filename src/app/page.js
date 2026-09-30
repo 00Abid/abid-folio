@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProjectsCards from "@/components/ProjectsCards";
 import SkillsSection from "@/components/SkillsSection";
-import ExperienceSection from "@/components/ExperienceSection";
 import BlogPreview from "@/components/BlogPreview";
 import ContactSection from "@/components/ContactSection";
 import RevenueStats from "@/components/RevenueStats";
@@ -18,7 +17,6 @@ export default function Home() {
             </div>
 
             <SkillsSection />
-            <ExperienceSection />
 
             <BlogPreview />
 
