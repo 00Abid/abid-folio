@@ -1108,89 +1108,119 @@
       termInput.focus();
     }
 
-    const commandDict = {
-      help: () => `
-<div class="term-dim">Scrapbook Field Terminal Commands:</div>
-  <span class="term-hl">kubectl get pods</span>      - Inspect running Kubernetes pods
-  <span class="term-hl">kubectl get nodes</span>     - View cluster node inventory
-  <span class="term-hl">terraform plan</span>        - Run remote state diff
-  <span class="term-hl">argocd app sync</span>       - Declarative GitOps reconciliation
-  <span class="term-hl">trivy image</span>           - Vulnerability assessment report
-  <span class="term-hl">whoami</span>                - Operator identity & region
-  <span class="term-hl">uptime</span>                - Host system uptime
-  <span class="term-hl">clear</span>                 - Wipe terminal slate
-      `,
-      whoami: () => `abid (Cloud / DevOps Platform Engineer) &bull; ap-south-1 [BOM]`,
-      uptime: () => `20:00:10 up 42 days, 15:15, 1 user, load average: 0.08, 0.05, 0.02`,
-      'uname -a': () => `Linux field-node 6.8.0-arch1 #1 SMP x86_64 GNU/Linux`,
-      'kubectl get nodes': () => `
-NAME                    STATUS   ROLES           AGE   VERSION
-ip-10-0-12-40.ec2       <span class="term-ok">Ready</span>    control-plane   42d   v1.30.2
-ip-10-0-24-118.ec2      <span class="term-ok">Ready</span>    karpenter-node  18d   v1.30.2
-ip-10-0-32-205.ec2      <span class="term-ok">Ready</span>    karpenter-node  18d   v1.30.2
-      `,
-      'kubectl get pods': () => `
-NAMESPACE       NAME                                READY   STATUS    AGE
-production      api-gateway-5c8f6b4d9-8x2jk         1/1     <span class="term-ok">Running</span>   12d
-production      auth-service-76b88fc7c-mk59d        1/1     <span class="term-ok">Running</span>   18d
-monitoring      prometheus-k8s-0                    2/2     <span class="term-ok">Running</span>   42d
-      `,
-      'kubectl get pods -A --field-selector=status.phase!=Running': () => `
-<span class="term-ok">&#10003; 0 non-running pods found. All namespaces reporting 100% healthy.</span>
-      `,
-      'terraform plan': () => `
-Refreshing remote state on S3 backend...
-184 cloud resources checked.
-<span class="term-ok">&#10003; Infrastructure matches declared configuration. Zero drift.</span>
-      `,
-      'terraform plan -out=tfplan && tfsec .': () => `
-[IaC] Evaluating 24 Terraform modules...
-[tfsec] Scanning against CIS AWS Benchmark v1.4...
-<span class="term-ok">&#10003; 0 violations found. Security baseline passed (42/42 checks).</span>
-      `,
-      'argocd app sync root-stack --prune': () => `
-Reconciling 'root-stack' with git#main (sha-8f2e91b)...
-Deployment 'api-gateway' -> <span class="term-ok">Synced</span> &amp; Healthy
-Service 'api-gateway'    -> <span class="term-ok">Synced</span> &amp; Healthy
-<span class="term-ok">&#10003; GitOps sync complete. Zero errors.</span>
-      `,
-      'trivy image --severity HIGH,CRITICAL app:v1': () => `
-Updating vulnerability database...
-Scanning artifact app:v1 (alpine 3.20.1)...
-Total: 0 (HIGH: 0, CRITICAL: 0)
-<span class="term-ok">&#10003; Artifact clean. Passed deployment gate.</span>
-      `
+    // Virtual File System State (in-memory Linux FS)
+    const fs = {
+      '~': {
+        'main.tf': `# AWS EKS & Karpenter Autoscaler\nmodule "eks" {\n  source  = "terraform-aws-modules/eks/aws"\n  version = "~> 20.0"\n  cluster_name = "prod-eks"\n}`,
+        'deployment.yaml': `apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: api-gateway\nspec:\n  replicas: 3`,
+        'notes.txt': `TODO: Upgrade cluster to v1.30 and apply ArgoCD canary rollouts.`,
+        'projects': {}
+      }
     };
+    let currentDir = '~';
+    let history = [];
+    let histIdx = 0;
 
     function execute(raw) {
-      const cmd = raw.trim();
-      if (!cmd) return;
+      const line = raw.trim();
+      if (!line) return;
+      history.push(line);
+      histIdx = history.length;
 
       const promptDiv = document.createElement('div');
-      promptDiv.innerHTML = `<span class="term-prompt">abid</span><span style="color:#71717a;">:</span><span class="term-path">~</span><span style="color:#fff;">$</span> ${escapeHTML(cmd)}`;
+      promptDiv.innerHTML = `<span class="term-prompt">abid</span><span style="color:#71717a;">:</span><span class="term-path">${currentDir}</span><span style="color:#fff;">$</span> ${escapeHTML(line)}`;
       termLog.appendChild(promptDiv);
 
+      const parts = line.split(/\s+/);
+      const cmd = parts[0];
+      const args = parts.slice(1);
+      const outDiv = document.createElement('div');
+      outDiv.style.whiteSpace = 'pre-wrap';
+
+      // Full Linux Command Evaluator
       if (cmd === 'clear') {
         termLog.innerHTML = '';
         termScreen.scrollTop = 0;
         return;
-      }
-
-      const outDiv = document.createElement('div');
-      outDiv.style.whiteSpace = 'pre-wrap';
-
-      let match = null;
-      for (const [key, fn] of Object.entries(commandDict)) {
-        if (cmd === key || cmd.startsWith(key)) {
-          match = fn;
-          break;
+      } else if (cmd === 'help') {
+        outDiv.innerHTML = `<span class="term-hl">Linux System Commands:</span> ls, pwd, cd, cat, touch, mkdir, rm, echo, date, whoami, uname, history, clear\n<span class="term-hl">Cloud DevOps Commands:</span> kubectl (get pods/nodes), terraform (plan/apply), argocd (sync), docker (ps), trivy`;
+      } else if (cmd === 'pwd') {
+        outDiv.innerHTML = currentDir === '~' ? `/home/abid` : `/home/abid/${currentDir.replace('~/', '')}`;
+      } else if (cmd === 'ls') {
+        const files = Object.keys(fs[currentDir] || {});
+        outDiv.innerHTML = files.map(f => typeof fs[currentDir][f] === 'object' ? `<span class="term-ok">${f}/</span>` : f).join('   ') || '<span class="term-dim">(empty directory)</span>';
+      } else if (cmd === 'cd') {
+        const target = args[0] || '~';
+        if (target === '~' || target === '/home/abid') {
+          currentDir = '~';
+        } else if (target === '..' && currentDir !== '~') {
+          currentDir = '~';
+        } else if (fs[currentDir] && typeof fs[currentDir][target] === 'object') {
+          currentDir = target;
+          if (!fs[currentDir]) fs[currentDir] = {};
+        } else {
+          outDiv.innerHTML = `<span class="term-err">cd: no such file or directory: ${escapeHTML(target)}</span>`;
         }
-      }
-
-      if (match) {
-        outDiv.innerHTML = match();
+      } else if (cmd === 'cat') {
+        const f = args[0];
+        if (!f) outDiv.innerHTML = `<span class="term-err">cat: missing filename</span>`;
+        else if (fs[currentDir] && typeof fs[currentDir][f] === 'string') outDiv.innerHTML = escapeHTML(fs[currentDir][f]);
+        else outDiv.innerHTML = `<span class="term-err">cat: ${escapeHTML(f)}: No such file</span>`;
+      } else if (cmd === 'touch') {
+        const f = args[0];
+        if (!f) outDiv.innerHTML = `<span class="term-err">touch: missing file operand</span>`;
+        else {
+          if (!fs[currentDir]) fs[currentDir] = {};
+          fs[currentDir][f] = '';
+          outDiv.innerHTML = `<span class="term-ok">&#10003; Created file '${escapeHTML(f)}'</span>`;
+        }
+      } else if (cmd === 'mkdir') {
+        const d = args[0];
+        if (!d) outDiv.innerHTML = `<span class="term-err">mkdir: missing directory name</span>`;
+        else {
+          if (!fs[currentDir]) fs[currentDir] = {};
+          fs[currentDir][d] = {};
+          outDiv.innerHTML = `<span class="term-ok">&#10003; Created directory '${escapeHTML(d)}/'</span>`;
+        }
+      } else if (cmd === 'rm') {
+        const target = args[0];
+        if (!target) outDiv.innerHTML = `<span class="term-err">rm: missing operand</span>`;
+        else if (fs[currentDir] && fs[currentDir][target] !== undefined) {
+          delete fs[currentDir][target];
+          outDiv.innerHTML = `<span class="term-ok">&#10003; Removed '${escapeHTML(target)}'</span>`;
+        } else {
+          outDiv.innerHTML = `<span class="term-err">rm: cannot remove '${escapeHTML(target)}': No such file</span>`;
+        }
+      } else if (cmd === 'echo') {
+        outDiv.innerHTML = escapeHTML(args.join(' '));
+      } else if (cmd === 'date') {
+        outDiv.innerHTML = new Date().toUTCString();
+      } else if (cmd === 'history') {
+        outDiv.innerHTML = history.map((h, i) => `  ${i + 1}  ${escapeHTML(h)}`).join('\n');
+      } else if (cmd === 'whoami') {
+        outDiv.innerHTML = `abid (Cloud / DevOps Platform Engineer) &bull; ap-south-1 [BOM]`;
+      } else if (cmd === 'uname') {
+        outDiv.innerHTML = `Linux field-node 6.8.0-arch1 #1 SMP PREEMPT_DYNAMIC x86_64 GNU/Linux`;
+      } else if (cmd === 'uptime') {
+        outDiv.innerHTML = `20:07:00 up 42 days, 15:20, 1 user, load average: 0.08, 0.04, 0.01`;
+      } else if (line.startsWith('kubectl')) {
+        if (line.includes('pods')) {
+          outDiv.innerHTML = `NAMESPACE     NAME                           READY   STATUS    AGE\nproduction    api-gateway-5c8f6b4d9-8x2jk    1/1     <span class="term-ok">Running</span>   12d\nproduction    auth-service-76b88fc7c-mk59d   1/1     <span class="term-ok">Running</span>   18d\nmonitoring    prometheus-k8s-0               2/2     <span class="term-ok">Running</span>   42d`;
+        } else if (line.includes('nodes')) {
+          outDiv.innerHTML = `NAME                 STATUS   ROLES           AGE   VERSION\nip-10-0-12-40.ec2    <span class="term-ok">Ready</span>    control-plane   42d   v1.30.2\nip-10-0-24-118.ec2   <span class="term-ok">Ready</span>    karpenter-node  18d   v1.30.2`;
+        } else {
+          outDiv.innerHTML = `<span class="term-ok">&#10003; Kubernetes API 1.30 active and responsive.</span>`;
+        }
+      } else if (line.startsWith('terraform')) {
+        outDiv.innerHTML = `Acquiring AWS S3 state lock...\nRefreshing state for 184 resources...\n<span class="term-ok">&#10003; No drift detected: Infrastructure matches declared code.</span>`;
+      } else if (line.startsWith('argocd')) {
+        outDiv.innerHTML = `Reconciling app with git#main (sha-8f2e91b)...\nDeployment 'api-gateway' -> <span class="term-ok">Synced</span> & Healthy\n<span class="term-ok">&#10003; GitOps sync complete.</span>`;
+      } else if (line.startsWith('docker')) {
+        outDiv.innerHTML = `CONTAINER ID   IMAGE                 STATUS       NAMES\n8f9e2b10a4c1   envoyproxy/gateway    Up 14 days   ingress-gw\n3d7a81c0e912   prom/prometheus       Up 42 days   telemetry-prom`;
+      } else if (line.startsWith('trivy')) {
+        outDiv.innerHTML = `Scanning image app:v1 (alpine 3.20.1)...\nTotal: 0 (HIGH: 0, CRITICAL: 0)\n<span class="term-ok">&#10003; Clean container artifact.</span>`;
       } else {
-        outDiv.innerHTML = `<span class="term-err">sh: command not found: ${escapeHTML(cmd)}</span>\nType <span class="term-hl">help</span> to view supported commands.`;
+        outDiv.innerHTML = `<span class="term-err">bash: ${escapeHTML(cmd)}: command not found</span>\nType <span class="term-hl">help</span> for a list of available Linux & cloud commands.`;
       }
 
       termLog.appendChild(outDiv);
