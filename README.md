@@ -1,87 +1,107 @@
-# Abid Khan - Enterprise SEO Portfolio
+# Abid Khan — Cloud & DevOps Infrastructure Portfolio
 
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
-![Next.js](https://img.shields.io/badge/Next.js-16.1-black)
-![React](https://img.shields.io/badge/React-19-blue)
-![Tailwind](https://img.shields.io/badge/Tailwind-v4-cyan)
-![Performance](https://img.shields.io/badge/Lighthouse-100-green)
+![Design](https://img.shields.io/badge/Design-Swiss%20International%20Style-red)
+![Stack](https://img.shields.io/badge/Stack-Pure%20HTML5%20%2F%20CSS3-00e5ff)
+![Telemetry](https://img.shields.io/badge/Uptime%20Target-99.995%25-green)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-A high-performance, Enterprise-grade SEO portfolio built with **Next.js 16 (App Router)** and **Tailwind CSS v4**. This project demonstrates the intersection of modern frontend engineering and advanced Technical SEO (AEO).
+A single-page, high-performance portfolio crafted for **Cloud & DevOps Engineering**, built with **Pure HTML5 and CSS3** following the **Swiss Design System (International Typographic Style)**.
 
-## 🚀 Features
+Zero runtime framework dependencies, instant load times, and 100/100 Lighthouse performance across all metrics.
 
-### Core Engineering
-*   **Framework**: Next.js 16 (App Router, Server Components).
-*   **Styling**: Tailwind CSS v4 (Zero-runtime CSS).
-*   **Deployment**: Vercel Edge Network.
-*   **Architecture**: Semantic HTML5, ARIA Accessible, Mobile-First.
+---
 
-### Enterprise SEO (Search Engine Optimization)
-*   **AEO (Answer Engine Optimization)**: Structured specifically for LLMs (Perplexity, ChatGPT) using `llms.txt` and "Direct Answer" content blocks.
-*   **Structured Data (Schema)**:
-    *   `ProfilePage` & `Organization`
-    *   `BlogPosting` with nested `FAQPage`
-    *   `BreadcrumbList` & `ItemList`
-*   **Performance**:
-    *   LCP Optimization (Eager loaded hero images).
-    *   CLS Elimination (Fixed aspect ratios).
-    *   Responsive Images (`sizes` prop implementation).
-*   **Technical**:
-    *   Dynamic `sitemap.xml` & `robots.txt`.
-    *   Self-referencing Canonical URLs.
-    *   `security.txt` & `humans.txt` standards.
-    *   Internationalization (`hreflang` targeting `en-US`).
+## 🏗️ Architecture & Design System
 
-## 🛠️ Installation
+### 1. Swiss International Typographic Style
+* **Mathematical Grid Layout**: Asymmetric columns, strict typographical baseline rhythm, and crisp structural borders.
+* **Palette**: Dark Obsidian (`#0a0e14`), Swiss Signal Red (`#ff3333`), Cloud Cyan (`#00e5ff`), and SRE OK Green (`#00ff88`).
+* **Typography**: Space Grotesk (Neo-Grotesque Swiss display) paired with JetBrains Mono for system feeds and telemetry.
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/00Abid/abid-folio.git
-    cd abid-folio
-    ```
+### 2. DevOps & Cloud Platform Focus
+* **Interactive Terminal Simulator**: Live cluster feedback simulating `kubectl`, `terraform plan`, and `argocd` reconciliation.
+* **Telemetry System Strip**: Node region (`ap-south-1`), SLA target (99.995%), declared IaC specs, and MTTR telemetry.
+* **Infrastructure Modules (CNCF / CIS Standards)**:
+  * Kubernetes & Orchestration (EKS/GKE, Cilium, Karpenter)
+  * Infrastructure as Code (Terraform, OpenTofu, Terragrunt)
+  * GitOps & Continuous Delivery (ArgoCD, GitHub Actions)
+  * Observability & SRE (Prometheus, Grafana, Loki, OpenTelemetry)
+  * Multi-Cloud Network Architecture (AWS, GCP, Cloudflare)
+  * DevSecOps & Zero-Trust (HashiCorp Vault, Trivy, Kyverno)
+* **GitOps 4-Phase Lifecycle Protocol**: Visual declarative pipeline from linting to progressive canary deployments.
+* **Direct Dispatch Terminal**: Client-side contact terminal routing to `khanabid.dev@gmail.com`.
 
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-
-3.  **Run Development Server**:
-    ```bash
-    npm run dev
-    ```
-    Visit `http://localhost:3000` to see the live site.
-
-4.  **Build for Production**:
-    ```bash
-    npm run build
-    npm start
-    ```
+---
 
 ## 📂 Project Structure
 
 ```bash
-src/
-├── app/
-│   ├── blog/            # Blog Index & Dynamic [slug] Routes
-│   ├── layout.js        # Root Layout (Metadata, Navbar, Footer)
-│   ├── page.js          # Homepage Component Assembly
-│   ├── error.js         # Global Error Boundary
-│   ├── sitemap.js       # Dynamic Sitemap Generation
-│   └── robots.js        # Robots.txt Generation
-├── components/          # React Requirements (Navbar, Hero, Projects, etc.)
-└── lib/                 # Data Utilities (Blog Data, etc.)
-public/
-├── .well-known/         # Security & Metadata Standards
-├── llms.txt             # AI Agent Context File
-└── ...assets
+abid-folio/
+├── index.html         # Pure, standalone single-page portfolio (HTML + CSS + JS)
+├── public/            # Static assets & web verification files
+│   ├── .well-known/   # security.txt disclosure
+│   ├── llms.txt       # AI/LLM contextual index
+│   ├── humans.txt     # Team & project credits
+│   └── *.webp         # Project visuals and profile assets
+├── README.md          # Project documentation
+└── .gitignore         # Version control ignore rules
 ```
 
-## 🛡️ Security
+---
 
-This project adheres to strict security standards.
-*   **Disclosure**: See [security.txt](public/.well-known/security.txt).
-*   **Headers**: HSTS and X-Frame-Options configured via Vercel headers.
+## ⚡ Quick Start
+
+Because this site is built with **Pure HTML5**, there is no compilation step, no Node.js runtime requirement, and no package manager needed.
+
+### Local Preview
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/00Abid/abid-folio.git
+   cd abid-folio
+   ```
+
+2. **Open directly in your browser**:
+   * Simply double-click `index.html` or open it with your browser of choice:
+   ```bash
+   # On macOS
+   open index.html
+
+   # On Linux
+   xdg-open index.html
+
+   # On Windows
+   start index.html
+   ```
+
+3. **Or run with any local lightweight server**:
+   ```bash
+   # Python 3
+   python -m http.server 3000
+
+   # Or npx serve
+   npx serve .
+   ```
+
+---
+
+## 🚀 Deployment
+
+The site is production-ready for instant static hosting on any CDN or edge platform:
+
+* **Vercel / Netlify / Cloudflare Pages**: Deploy directly from Git with no build command (`Build Command: None`, `Output Directory: .`).
+* **AWS S3 + CloudFront / GitHub Pages**: Upload `index.html` and the `public/` folder directly to your bucket or branch.
+
+---
+
+## 🛡️ Security & Standards
+
+* **No Trackers & Zero Analytics bloat**: Clean client-side code with zero third-party tracking scripts.
+* **Security Standards**: RFC 9116 compliant security disclosure available at `public/.well-known/security.txt`.
+
+---
 
 ## 📄 License
 
-MIT License © 2026 Abid Khan.
+MIT License © 2026 [Abid Khan](https://github.com/00Abid).

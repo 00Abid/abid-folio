@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Abid Khan | Cloud &amp; DevOps Engineer</title>
+  <meta name="description" content="Personal engineering portfolio of Abid Khan. Specializing in cloud infrastructure, Kubernetes, and automated deployment systems." />
+
+  <!-- Handwriting, Vintage Typewriter & Monospace Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&family=Patrick+Hand&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       SCRAPBOOK / FIELD JOURNAL DESIGN SYSTEM
+       Cloud & DevOps Engineering Lab Notebook - 100% Fully Responsive
+       ========================================================================== */
+    :root {
+      --bg-desk: #2a2521;
+      --paper-cream: #fbf7ee;
+      --paper-aged: #f3ecdb;
+      --paper-dark: #1e1d1b;
+      --tape: rgba(254, 240, 138, 0.75);
+      --tape-blue: rgba(186, 230, 253, 0.75);
+      
+      --ink: #1c1917;
+      --ink-muted: #57534e;
+      --ink-stamp: #991b1b;
+      --highlighter: #fef08a;
+      --blueprint: #0284c7;
+
+      --font-hand: 'Caveat', cursive;
+      --font-note: 'Patrick Hand', cursive;
+      --font-typewriter: 'Courier Prime', monospace;
+      --font-terminal: 'JetBrains Mono', monospace;
+
+      --shadow-paper: 0 4px 6px -1px rgba(0, 0, 0, 0.25), 0 10px 20px -3px rgba(0, 0, 0, 0.35);
+      --shadow-card: 0 2px 5px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg-desk);
+      color: var(--ink);
+      font-family: var(--font-typewriter);
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      background: 
+        radial-gradient(circle at 50% 0%, #3a322c 0%, #1e1a17 100%),
+        repeating-linear-gradient(45deg, rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 2px, transparent 2px, transparent 4px);
+      min-height: 100vh;
+      padding: 20px 12px 60px;
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Desk Mat / Scrapbook Canvas */
+    .scrapbook-desk {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* TAPE & PINS UTILITIES (Responsive & Adaptive) */
+    .washi-tape {
+      position: absolute;
+      height: 24px;
+      width: 110px;
+      background: var(--tape);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      opacity: 0.9;
+      z-index: 10;
+      pointer-events: none;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+    }
+    .tape-top-left { top: -10px; left: 16px; transform: rotate(-5deg); }
+    .tape-top-right { top: -10px; right: 16px; transform: rotate(4deg); }
+    .tape-center { top: -12px; left: 50%; transform: translateX(-50%) rotate(-1deg); width: 140px; background: var(--tape-blue); }
+
+    .pin {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #ef4444, #991b1b);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+      position: absolute;
+      z-index: 12;
+    }
+    .pin::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 6px;
+      width: 2px;
+      height: 6px;
+      background: rgba(0,0,0,0.3);
+      filter: blur(1px);
+    }
+
+    /* PAPER BADGES & STAMPS */
+    .rubber-stamp {
+      display: inline-block;
+      padding: 4px 10px;
+      border: 2px dashed var(--ink-stamp);
+      color: var(--ink-stamp);
+      font-family: var(--font-typewriter);
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transform: rotate(-3deg);
+      border-radius: 4px;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .handwritten {
+      font-family: var(--font-hand);
+      font-size: 20px;
+      color: #1e3a8a;
+      line-height: 1.2;
+    }
+
+    /* ==========================================================================
+       SCRAPBOOK HEADER & RESPONSIVE NAV
+       ========================================================================== */
+    header.scrapbook-nav {
+      background: var(--paper-cream);
+      border-radius: 4px;
+      padding: 16px 20px;
+      box-shadow: var(--shadow-paper);
+      margin-bottom: 28px;
+      position: relative;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .nav-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .nav-id {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-role {
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+
+    /* Mobile Menu Toggle Button */
+    .mobile-nav-toggle {
+      display: none;
+      background: #dfd2b5;
+      border: 1px solid #b5a482;
+      color: var(--ink);
+      padding: 6px 12px;
+      font-family: var(--font-typewriter);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 3px;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .bookmarks {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(0,0,0,0.1);
+    }
+
+    .bookmarks a {
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 6px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    .bookmarks a:hover {
+      border-bottom-color: var(--ink-stamp);
+    }
+
+    .contact-tab {
+      background: #dc2626;
+      color: #fff !important;
+      border-radius: 3px;
+      padding: 5px 12px !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .contact-tab:hover {
+      background: #b91c1c;
+      border-bottom: none !important;
+    }
+
+    /* ==========================================================================
+       HERO SPREAD: LEGAL PAD + LIVE LINUX SHELL
+       ========================================================================== */
+    .hero-spread {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 24px;
+      margin-bottom: 36px;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    /* LEFT: RIPPED LEGAL PAD SHEET */
+    .scrapbook-paper {
+      background: var(--paper-cream);
+      background-image: 
+        repeating-linear-gradient(transparent, transparent 27px, #e7dfc9 28px);
+      padding: 36px 24px 30px;
+      border-radius: 2px;
+      box-shadow: var(--shadow-paper);
+      position: relative;
+      border: 1px solid rgba(0,0,0,0.06);
+      transform: rotate(-0.5deg);
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* Red Margin Line on Legal Pad */
+    .scrapbook-paper::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 24px;
+      width: 1px;
+      background: #fca5a5;
+    }
+
+    .hero-meta-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-left: 14px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hero-h1 {
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 16px;
+      padding-left: 14px;
+      color: #0c0a09;
+    }
+
+    .hero-p {
+      padding-left: 14px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--ink-muted);
+      margin-bottom: 20px;
+    }
+
+    .highlighter-mark {
+      background: var(--highlighter);
+      padding: 2px 4px;
+      color: #000;
+      font-weight: 700;
+    }
+
+    .scribble-box {
+      margin-left: 14px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px dashed #d6cfb8;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .links-row {
+      display: flex;
+      gap: 12px;
+      padding-left: 14px;
+      margin-top: 20px;
+      font-weight: 700;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+    .links-row a {
+      color: var(--blueprint);
+      text-decoration: underline;
+    }
+
+    /* RIGHT: FIELD TERMINAL NOTEBOOK */
+    .field-terminal-wrap {
+      background: #18181b;
+      border-radius: 6px;
+      box-shadow: var(--shadow-paper);
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #27272a;
+      transform: rotate(0.6deg);
+      width: 100%;
+    }
+
+    .terminal-label-strip {
+      background: #27272a;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-terminal);
+      font-size: 11px;
+      color: #a1a1aa;
+      border-bottom: 1px solid #3f3f46;
+    }
+
+    .terminal-screen {
+      padding: 14px;
+      background: #09090b;
+      height: 360px;
+      overflow-y: auto;
+      font-family: var(--font-terminal);
+      font-size: 12px;
+      line-height: 1.5;
+      color: #e4e4e7;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      cursor: text;
+    }
+
+    .term-prompt { color: #38bdf8; font-weight: 600; }
+    .term-path { color: #4ade80; }
+    .term-ok { color: #4ade80; }
+    .term-err { color: #f87171; }
+    .term-dim { color: #71717a; }
+    .term-hl { color: #facc15; }
+
+    .term-input-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .term-input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-family: var(--font-terminal);
+      font-size: 12px;
+      flex: 1;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .terminal-bottom-bar {
+      padding: 6px 12px;
+      background: #18181b;
+      border-top: 1px solid #3f3f46;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-terminal);
+      font-size: 10px;
+      color: #71717a;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    /* ==========================================================================
+       SCRAPBOOK SECTION: COMMAND CHEATSHEET CLIPPINGS
+       ========================================================================= -->
+    .scrapbook-section {
+      background: var(--paper-aged);
+      border-radius: 4px;
+      padding: 28px 20px;
+      box-shadow: var(--shadow-paper);
+      margin-bottom: 32px;
+      position: relative;
+      width: 100%;
+    }
+
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+    }
+
+    /* POLAROIDS / NOTECARD CLIPPINGS */
+    .clippings-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      width: 100%;
+    }
+
+    .clipping-card {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 2px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      border: 1px solid #e5e5e5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .clipping-cmd {
+      background: #f4f4f5;
+      padding: 8px 10px;
+      font-family: var(--font-terminal);
+      font-size: 11px;
+      border-radius: 3px;
+      color: #09090b;
+      margin-bottom: 10px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .clipping-desc {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .run-stamp-btn {
+      align-self: flex-start;
+      background: transparent;
+      border: 1px solid #dc2626;
+      color: #dc2626;
+      font-family: var(--font-typewriter);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.15s;
+    }
+    .run-stamp-btn:hover, .run-stamp-btn:active {
+      background: #dc2626;
+      color: #fff;
+    }
+
+    /* ==========================================================================
+       STICKY NOTES: CORE CAPABILITIES (3-COLUMN POST-IT ROW)
+       ========================================================================== */
+    .sticky-notes-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 32px;
+      width: 100%;
+    }
+
+    .post-it {
+      padding: 24px 20px 20px;
+      border-radius: 2px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .post-it-yellow { background: #fef08a; transform: rotate(-1deg); }
+    .post-it-blue   { background: #bae6fd; transform: rotate(0.8deg); }
+    .post-it-green  { background: #bbf7d0; transform: rotate(-0.6deg); }
+
+    .post-it h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .post-it p {
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.55;
+    }
+
+    .post-it-footer {
+      font-family: var(--font-terminal);
+      font-size: 11px;
+      color: #475569;
+      margin-top: 14px;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(0,0,0,0.15);
+    }
+
+    /* ==========================================================================
+       MANILA FOLDER: PROJECTS PLACEHOLDER
+       ========================================================================== */
+    .manila-folder {
+      background: #dfd2b5;
+      border: 1px solid #c9b996;
+      border-radius: 6px;
+      box-shadow: var(--shadow-paper);
+      margin-bottom: 32px;
+      position: relative;
+      padding: 24px 20px;
+      width: 100%;
+    }
+
+    .manila-tab {
+      position: absolute;
+      top: -22px;
+      left: 20px;
+      background: #dfd2b5;
+      border: 1px solid #c9b996;
+      border-bottom: none;
+      padding: 3px 14px;
+      border-radius: 5px 5px 0 0;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .folder-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 6px;
+      width: 100%;
+    }
+
+    .folder-sheet {
+      background: #fff;
+      padding: 18px 16px;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border: 1px solid #d5cbaf;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .folder-sheet h4 {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .folder-sheet p {
+      font-size: 12px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    /* ==========================================================================
+       VINTAGE POSTCARD: CONTACT DISPATCH
+       ========================================================================== */
+    .postcard {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 28px 20px;
+      box-shadow: var(--shadow-paper);
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px;
+      position: relative;
+      background-image: 
+        radial-gradient(#e5e7eb 1px, transparent 1px);
+      background-size: 20px 20px;
+      width: 100%;
+    }
+
+    /* Postcard Divider Line */
+    .postcard::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      bottom: 20px;
+      left: 54%;
+      width: 1px;
+      background: #cbd5e1;
+    }
+
+    .stamp-box {
+      width: 54px;
+      height: 64px;
+      border: 2px dashed #94a3b8;
+      border-radius: 3px;
+      display: grid;
+      place-items: center;
+      font-size: 8px;
+      color: #94a3b8;
+      font-family: var(--font-typewriter);
+      float: right;
+      text-align: center;
+      padding: 2px;
+      line-height: 1.3;
+    }
+
+    .postcard-left h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .postcard-left p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .postcard-address {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 10px;
+    }
+
+    .address-line {
+      border-bottom: 1px solid #94a3b8;
+      padding-bottom: 4px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 4px;
+      word-break: break-all;
+    }
+
+    /* FOOTER */
+    footer.scrapbook-footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 11px;
+      color: #a8a29e;
+      font-family: var(--font-typewriter);
+      padding: 0 10px;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE ADAPTATIONS (MOBILE FIRST REFINEMENTS)
+       ========================================================================== */
+    @media (max-width: 900px) {
+      .hero-spread {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .clippings-grid {
+        grid-template-columns: 1fr;
+      }
+      .sticky-notes-row {
+        grid-template-columns: 1fr;
+      }
+      .folder-grid {
+        grid-template-columns: 1fr;
+      }
+      .postcard {
+        grid-template-columns: 1fr;
+      }
+      .postcard::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 12px 8px 48px;
+      }
+
+      header.scrapbook-nav {
+        padding: 14px 14px;
+        margin-bottom: 20px;
+      }
+
+      .mobile-nav-toggle {
+        display: inline-flex;
+      }
+
+      .bookmarks {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 8px;
+      }
+
+      .bookmarks.open {
+        display: flex;
+      }
+
+      .scrapbook-paper {
+        padding: 28px 14px 24px;
+        transform: none;
+      }
+
+      .scrapbook-paper::before {
+        left: 14px;
+      }
+
+      .hero-meta-strip {
+        padding-left: 8px;
+      }
+
+      .hero-h1 {
+        padding-left: 8px;
+        font-size: 20px;
+      }
+
+      .hero-p {
+        padding-left: 8px;
+        font-size: 13px;
+      }
+
+      .scribble-box {
+        margin-left: 8px;
+        padding: 10px;
+      }
+
+      .links-row {
+        padding-left: 8px;
+        font-size: 12px;
+      }
+
+      .field-terminal-wrap {
+        transform: none;
+      }
+
+      .terminal-screen {
+        height: 320px;
+        padding: 10px;
+        font-size: 11px;
+      }
+
+      .post-it {
+        transform: none;
+        min-height: auto;
+      }
+
+      .washi-tape {
+        width: 80px;
+        height: 18px;
+      }
+
+      .rubber-stamp {
+        font-size: 10px;
+        padding: 3px 8px;
+      }
+
+      .handwritten {
+        font-size: 17px;
+      }
+
+      .clipping-cmd {
+        font-size: 10.5px;
+      }
+
+      .postcard {
+        padding: 20px 14px;
+      }
+
+      .stamp-box {
+        width: 46px;
+        height: 56px;
+        font-size: 7.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scrapbook-desk">
+
+    <!-- =========================================================================
+         SCRAPBOOK HEADER (FIELD LAB DISPATCH)
+         ========================================================================= -->
+    <header class="scrapbook-nav">
+      <div class="washi-tape tape-center"></div>
+      
+      <div class="nav-header-row">
+        <div class="nav-id">
+          <span class="pin" style="top: -6px; left: -6px;"></span>
+          <div class="nav-name">Abid Khan</div>
+          <div class="nav-role">&bull; Cloud &amp; DevOps Engineer</div>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-nav-toggle" id="mobileToggle" onclick="toggleBookmarks()" aria-label="Toggle Navigation">
+          <span>INDEX</span>
+          <span id="toggleIcon">&equiv;</span>
+        </button>
+      </div>
+
+      <nav class="bookmarks" id="navBookmarks" aria-label="Main Navigation">
+        <a href="#notes" onclick="closeBookmarks()">About</a>
+        <a href="#commands" onclick="closeBookmarks()">Commands</a>
+        <a href="#focus" onclick="closeBookmarks()">Skills</a>
+        <a href="#projects" onclick="closeBookmarks()">Projects</a>
+        <a href="#dispatch" onclick="closeBookmarks()" class="contact-tab">Contact Me</a>
+      </nav>
+    </header>
+
+    <!-- =========================================================================
+         HERO SECTION: SCRAPBOOK NOTE SHEET + LIVE LINUX FIELD TERMINAL
+         ========================================================================= -->
+    <main>
+      <div class="hero-spread" id="notes">
+
+        <!-- LEFT: TORN LEGAL PAD NOTES -->
+        <article class="scrapbook-paper">
+          <div class="washi-tape tape-top-left"></div>
+          
+          <div class="hero-meta-strip">
+            <div class="rubber-stamp">VERIFIED OPERATOR</div>
+            <div class="handwritten">entry // 2026.10</div>
+          </div>
+
+          <h1 class="hero-h1">
+            Engineering cloud systems that <span class="highlighter-mark">don't wake you up</span> at 3:00 AM.
+          </h1>
+
+          <p class="hero-p">
+            I’m Abid, a Cloud &amp; DevOps Engineer building automated, crash-proof infrastructure. I spend my time crafting reproducible Terraform modules, self-healing Kubernetes clusters, and friction-free GitOps deployment pipelines.
+          </p>
+
+          <div class="scribble-box">
+            <div style="font-weight: 700; font-size: 12px;">📌 CORE OPERATING RULE:</div>
+            <div style="font-size: 12px; color: var(--ink-muted);">
+              "If it isn't declared in code and tracked in Git, it doesn't belong in production."
+            </div>
+          </div>
+
+          <div class="links-row">
+            <a href="mailto:khanabid.dev@gmail.com">khanabid.dev@gmail.com</a>
+            <span>&bull;</span>
+            <a href="https://github.com/00Abid" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span>&bull;</span>
+            <a href="https://www.linkedin.com/in/abid-khan-coder/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </article>
+
+        <!-- RIGHT: LIVE FIELD TERMINAL / NOTEBOOK -->
+        <div class="field-terminal-wrap">
+          <div class="pin" style="top: 8px; right: 12px;"></div>
+          
+          <div class="terminal-label-strip">
+            <span>[abid@cloud-node: ~]</span>
+            <span style="color: #4ade80;">LIVE K8S SHELL</span>
+          </div>
+
+          <div class="terminal-screen" id="termScreen" onclick="focusShell()">
+            <div class="term-dim">Field Terminal v2.4 (x86_64-linux)</div>
+            <div class="term-dim">Click here or tap clips below. Type <span class="term-hl">help</span> for commands.</div>
+            
+            <div id="termLog"></div>
+
+            <div class="term-input-row" id="termPromptLine">
+              <span class="term-prompt">abid</span><span style="color:#71717a;">:</span><span class="term-path">~</span><span style="color:#fff;">$</span>
+              <input type="text" id="termInput" class="term-input" autocomplete="off" spellcheck="false" autofocus />
+            </div>
+          </div>
+
+          <div class="terminal-bottom-bar">
+            <span>Type: kubectl &bull; terraform &bull; argocd &bull; clear</span>
+            <span>↵ Enter</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- =========================================================================
+           COMMAND CHEATSHEET CLIPPINGS (SCRAPBOOK POLAROID TILES)
+           ========================================================================= -->
+      <section class="scrapbook-section" id="commands">
+        <div class="washi-tape tape-top-right"></div>
+        <div class="section-title-wrap">
+          <span class="rubber-stamp">CLIPPINGS</span>
+          <h2 class="section-title">Diagnostic Field Commands</h2>
+        </div>
+
+        <div class="clippings-grid">
+          <div class="clipping-card">
+            <div>
+              <div class="clipping-cmd">kubectl get pods -A --field-selector=status.phase!=Running</div>
+              <p class="clipping-desc">Quickly isolate any crashing, evicted, or pending pods across every namespace.</p>
+            </div>
+            <button class="run-stamp-btn" onclick="runClip('kubectl get pods -A --field-selector=status.phase!=Running')">Run Clip in Shell &rarr;</button>
+          </div>
+
+          <div class="clipping-card">
+            <div>
+              <div class="clipping-cmd">terraform plan -out=tfplan &amp;&amp; tfsec .</div>
+              <p class="clipping-desc">Generates deterministic execution plans and scans modules against CIS security baselines.</p>
+            </div>
+            <button class="run-stamp-btn" onclick="runClip('terraform plan -out=tfplan && tfsec .')">Run Clip in Shell &rarr;</button>
+          </div>
+
+          <div class="clipping-card">
+            <div>
+              <div class="clipping-cmd">argocd app sync root-stack --prune</div>
+              <p class="clipping-desc">Reconciles declarative Git repo state directly with live cluster manifests.</p>
+            </div>
+            <button class="run-stamp-btn" onclick="runClip('argocd app sync root-stack --prune')">Run Clip in Shell &rarr;</button>
+          </div>
+
+          <div class="clipping-card">
+            <div>
+              <div class="clipping-cmd">trivy image --severity HIGH,CRITICAL app:v1</div>
+              <p class="clipping-desc">Conducts pre-flight vulnerability assessments on container artifacts before rollout.</p>
+            </div>
+            <button class="run-stamp-btn" onclick="runClip('trivy image --severity HIGH,CRITICAL app:v1')">Run Clip in Shell &rarr;</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           CORE FOCUS AREAS (POST-IT STICKY NOTES)
+           ========================================================================= -->
+      <section id="focus">
+        <div class="sticky-notes-row">
+          <div class="post-it post-it-yellow">
+            <span class="pin" style="top: 8px; left: 50%; transform: translateX(-50%);"></span>
+            <div>
+              <h3>Kubernetes &amp; Containers</h3>
+              <p>Designing multi-cluster AWS EKS and GCP GKE architectures, Karpenter auto-provisioning, and Cilium eBPF mesh networking.</p>
+            </div>
+            <div class="post-it-footer">K8s &bull; Helm &bull; Cilium &bull; Docker</div>
+          </div>
+
+          <div class="post-it post-it-blue">
+            <span class="pin" style="top: 8px; left: 50%; transform: translateX(-50%);"></span>
+            <div>
+              <h3>Infrastructure as Code</h3>
+              <p>Writing clean, modular Terraform and OpenTofu modules. Remote state locking with DynamoDB, drift audits, and automated Terragrunt scaffolding.</p>
+            </div>
+            <div class="post-it-footer">Terraform &bull; OpenTofu &bull; AWS VPC</div>
+          </div>
+
+          <div class="post-it post-it-green">
+            <span class="pin" style="top: 8px; left: 50%; transform: translateX(-50%);"></span>
+            <div>
+              <h3>GitOps &amp; Continuous Delivery</h3>
+              <p>Zero-touch deployment pipelines using ArgoCD and GitHub Actions. Automated canary analysis, progressive rollouts, and rollback triggers.</p>
+            </div>
+            <div class="post-it-footer">ArgoCD &bull; Actions &bull; Prometheus</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           MANILA DOSSIER FOLDER: PROJECTS PLACEHOLDERS
+           ========================================================================= -->
+      <section class="manila-folder" id="projects">
+        <div class="manila-tab">DOSSIER // DEPLOYMENTS</div>
+        
+        <div style="margin-bottom: 16px;">
+          <h2 style="font-size: 16px; text-transform: uppercase;">Infrastructure Case Studies &amp; Repositories</h2>
+          <p style="color: var(--ink-muted); font-size: 12px;">Archived deployment architectures and open-source infrastructure tools.</p>
+        </div>
+
+        <div class="folder-grid">
+          <div class="folder-sheet">
+            <div class="rubber-stamp" style="margin-bottom: 10px; font-size: 9px;">RESERVED // SLOT 01</div>
+            <h4>Multi-Region AWS EKS Platform</h4>
+            <p>Automated Terraform blueprints for cross-region Kubernetes clusters with Karpenter autoscaling, external-dns, and cert-manager automation.</p>
+            <div style="font-family: var(--font-terminal); font-size: 11px; color: var(--blueprint);">
+              [Terraform &bull; AWS EKS &bull; ArgoCD]
+            </div>
+          </div>
+
+          <div class="folder-sheet">
+            <div class="rubber-stamp" style="margin-bottom: 10px; font-size: 9px;">RESERVED // SLOT 02</div>
+            <h4>Continuous GitOps Delivery Pipeline</h4>
+            <p>End-to-end delivery framework integrating automated Docker builds, Trivy CVE vulnerability gating, and zero-downtime rolling deploys.</p>
+            <div style="font-family: var(--font-terminal); font-size: 11px; color: var(--blueprint);">
+              [GitHub Actions &bull; Trivy &bull; Istio]
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================================
+           VINTAGE POSTCARD: CONTACT DISPATCH
+           ========================================================================= -->
+      <section class="postcard" id="dispatch">
+        <div class="washi-tape tape-top-left" style="background: var(--tape-blue);"></div>
+        
+        <div class="postcard-left">
+          <div class="rubber-stamp" style="margin-bottom: 12px;">AIR MAIL DISPATCH</div>
+          <h2>Let's build something durable.</h2>
+          <p>
+            Looking to migrate your workload to Kubernetes, audit your cloud spend, or build an automated GitOps delivery pipeline? Send a dispatch.
+          </p>
+
+          <div style="font-family: var(--font-hand); font-size: 20px; color: #1e3a8a;">
+            "Happy to discuss cloud architectures, contracts, and platform engineering roles."
+          </div>
+        </div>
+
+        <div class="postcard-right">
+          <div class="stamp-box">
+            AIR MAIL<br />2026<br />INDIA
+          </div>
+
+          <div class="postcard-address">
+            <div class="address-line">
+              <span style="color: var(--ink-muted);">TO:</span>
+              <strong>Abid Khan</strong>
+            </div>
+            <div class="address-line">
+              <span style="color: var(--ink-muted);">EMAIL:</span>
+              <a href="mailto:khanabid.dev@gmail.com" style="color: var(--blueprint); font-weight: 700;">khanabid.dev@gmail.com</a>
+            </div>
+            <div class="address-line">
+              <span style="color: var(--ink-muted);">LOCATION:</span>
+              <span>Mumbai, India (IST)</span>
+            </div>
+            <div class="address-line">
+              <span style="color: var(--ink-muted);">PROFILE:</span>
+              <span>
+                <a href="https://github.com/00Abid" target="_blank" rel="noopener noreferrer" style="color: var(--blueprint);">GitHub</a> / 
+                <a href="https://www.linkedin.com/in/abid-khan-coder/" target="_blank" rel="noopener noreferrer" style="color: var(--blueprint);">LinkedIn</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="scrapbook-footer">
+      <p>&copy; 2026 Abid Khan &bull; Cloud &amp; DevOps Engineering Scrapbook &bull; All entries written in code</p>
+    </footer>
+
+  </div>
+
+  <!-- =========================================================================
+       SCRIPTS: LIVE TERMINAL JAVASCRIPT & MOBILE NAV TOGGLE
+       ========================================================================= -->
+  <script>
+    // 1. Mobile Bookmarks Toggle
+    function toggleBookmarks() {
+      const bmarks = document.getElementById('navBookmarks');
+      const icon = document.getElementById('toggleIcon');
+      bmarks.classList.toggle('open');
+      icon.innerHTML = bmarks.classList.contains('open') ? '&times;' : '&equiv;';
+    }
+
+    function closeBookmarks() {
+      if (window.innerWidth <= 640) {
+        const bmarks = document.getElementById('navBookmarks');
+        const icon = document.getElementById('toggleIcon');
+        bmarks.classList.remove('open');
+        icon.innerHTML = '&equiv;';
+      }
+    }
+
+    // 2. Terminal Shell
+    const termInput = document.getElementById('termInput');
+    const termLog = document.getElementById('termLog');
+    const termScreen = document.getElementById('termScreen');
+
+    function focusShell() {
+      termInput.focus();
+    }
+
+    const commandDict = {
+      help: () => `
+<div class="term-dim">Scrapbook Field Terminal Commands:</div>
+  <span class="term-hl">kubectl get pods</span>      - Inspect running Kubernetes pods
+  <span class="term-hl">kubectl get nodes</span>     - View cluster node inventory
+  <span class="term-hl">terraform plan</span>        - Run remote state diff
+  <span class="term-hl">argocd app sync</span>       - Declarative GitOps reconciliation
+  <span class="term-hl">trivy image</span>           - Vulnerability assessment report
+  <span class="term-hl">whoami</span>                - Operator identity & region
+  <span class="term-hl">uptime</span>                - Host system uptime
+  <span class="term-hl">clear</span>                 - Wipe terminal slate
+      `,
+      whoami: () => `abid (Cloud / DevOps Platform Engineer) &bull; ap-south-1 [BOM]`,
+      uptime: () => `20:00:10 up 42 days, 15:15, 1 user, load average: 0.08, 0.05, 0.02`,
+      'uname -a': () => `Linux field-node 6.8.0-arch1 #1 SMP x86_64 GNU/Linux`,
+      'kubectl get nodes': () => `
+NAME                    STATUS   ROLES           AGE   VERSION
+ip-10-0-12-40.ec2       <span class="term-ok">Ready</span>    control-plane   42d   v1.30.2
+ip-10-0-24-118.ec2      <span class="term-ok">Ready</span>    karpenter-node  18d   v1.30.2
+ip-10-0-32-205.ec2      <span class="term-ok">Ready</span>    karpenter-node  18d   v1.30.2
+      `,
+      'kubectl get pods': () => `
+NAMESPACE       NAME                                READY   STATUS    AGE
+production      api-gateway-5c8f6b4d9-8x2jk         1/1     <span class="term-ok">Running</span>   12d
+production      auth-service-76b88fc7c-mk59d        1/1     <span class="term-ok">Running</span>   18d
+monitoring      prometheus-k8s-0                    2/2     <span class="term-ok">Running</span>   42d
+      `,
+      'kubectl get pods -A --field-selector=status.phase!=Running': () => `
+<span class="term-ok">&#10003; 0 non-running pods found. All namespaces reporting 100% healthy.</span>
+      `,
+      'terraform plan': () => `
+Refreshing remote state on S3 backend...
+184 cloud resources checked.
+<span class="term-ok">&#10003; Infrastructure matches declared configuration. Zero drift.</span>
+      `,
+      'terraform plan -out=tfplan && tfsec .': () => `
+[IaC] Evaluating 24 Terraform modules...
+[tfsec] Scanning against CIS AWS Benchmark v1.4...
+<span class="term-ok">&#10003; 0 violations found. Security baseline passed (42/42 checks).</span>
+      `,
+      'argocd app sync root-stack --prune': () => `
+Reconciling 'root-stack' with git#main (sha-8f2e91b)...
+Deployment 'api-gateway' -> <span class="term-ok">Synced</span> &amp; Healthy
+Service 'api-gateway'    -> <span class="term-ok">Synced</span> &amp; Healthy
+<span class="term-ok">&#10003; GitOps sync complete. Zero errors.</span>
+      `,
+      'trivy image --severity HIGH,CRITICAL app:v1': () => `
+Updating vulnerability database...
+Scanning artifact app:v1 (alpine 3.20.1)...
+Total: 0 (HIGH: 0, CRITICAL: 0)
+<span class="term-ok">&#10003; Artifact clean. Passed deployment gate.</span>
+      `
+    };
+
+    function execute(raw) {
+      const cmd = raw.trim();
+      if (!cmd) return;
+
+      const promptDiv = document.createElement('div');
+      promptDiv.innerHTML = `<span class="term-prompt">abid</span><span style="color:#71717a;">:</span><span class="term-path">~</span><span style="color:#fff;">$</span> ${escapeHTML(cmd)}`;
+      termLog.appendChild(promptDiv);
+
+      if (cmd === 'clear') {
+        termLog.innerHTML = '';
+        termScreen.scrollTop = 0;
+        return;
+      }
+
+      const outDiv = document.createElement('div');
+      outDiv.style.whiteSpace = 'pre-wrap';
+
+      let match = null;
+      for (const [key, fn] of Object.entries(commandDict)) {
+        if (cmd === key || cmd.startsWith(key)) {
+          match = fn;
+          break;
+        }
+      }
+
+      if (match) {
+        outDiv.innerHTML = match();
+      } else {
+        outDiv.innerHTML = `<span class="term-err">sh: command not found: ${escapeHTML(cmd)}</span>\nType <span class="term-hl">help</span> to view supported commands.`;
+      }
+
+      termLog.appendChild(outDiv);
+      termScreen.scrollTop = termScreen.scrollHeight;
+    }
+
+    function escapeHTML(str) {
+      const p = document.createElement('p');
+      p.appendChild(document.createTextNode(str));
+      return p.innerHTML;
+    }
+
+    termInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        const val = termInput.value;
+        termInput.value = '';
+        execute(val);
+      }
+    });
+
+    function runClip(cmd) {
+      document.getElementById('notes').scrollIntoView({ behavior: 'smooth' });
+      execute(cmd);
+      focusShell();
+    }
+  </script>
+</body>
+</html>
