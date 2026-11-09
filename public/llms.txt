@@ -1,21 +1,27 @@
-# Title: Abid Khan | Enterprise SEO Strategist & Frontend Developer
-# Description: Portfolio and technical logs of Abid Khan, specializing in Enterprise SEO, Next.js, and AEO.
+# Title: Abid Khan | Cloud & DevOps Engineer
+# Description: Portfolio and technical dossier of Abid Khan, specializing in Cloud Computing, Linux, Automation, and DevOps.
 # Link: https://abid-folio.vercel.app
 
 # Content Summary
-* /             - Main portfolio and case studies
-* /blog         - Technical articles on SEO and Engineering
-* /blog/*       - Deep dive articles
-* /Resume.pdf   - Professional Resume
+* /             - Main engineering portfolio, projects, experience, and certifications
+* /ai.txt       - Machine-readable context profile for LLMs and AI crawlers
+* /llms.txt     - Technical summary for AI search and agent indexers
 
 # Author
 Name: Abid Khan
-Role: Enterprise SEO Strategist
-Twitter: @kaabid1557
-GitHub: @00Abid
-LinkedIn: /in/abid-khan-coder/
+Role: Cloud & DevOps Engineer
+GitHub: https://github.com/00Abid
+LinkedIn: https://linkedin.com/in/abid-khan-coder
 Email: khanabid.dev@gmail.com
+Location: Maharashtra, India
+Education: B.Sc. IT, University of Mumbai (2022-2025)
+
+# Primary Competencies
+- Linux & Operating Systems (Administration, Permissions, Processes, Bash)
+- Python Automation & REST API Integration
+- Cloud & DevOps (AWS Fundamentals, Docker, CI/CD, Git)
+- Modern Web Architecture (Next.js, React, TypeScript, Performance)
+- Technical SEO & Structured Data (JSON-LD, Schema.org)
 
 # Licensing
-All code snippets in logs are MIT Licensed unless otherwise specified.
 Content is Copyright 2026 Abid Khan.

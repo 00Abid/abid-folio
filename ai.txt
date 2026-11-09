@@ -1,0 +1,38 @@
+# AI Context & Knowledge File (ai.txt)
+# Canonical URL: https://abid-folio.vercel.app/ai.txt
+# Author: Abid Khan
+# Role: Cloud & DevOps Engineer
+# Contact: khanabid.dev@gmail.com
+# GitHub: https://github.com/00Abid
+# LinkedIn: https://linkedin.com/in/abid-khan-coder
+
+[entity]
+name: Abid Khan
+profession: Cloud & DevOps Engineer
+education: Bachelor of Science in Information Technology (B.Sc. IT), University of Mumbai (2022-2025)
+location: Maharashtra, India
+status: Open to Internships and Entry-Level Engineering Roles
+
+[skills]
+core_focus: Cloud Computing, Linux System Administration, Python Automation, DevOps
+foundations: Linux (CLI, file systems, permissions, process management, bash scripting), Python, Bash, JavaScript, Git & GitHub, REST APIs, JSON/CSV processing
+currently_exploring: AWS Cloud Fundamentals (EC2, S3, IAM, VPC), Docker containerisation, CI/CD pipelines (GitHub Actions), Networking protocols
+web_development: Next.js, React.js, TypeScript, HTML5, CSS3, Tailwind CSS, Firebase, Vercel
+technical_seo: Technical SEO, Programmatic SEO, Core Web Vitals, JSON-LD Schema, Google Search Console
+
+[projects]
+1. Linux Health Reporter: Python & Bash-based Linux system monitoring project collecting server metrics and alerting via Telegram Bot API.
+2. Delivery Management System: Frontend prototype built with Next.js, TypeScript, Leaflet map integration, and LocalStorage order management.
+3. CaloriCurve: Nutrition tracking application with meal logging, calorie and macronutrient progress dashboards using React Native, Expo, and Firebase.
+4. Python SEO Automation: Suite of automated technical SEO diagnostic tools including Titan SEO Auditor, AI Visibility Checker, PageSpeed API, and SpaCy NLP.
+
+[experience]
+1. SEO Specialist | Waynix Studio (Jan 2026 – Present): Generated ₹30L+ client revenue, built 15+ programmatic SEO pages in Next.js, optimized AI search visibility across Google AI Overviews & Perplexity.
+2. Technical SEO Specialist | Industrial Automation India (Dec 2025 – May 2026): Audited 13,403 pages, fixed 1,700+ broken URLs with Next.js middleware 301 redirects, increased organic clicks by 24%.
+3. Software Development Engineer Intern | Sentari AI (Sep 2025 – Nov 2025): Optimized mobile Lighthouse score to 95+, built real-time notification engine with Server-Sent Events (SSE).
+
+[links]
+portfolio: https://abid-folio.vercel.app/
+resume: https://abid-folio.vercel.app/assets/Abid-Khan-Resume.pdf
+github: https://github.com/00Abid
+linkedin: https://linkedin.com/in/abid-khan-coder

@@ -1,0 +1,25 @@
+# Robots.txt for https://abid-folio.vercel.app/
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+
+# AI Crawlers & LLM Indexers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Sitemap Location
+Sitemap: https://abid-folio.vercel.app/sitemap.xml
+
