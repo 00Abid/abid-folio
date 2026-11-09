@@ -36,4 +36,3 @@ portfolio: https://abid-folio.vercel.app/
 resume: https://abid-folio.vercel.app/assets/Abid-Khan-Resume.pdf
 github: https://github.com/00Abid
 linkedin: https://linkedin.com/in/abid-khan-coder
-

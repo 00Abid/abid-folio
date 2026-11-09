@@ -6,6 +6,7 @@
 * /             - Main engineering portfolio, projects, experience, and certifications
 * /ai.txt       - Machine-readable context profile for LLMs and AI crawlers
 * /llms.txt     - Technical summary for AI search and agent indexers
+* /assets/Abid-Khan-Resume.pdf - Engineering Resume
 
 # Author
 Name: Abid Khan

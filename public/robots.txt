@@ -22,4 +22,3 @@ Allow: /
 
 # Sitemap Location
 Sitemap: https://abid-folio.vercel.app/sitemap.xml
-
